@@ -3,6 +3,7 @@ import { DatabaseModule } from 'dependency/common/DatabaseModule';
 import { NetworkModule } from 'dependency/common/NetworkModule';
 import { AuthenticationModule } from 'dependency/AuthenticationModule';
 import { ApplicationModule } from 'dependency/common/ApplicationModule';
+import { InfrastructureModule } from 'dependency/common/InfrastructureModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -19,6 +20,8 @@ export class AppContainer extends BaseContainer {
     this.provideDatabaseModule();
     this.provideNetworkModule();
 
+    this.provideInfrastructureModule();
+
     this.provideAuthenticationModule();
 
     this.provideApplicationModule();
@@ -30,6 +33,10 @@ export class AppContainer extends BaseContainer {
 
   private provideNetworkModule(): void {
     this.load(new NetworkModule());
+  }
+
+  private provideInfrastructureModule(): void {
+    this.load(new InfrastructureModule());
   }
 
   private provideApplicationModule(): void {

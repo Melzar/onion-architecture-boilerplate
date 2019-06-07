@@ -5,6 +5,8 @@ import { AuthenticationService } from 'core/applicationServices/Authentication/A
 import { AuthenticationController } from 'ui/controllers/Authentication/AuthenticationController';
 import { AuthenticationRouter } from 'ui/routes/v1/Authentication/AuthenticationRouter';
 
+import { AUTHENTICATION_IDENTIFIERS } from 'dependency/common/AuthenticationModuleSymbols';
+
 export class AuthenticationModule extends BaseModule {
   constructor() {
     super((bind: interfaces.Bind) => {
@@ -19,14 +21,14 @@ export class AuthenticationModule extends BaseModule {
   }
 
   private provideAuthenticationService(bind: interfaces.Bind): void {
-    bind<IAuthenticationService>(AuthenticationService).to(AuthenticationService);
+    bind<IAuthenticationService>(AUTHENTICATION_IDENTIFIERS.AUTHENTICATION_SERVICE).to(AuthenticationService);
   }
 
   private provideAuthenticationController(bind: interfaces.Bind): void {
-    bind<AuthenticationController>(AuthenticationController).toSelf();
+    bind<AuthenticationController>(AUTHENTICATION_IDENTIFIERS.AUTHENTICATION_CONTROLLER).to(AuthenticationController);
   }
 
   private provideAuthenticationRouter(bind: interfaces.Bind): void {
-    bind<AuthenticationRouter>(AuthenticationRouter).toSelf();
+    bind<AuthenticationRouter>(AUTHENTICATION_IDENTIFIERS.AUTHENTICATION_ROUTER).to(AuthenticationRouter);
   }
 }

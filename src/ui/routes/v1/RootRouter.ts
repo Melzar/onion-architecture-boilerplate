@@ -1,16 +1,17 @@
 import express from 'express';
 import core from 'express-serve-static-core';
-import { injectable } from 'inversify';
+import { inject, injectable } from 'inversify';
 
 import { BaseRouter } from 'ui/routes/BaseRouter';
 import { AuthenticationRouter } from 'ui/routes/v1/Authentication/AuthenticationRouter';
+import { AUTHENTICATION_IDENTIFIERS } from 'dependency/common/AuthenticationModuleSymbols';
 
 @injectable()
 export class RootRouter extends BaseRouter<core.Router> {
   private readonly authenticationRouter: AuthenticationRouter;
 
   constructor(
-    authenticationRouter: AuthenticationRouter,
+    @inject(AUTHENTICATION_IDENTIFIERS.AUTHENTICATION_ROUTER) authenticationRouter: AuthenticationRouter,
   ) {
     super(express.Router()); // TODO Deliver via di
     this.authenticationRouter = authenticationRouter;

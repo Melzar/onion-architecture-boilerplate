@@ -14,9 +14,6 @@ import { RootRouter } from 'ui/routes/v1/RootRouter';
 import swaggerDocument from 'ui/config/swagger.json';
 import { APPLICATION_IDENTIFIERS } from 'dependency/common/ApplicationModuleSymbols';
 
-
-console.log(APPLICATION_IDENTIFIERS);
-
 @injectable()
 export class ExpressApplication extends BaseApplication<express.Application> implements IApplication {
   private readonly logger: ILogger;

@@ -1,15 +1,15 @@
 import { Mapper } from '@wufe/mapper';
 
 export abstract class BaseMapper {
-    protected readonly mapper: Mapper;
+  protected readonly mapper: Mapper;
 
-    constructor(mapper: Mapper) {
-      this.mapper = mapper;
-    }
+  constructor() {
+    this.mapper = new Mapper().withConfiguration(configuration => configuration
+      .shouldIgnoreSourcePropertiesIfNotInDestination(true)
+      .shouldAutomaticallyMapArrays(true));
+  }
 
-    public abstract initialize(): void;
-
-    public getMapper(): Mapper {
-      return this.mapper;
-    }
+  public getMapper(): Mapper {
+    return this.mapper;
+  }
 }

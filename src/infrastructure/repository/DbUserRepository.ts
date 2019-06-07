@@ -1,14 +1,23 @@
-import { injectable } from 'inversify';
+import { inject, injectable } from 'inversify';
 
 import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { User } from 'core/domain/User';
 import { User as UserEntity } from 'infrastructure/db/entities/User';
-import { infrastructureMapper } from 'infrastructure/common/mapper/InfrastructureMapper';
 import { DbRepository } from 'infrastructure/repository/DbRepository';
+import { INFRASTRUCTURE_SYMBOLS } from 'dependency/common/InfrastructureModuleSymbols';
+import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
 
 
 @injectable()
 export class DbUserRepository extends DbRepository<UserEntity> implements IUserRepository {
+  private readonly userMapper: UserMapper;
+
+  constructor(@inject(INFRASTRUCTURE_SYMBOLS.USER_MAPPER) userMapper: UserMapper) {
+    super();
+
+    this.userMapper = userMapper;
+  }
+
   async addUser(user: User): Promise<boolean> {
     return this.save(user); // TODO TRANSFORM TO ENTITY
   }
@@ -18,7 +27,7 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
 
     let mappedResult;
     if (result) {
-      mappedResult = infrastructureMapper.getMapper().map<UserEntity, User>(result);
+      mappedResult = this.userMapper.getMapper().map<UserEntity, User>(result);
     }
 
     return mappedResult;
@@ -27,11 +36,9 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
   async findUserByEmail(email: string): Promise<User[] | undefined> {
     const result = await this.findBy({ email });
 
-    const mappedResult = infrastructureMapper.getMapper().mapArray<UserEntity, User>({
+    return this.userMapper.getMapper().mapArray<UserEntity, User>({
       source: Symbol('source'),
       destination: Symbol('destination'),
     }, result);
-
-    return mappedResult;
   }
 }

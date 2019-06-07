@@ -26,6 +26,7 @@
         "@typescript-eslint/explicit-member-accessibility": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
+        "class-methods-use-this": "off",
         "max-len": ["error", { "code": 120 }],
         "no-unused-vars": "error",
         "no-console": "error",

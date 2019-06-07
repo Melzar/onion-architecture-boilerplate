@@ -3,13 +3,16 @@ import httpStatus from 'http-status';
 import { inject, injectable } from 'inversify';
 
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
-import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
+import { AUTHENTICATION_IDENTIFIERS } from 'dependency/common/AuthenticationModuleSymbols';
 
 @injectable()
 export class AuthenticationController {
     private readonly authenticationService: IAuthenticationService;
 
-    constructor(@inject(AuthenticationService) authenticationService: IAuthenticationService) {
+    constructor(
+        @inject(AUTHENTICATION_IDENTIFIERS.AUTHENTICATION_SERVICE)
+          authenticationService: IAuthenticationService,
+    ) {
       this.authenticationService = authenticationService;
     }
 
