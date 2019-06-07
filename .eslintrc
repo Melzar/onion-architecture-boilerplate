@@ -1,0 +1,50 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "mocha": true
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-base"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "max-len": ["error", { "code": 120 }],
+        "no-unused-vars": "error",
+        "no-console": "error",
+        "no-undef": "error",
+        "no-underscore-dangle": "off"
+    },
+    "settings":  {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [
+                    ".ts"
+                ]
+            }
+        },
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts"
+            ]
+        }
+    }
+}

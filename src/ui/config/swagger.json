@@ -1,0 +1,66 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Onion API",
+    "description": "Api documentation for Onion project \n",
+    "contact": {
+      "name": "Tom"
+    },
+    "license": {
+      "name": "[PUT LICENSE NAME HERE]"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "auth",
+      "description": "Api endpoints related to authentication"
+    }
+  ],
+  "schemes": [
+    "http", "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "description": "Returns onion status",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns server status",
+            "schema": {
+              "$ref": "#/definitions/Status"
+            },
+            "example": {
+              "staus": "OK"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Status": {
+      "properties": {
+        "status": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
+
+

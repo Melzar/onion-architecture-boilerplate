@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "types": [
+      "mocha",
+      "node",
+      "chai"
+    ],
+    "lib": [
+      "es5",
+      "es6"
+    ],
+    "paths": {
+      "core/*": ["core/*"],
+      "dependency/*": ["dependency/*"],
+      "infrastructure/*": ["infrastructure/*"],
+      "ui/*": ["ui/*"],
+      "*": [
+        "@types/*"
+      ]
+    },
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths" }
+    ],
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "tests"
+  ]
+}
