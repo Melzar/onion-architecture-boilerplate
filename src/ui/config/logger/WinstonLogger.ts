@@ -5,7 +5,7 @@ import { BaseLogger } from 'ui/config/logger/BaseLogger';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { inject, injectable } from 'inversify';
 
-import { APPLICATION_IDENTIFIERS } from 'dependency/common/ApplicationModuleSymbols';
+import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
 
 @injectable()
 export class WinstonLogger extends BaseLogger<Logger> implements ILogger {

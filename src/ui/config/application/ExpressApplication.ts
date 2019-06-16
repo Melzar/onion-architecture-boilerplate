@@ -9,32 +9,27 @@ import { inject, injectable } from 'inversify';
 import { IApplication } from 'ui/config/application/IApplication';
 import { BaseApplication } from 'ui/config/application/BaseApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
-import { RootRouter } from 'ui/routes/v1/RootRouter';
+import { SWAGGER_HOST } from 'ui/config/consts/variables';
+import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
 
 import swaggerDocument from 'ui/config/swagger.json';
-import { APPLICATION_IDENTIFIERS } from 'dependency/common/ApplicationModuleSymbols';
 
 @injectable()
 export class ExpressApplication extends BaseApplication<express.Application> implements IApplication {
   private readonly logger: ILogger;
 
-  private readonly rootRouter: RootRouter;
-
   constructor(
       @inject(APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
       @inject(APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application,
-      @inject(APPLICATION_IDENTIFIERS.ROOT_ROUTER) rootRouter: RootRouter,
   ) {
     super(app);
     this.logger = logger;
-    this.rootRouter = rootRouter;
   }
 
   public initialize(): void {
     this.initializeSecurity();
     this.initializeBodyParsers();
     this.initializeLogging();
-    this.initializeRoutes();
     this.initializeHandlers();
     this.initializePlugins();
   }
@@ -64,8 +59,6 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
   }
 
   public initializeRoutes(): void {
-    this.rootRouter.initialize();
-    this.app.use('/api/v1', this.rootRouter.getRouter());
   }
 
   public initializeHandlers(): void {
@@ -93,16 +86,9 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
     this.app.use(helmet());
     this.app.use(cors());
 
-    if (process.env.NODE_ENV !== 'production') { // TODO SHOULD BE MOVED TO VARIABLES
-      if (process.env.NODE_ENV === 'qa') {
-        swaggerDocument.host = 'the-onion-qa.com';
-      }
-      if (process.env.NODE_ENV === 'staging') {
-        swaggerDocument.host = 'the-onion-staging.com';
-      }
-      if (process.env.NODE_ENV !== 'test') {
-        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-      }
+    if (SWAGGER_HOST) {
+      swaggerDocument.host = SWAGGER_HOST;
+      this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     }
   }
 }

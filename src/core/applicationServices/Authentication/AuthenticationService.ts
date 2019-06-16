@@ -5,7 +5,7 @@ import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { BaseService } from 'core/applicationServices/BaseService';
 import { User } from 'core/domain/User';
 
-import { DATABASE_IDENTIFIERS } from 'dependency/common/DatabaseModule';
+import { DATABASE_IDENTIFIERS } from 'dependency/infrastructure/DatabaseModule';
 
 @injectable()
 export class AuthenticationService extends BaseService<IUserRepository> implements IAuthenticationService {

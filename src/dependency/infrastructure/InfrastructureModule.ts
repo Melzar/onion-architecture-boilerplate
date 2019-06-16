@@ -1,7 +1,7 @@
 import { BaseModule } from 'dependency/BaseModule';
 import { interfaces } from 'inversify';
 import { IMapper } from 'infrastructure/common/mapper/IMapper';
-import { INFRASTRUCTURE_SYMBOLS } from 'dependency/common/InfrastructureModuleSymbols';
+import { INFRASTRUCTURE_SYMBOLS } from 'dependency/infrastructure/InfrastructureModuleSymbols';
 import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
 
 export class InfrastructureModule extends BaseModule {

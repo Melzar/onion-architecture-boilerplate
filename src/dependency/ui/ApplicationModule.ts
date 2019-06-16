@@ -8,13 +8,14 @@ import { IApplication } from 'ui/config/application/IApplication';
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { WinstonLogger } from 'ui/config/logger/WinstonLogger';
-import { BaseRouter } from 'ui/routes/BaseRouter';
-import { RootRouter } from 'ui/routes/v1/RootRouter';
-import { APPLICATION_IDENTIFIERS } from 'dependency/common/ApplicationModuleSymbols';
+import { LOG_LEVEL } from "ui/config/consts/variables";
+import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
 
-import core from 'express-serve-static-core';
-
-const defaultLevel = process.env.LOG_LEVEL || 'debug'; // TODO Export to const
+/**
+ @description Need to import it once for inversify express utils - if you find better way to do it please share
+ @link https://github.com/inversify/inversify-express-utils#important-information-about-the-controller-decorator
+ */
+import 'ui/controllers';
 
 export class ApplicationModule extends BaseModule {
   constructor() {
@@ -29,7 +30,6 @@ export class ApplicationModule extends BaseModule {
     this.provideLogger(bind);
     this.provideWinstonLogger(bind);
 
-    this.provideRootRouter(bind);
     this.provideExpressApplication(bind);
   }
 
@@ -40,7 +40,7 @@ export class ApplicationModule extends BaseModule {
   private provideLogger(bind: interfaces.Bind): void {
     bind<Logger>(APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(createLogger({
       exitOnError: false,
-      level: defaultLevel,
+      level: LOG_LEVEL,
     }));
   }
 
@@ -63,10 +63,6 @@ export class ApplicationModule extends BaseModule {
 
   private provideWinstonLogger(bind: interfaces.Bind): void {
     bind<ILogger>(APPLICATION_IDENTIFIERS.LOGGER_WINSTON).to(WinstonLogger);
-  }
-
-  private provideRootRouter(bind: interfaces.Bind): void {
-    bind<BaseRouter<core.Router>>(APPLICATION_IDENTIFIERS.ROOT_ROUTER).to(RootRouter);
   }
 
   private provideExpressApplication(bind: interfaces.Bind): void {
