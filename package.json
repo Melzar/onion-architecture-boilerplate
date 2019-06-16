@@ -6,10 +6,16 @@
   "license": "MIT",
   "scripts": {
     "build": "ttsc -p tsconfig.json",
-    "serve": "npm run build && node dist/index.js",
+    "serve": "yarn build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "lint": "ttsc && eslint '*/**/*.{ts}'",
     "dev": "nodemon",
     "test": "mocha-parallel-tests --exit --recursive --max-parallel 5 -r ts-node/register -r tsconfig-paths/register tests/**/*.spec.ts"
+  },
+  "//husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "dependencies": {
     "@types/cors": "^2.8.5",
@@ -51,6 +57,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "husky": "^2.4.1",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
     "ts-node": "^8.2.0",

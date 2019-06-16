@@ -6,8 +6,8 @@ import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { PORT } from 'ui/config/consts/variables';
 import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
 import { AppContainer } from 'dependency/AppContainer';
-import { DATABASE_IDENTIFIERS } from 'dependency/infrastructure/DatabaseModule';
-import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
+import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
+import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 const appContainer = new AppContainer();
 appContainer.init();

@@ -3,7 +3,7 @@ import { BaseModule } from 'dependency/BaseModule';
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
 
-import { AUTHENTICATION_IDENTIFIERS } from 'dependency/core/AuthenticationModuleSymbols';
+import { AUTHENTICATION_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 export class AuthenticationModule extends BaseModule {
   constructor() {

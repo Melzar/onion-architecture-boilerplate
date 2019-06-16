@@ -5,7 +5,7 @@ import { ApplicationModule } from 'dependency/ui/ApplicationModule';
 import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureModule';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
-import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
+import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 export class AppContainer extends BaseContainer {
   constructor() {

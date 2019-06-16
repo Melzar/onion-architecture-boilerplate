@@ -1,9 +1,11 @@
 import httpStatus from 'http-status';
 import { inject } from 'inversify';
-import { BaseHttpController, controller, httpPost, results, } from 'inversify-express-utils';
+import {
+  BaseHttpController, controller, httpPost, results,
+} from 'inversify-express-utils';
 
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
-import { AUTHENTICATION_IDENTIFIERS } from 'dependency/core/AuthenticationModuleSymbols';
+import { AUTHENTICATION_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 @controller('/v1/auth')
 export class AuthenticationController extends BaseHttpController {

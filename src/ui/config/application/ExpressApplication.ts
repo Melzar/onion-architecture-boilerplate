@@ -10,7 +10,7 @@ import { IApplication } from 'ui/config/application/IApplication';
 import { BaseApplication } from 'ui/config/application/BaseApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { SWAGGER_HOST } from 'ui/config/consts/variables';
-import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
+import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 import swaggerDocument from 'ui/config/swagger.json';
 

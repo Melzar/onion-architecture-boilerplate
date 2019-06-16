@@ -4,11 +4,8 @@ import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
 import { BaseOrm } from 'infrastructure/db/orm/BaseOrm';
 import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { DbUserRepository } from 'infrastructure/repository/DbUserRepository';
-
-export const DATABASE_IDENTIFIERS = {
-  ORM: Symbol.for('BaseOrm'),
-  USER_REPOSITORY: Symbol.for('IUserRepository'),
-};
+import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 
 export class DatabaseModule extends BaseModule {
   constructor() {
@@ -28,6 +25,6 @@ export class DatabaseModule extends BaseModule {
   }
 
   private provideDbUserRepository(bind: interfaces.Bind): void {
-    bind<IUserRepository>(DATABASE_IDENTIFIERS.USER_REPOSITORY).to(DbUserRepository);
+    bind<IUserRepository>(REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(DbUserRepository);
   }
 }

@@ -4,12 +4,11 @@ import { IAuthenticationService } from 'core/applicationServices/Authentication/
 import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { BaseService } from 'core/applicationServices/BaseService';
 import { User } from 'core/domain/User';
-
-import { DATABASE_IDENTIFIERS } from 'dependency/infrastructure/DatabaseModule';
+import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 @injectable()
 export class AuthenticationService extends BaseService<IUserRepository> implements IAuthenticationService {
-  constructor(@inject(DATABASE_IDENTIFIERS.USER_REPOSITORY) repository: IUserRepository) {
+  constructor(@inject(REPOSITORY_IDENTIFIERS.USER_REPOSITORY) repository: IUserRepository) {
     super(repository);
   }
 

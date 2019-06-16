@@ -8,8 +8,8 @@ import { IApplication } from 'ui/config/application/IApplication';
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { WinstonLogger } from 'ui/config/logger/WinstonLogger';
-import { LOG_LEVEL } from "ui/config/consts/variables";
-import { APPLICATION_IDENTIFIERS } from 'dependency/ui/ApplicationModuleSymbols';
+import { LOG_LEVEL } from 'ui/config/consts/variables';
+import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 /**
  @description Need to import it once for inversify express utils - if you find better way to do it please share

@@ -1,1 +1,1 @@
-typeorm migration:create -n User    
+# Onion Architecture Boilerplate

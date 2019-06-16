@@ -4,7 +4,7 @@ import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { User } from 'core/domain/User';
 import { User as UserEntity } from 'infrastructure/db/entities/User';
 import { DbRepository } from 'infrastructure/repository/DbRepository';
-import { INFRASTRUCTURE_SYMBOLS } from 'dependency/infrastructure/InfrastructureModuleSymbols';
+import { INFRASTRUCTURE_SYMBOLS } from 'infrastructure/InfrastructureModuleSymbols';
 import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
 
 

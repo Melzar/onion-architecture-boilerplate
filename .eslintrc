@@ -47,5 +47,47 @@
                 ".ts"
             ]
         }
-    }
+    },
+    "overrides": [
+        {
+            "files": [ "src/ui/**/*" ],
+            "rules": {
+                "no-restricted-imports": ["error", {
+                    "patterns": ["dependency", "infrastructure"]
+                }]
+            }
+        },
+        {
+            "files": [ "src/infrastructure/**/*" ],
+            "rules": {
+                "no-restricted-imports": ["error", {
+                    "patterns": ["dependency", "ui"]
+                }]
+            }
+        },
+        {
+            "files": [ "src/core/**/*" ],
+            "rules": {
+                "no-restricted-imports": ["error", {
+                    "patterns": ["dependency", "ui", "infrastructure"]
+                }]
+            }
+        },
+        {
+            "files": [ "src/core/domainServices/**/*" ],
+            "rules": {
+                "no-restricted-imports": ["error", {
+                    "patterns": ["dependency", "ui", "infrastructure", "applicationServices"]
+                }]
+            }
+        },
+        {
+            "files": [ "src/core/domain/**/*" ],
+            "rules": {
+                "no-restricted-imports": ["error", {
+                    "patterns": ["dependency", "ui", "infrastructure", "applicationServices", "domainServices"]
+                }]
+            }
+        }
+    ]
 }
