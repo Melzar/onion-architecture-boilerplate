@@ -1,1 +1,1 @@
-export { default as AuthenticationController } from 'ui/controllers/v1/Authentication/AuthenticationController';
+export { AuthenticationController } from 'ui/controllers/v1/Authentication/AuthenticationController';

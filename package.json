@@ -8,11 +8,11 @@
     "build": "ttsc -p tsconfig.json",
     "serve": "yarn build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "lint": "ttsc && eslint '*/**/*.{ts}'",
+    "lint": "ttsc && eslint '*/**/*.ts'",
     "dev": "nodemon",
     "test": "mocha-parallel-tests --exit --recursive --max-parallel 5 -r ts-node/register -r tsconfig-paths/register tests/**/*.spec.ts"
   },
-  "//husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "yarn lint"
     }
@@ -25,8 +25,8 @@
     "@types/http-status": "^0.2.30",
     "@types/method-override": "^0.0.31",
     "@types/morgan": "^1.7.35",
-    "@types/node": "^12.0.7",
-    "@types/swagger-ui-express": "^3.0.0",
+    "@types/node": "^12.0.8",
+    "@types/swagger-ui-express": "^3.0.1",
     "@wufe/mapper": "^0.5.0",
     "cors": "^2.8.5",
     "debug": "~4.1.1",
@@ -37,7 +37,7 @@
     "inversify": "^5.0.1",
     "inversify-express-utils": "^6.3.2",
     "method-override": "^3.0.0",
-    "mocha-parallel-tests": "^2.1.2",
+    "mocha-parallel-tests": "^2.2.0",
     "morgan": "^1.9.1",
     "pg": "^7.11.0",
     "reflect-metadata": "^0.1.13",
@@ -49,8 +49,8 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
-    "@typescript-eslint/parser": "^1.9.0",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
     "@zerollup/ts-transform-paths": "^1.7.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
@@ -60,10 +60,10 @@
     "husky": "^2.4.1",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
-    "ts-node": "^8.2.0",
+    "ts-node": "^8.3.0",
     "tsconfig-paths": "^3.8.0",
     "ttypescript": "^1.5.7",
     "typeorm-fixtures-cli": "^1.2.1",
-    "typescript": "^3.5.1"
+    "typescript": "3.1.6"
   }
 }

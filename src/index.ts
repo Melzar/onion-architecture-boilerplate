@@ -15,4 +15,5 @@ appContainer.get<ExpressApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
 appContainer.get<OnionOrm>(DATABASE_IDENTIFIERS.ORM).initialize();
 appContainer.get<InversifyExpressServer>(APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION)
   .build()
+  // eslint-disable-next-line no-console
   .listen(PORT, () => console.log(`Server listening on ${PORT}`));

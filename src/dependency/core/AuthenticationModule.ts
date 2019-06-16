@@ -7,7 +7,7 @@ import { AUTHENTICATION_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 export class AuthenticationModule extends BaseModule {
   constructor() {
-    super((bind: interfaces.Bind) => {
+    super((bind: interfaces.Bind): void => {
       this.init(bind);
     });
   }

@@ -24,6 +24,7 @@
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
         "class-methods-use-this": "off",
@@ -31,7 +32,8 @@
         "no-unused-vars": "error",
         "no-console": "error",
         "no-undef": "error",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "no-useless-constructor": "off"
     },
     "settings":  {
         "import/resolver": {

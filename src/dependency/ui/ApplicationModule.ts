@@ -19,7 +19,7 @@ import 'ui/controllers';
 
 export class ApplicationModule extends BaseModule {
   constructor() {
-    super((bind: interfaces.Bind) => {
+    super((bind: interfaces.Bind): void => {
       this.init(bind);
     });
   }

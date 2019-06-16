@@ -6,7 +6,7 @@ import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
 
 export class InfrastructureModule extends BaseModule {
   constructor() {
-    super((bind: interfaces.Bind) => {
+    super((bind: interfaces.Bind): void => {
       this.init(bind);
     });
   }

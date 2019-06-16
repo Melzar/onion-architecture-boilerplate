@@ -9,7 +9,7 @@ import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols
 
 export class DatabaseModule extends BaseModule {
   constructor() {
-    super((bind: interfaces.Bind) => {
+    super((bind: interfaces.Bind): void => {
       this.init(bind);
     });
   }

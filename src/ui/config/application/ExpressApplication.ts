@@ -46,7 +46,7 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
     this.logger.initialize();
     morgan.token(
       'body',
-      (req, res) => `\nREQUEST BODY: ${JSON.stringify(req.body)}`,
+      (req): string => `\nREQUEST BODY: ${JSON.stringify(req.body)}`,
     ); // TODO you may consider what you want to log on production
     // TODO keep in mind to obfuscate sensitive data if you want to log request or response bodies
     // TODO format can be moved to some other place for easier configuration
