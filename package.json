@@ -8,8 +8,8 @@
     "build": "ttsc -p tsconfig.json",
     "serve": "yarn build && node dist/index.js",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "lint": "ttsc && eslint '*/**/*.ts'",
     "dev": "nodemon",
+    "lint": "ttsc && eslint '*/**/*.ts'",
     "test": "mocha-parallel-tests --exit --recursive --max-parallel 5 -r ts-node/register -r tsconfig-paths/register tests/**/*.spec.ts"
   },
   "husky": {

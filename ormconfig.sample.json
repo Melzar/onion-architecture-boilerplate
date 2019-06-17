@@ -8,7 +8,6 @@
     "password": "root",
     "database": "onion_dev",
     "migrationsRun": true,
-    "synchronize": true,
     "logging": true,
     "entities": [
       "src/infrastructure/db/entities/**/*.ts"
