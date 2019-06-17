@@ -28,7 +28,15 @@ This repository is a real life example of Onion Architecture with use of `Node.j
         
 4. ui
 
-        Contains definition of presentation layer like controller, express setup etc             
+        Contains definition of presentation layer like controller, express setup etc  
+        
+##### What is supported?
+
+1. Multiple environment setup
+2. DB Agnostic setup, supports multiple datasource
+3. Infrastructure -> Domain Mapping ( more TODO )
+4. Migrations, Fixtures ( example TODO )    
+5. Multiple API versions support             
 
 ##### Reference
 
@@ -90,14 +98,16 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 * Add list of helpful commands to create migration etc
 * Prepare command line tools like DB:Reload to reload database etc
 * Add mutational testing
+* Add mapping for Application core layer?
+* On complete update `CHANGELOG.MD` and tag v1
 
 ### KNOWN ISSUES
 
 * There is a known issue in `TypeOrm` combined with `Typescript` described
   here: https://github.com/Microsoft/TypeScript/issues/29112#issuecomment-486107941
 
-        Issue can be solved by just removing following funtion from IRepository and
-        DBRepository but for general usecase it would be a waste. 
+        Issue can be solved by just removing following function from IRepository and
+        DBRepository but for general usecase it would be a waste to loose it. 
         
         public findBy(condition: Query<E>): Promise<E[]> {
             return this.repository.find(condition);
