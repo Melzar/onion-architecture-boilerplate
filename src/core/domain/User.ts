@@ -11,6 +11,8 @@ export class User {
 
     private readonly _age: number;
 
+    private readonly _role: string; // TODO Move to enum here
+
     constructor(
       id: number,
       firstName: string,
@@ -18,6 +20,7 @@ export class User {
       email: string,
       password: string,
       age: number,
+      role: string,
     ) {
       this._id = id;
       this._firstName = firstName;
@@ -25,6 +28,7 @@ export class User {
       this._email = email;
       this._password = password;
       this._age = age;
+      this._role = role;
     }
 
     get id(): number {
@@ -49,5 +53,9 @@ export class User {
 
     get age(): number {
       return this._age;
+    }
+
+    get role(): string {
+      return this._role;
     }
 }

@@ -10,12 +10,12 @@ import { ILogger } from 'ui/config/logger/ILogger';
 import { WinstonLogger } from 'ui/config/logger/WinstonLogger';
 import { LOG_LEVEL } from 'ui/config/consts/variables';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
-
 /**
  @description Need to import it once for inversify express utils - if you find better way to do it please share
  @link https://github.com/inversify/inversify-express-utils#important-information-about-the-controller-decorator
  */
 import 'ui/controllers';
+import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
 
 export class ApplicationModule extends BaseModule {
   constructor() {
@@ -29,6 +29,7 @@ export class ApplicationModule extends BaseModule {
     this.provideLoggerFormat(bind);
     this.provideLogger(bind);
     this.provideWinstonLogger(bind);
+    this.provideJWTTokenUtil(bind);
 
     this.provideExpressApplication(bind);
   }
@@ -67,5 +68,9 @@ export class ApplicationModule extends BaseModule {
 
   private provideExpressApplication(bind: interfaces.Bind): void {
     bind<IApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).to(ExpressApplication);
+  }
+
+  private provideJWTTokenUtil(bind: interfaces.Bind): void {
+    bind<JWTTokenUtil>(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL).to(JWTTokenUtil);
   }
 }

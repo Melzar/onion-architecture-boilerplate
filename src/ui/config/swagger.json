@@ -12,7 +12,7 @@
     }
   },
   "host": "localhost:3000",
-  "basePath": "/api/v1",
+  "basePath": "/v1",
   "tags": [
     {
       "name": "auth",

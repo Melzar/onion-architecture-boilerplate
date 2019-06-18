@@ -66,6 +66,10 @@ https://www.slideshare.net/matthidinger/onion-architecture
 2. **Env Variables**
     * `.env.example` contains example env config - for local / dev use you can use same values as provided
        in sample
+    * for production use generate token with following command
+    
+            node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"   
+       
        
 ### HOW TO RUN LOCALLY
 
@@ -90,7 +94,6 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 * Add unit tests examples for boilerplate
 * Add database tests examples
 * Resolve TODO's comments
-* Add example authentication integration
 * Add example implementation of authentication flows
 * Finish fixtures implementation with examples
 * Consider tool to create automatically database if not available

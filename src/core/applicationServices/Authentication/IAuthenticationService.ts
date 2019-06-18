@@ -1,6 +1,6 @@
 export interface IAuthenticationService {
 
-    authenticate(): void;
+    authenticate(email: string, password: string): string | undefined; // TODO wrap into request object
 
     signUp(): void;
 

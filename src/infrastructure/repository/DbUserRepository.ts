@@ -33,12 +33,12 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
     return mappedResult;
   }
 
-  async findUserByEmail(email: string): Promise<User[] | undefined> {
-    const result = await this.findBy({ email });
+  async findUserByEmail(email: string): Promise<User | undefined> {
+    const result = await this.findBy({ email }); // TODO ADD UNIQUE CONSTRAINT TO EMAIL
 
-    return this.userMapper.getMapper().mapArray<UserEntity, User>({
+    return this.userMapper.getMapper().map<UserEntity, User>({
       source: Symbol('source'),
       destination: Symbol('destination'),
-    }, result);
+    }, result[0]);
   }
 }

@@ -1,4 +1,4 @@
-export const AUTHENTICATION_IDENTIFIERS = {
+export const APPLICATION_SERVICE_IDENTIFIERS = {
   AUTHENTICATION_SERVICE: Symbol.for('AuthenticationService'),
 };
 

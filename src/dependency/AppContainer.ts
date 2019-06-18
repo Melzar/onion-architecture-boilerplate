@@ -5,6 +5,7 @@ import { ApplicationModule } from 'dependency/ui/ApplicationModule';
 import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureModule';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
+import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 export class AppContainer extends BaseContainer {
@@ -51,8 +52,9 @@ export class AppContainer extends BaseContainer {
       .toConstantValue(new InversifyExpressServer(
         this,
         null,
-        { rootPath: '/api' },
+        { rootPath: '/' },
         this.get<ExpressApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).getApplication(),
+        ApplicationAuthProvider,
       ));
   }
 }
