@@ -19,6 +19,13 @@
       "description": "Api endpoints related to authentication"
     }
   ],
+  "securityDefinitions": {
+    "bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
   "schemes": [
     "http", "https"
   ],
@@ -60,6 +67,31 @@
             "examples": {
               "token": "123456789"
             }
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "auth"
+        ],
+        "description": "Logout endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Returns success status"
           }
         }
       }

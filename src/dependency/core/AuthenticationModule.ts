@@ -2,7 +2,7 @@ import { interfaces } from 'inversify';
 
 import { BaseModule } from 'dependency/BaseModule';
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
-import { AuthenticationService } from 'ui/config/auth/AuthenticationService';
+import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
 
 import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 

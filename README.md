@@ -105,8 +105,6 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 * Add unit tests examples for boilerplate
 * Add database tests examples
 * Resolve TODO's comments
-* Add example implementation of authentication flows
-* Provide more complex seed examples
 * Cleanup and see what can be moved to .env
 * Add mutational testing
 * Add mapping for Application core layer?
@@ -117,3 +115,5 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 * Seeds issue - currently using external repository with patch, when this PR is merged move to newest version
   `https://github.com/w3tecch/typeorm-seeding/pull/18`
 
+* To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
+`https://github.com/OAI/OpenAPI-Specification/issues/583#issuecomment-267554000`

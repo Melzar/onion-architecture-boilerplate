@@ -7,10 +7,6 @@ import { User } from 'infrastructure/db/entities/User';
 const SALT = 10;
 const RANDOM_NUMBER_SIZE = 100;
 
-type Param = {
-  email: string;
-}
-
 define(User, (faker: typeof Faker) => {
   const counter = faker.random.number(RANDOM_NUMBER_SIZE);
   const user = new User();

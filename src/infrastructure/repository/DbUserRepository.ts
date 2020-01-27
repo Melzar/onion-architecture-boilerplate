@@ -19,7 +19,8 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
   }
 
   async addUser(user: User): Promise<boolean> {
-    return this.save(user); // TODO TRANSFORM TO ENTITY
+    return !!user;
+    // return this.save(user); // TODO TRANSFORM TO ENTITY, temporary commented out
   }
 
   async findUser(id: string): Promise<User | undefined> {
@@ -37,7 +38,11 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
   }
 
   async findUserByEmail(email: string): Promise<User> {
-    const result = await this.findBy({ email }); // TODO ADD UNIQUE CONSTRAINT TO EMAIL, CHECK FOR NULL
+    const result = await this.custom()
+      .createQueryBuilder()
+      .leftJoinAndSelect('User.role', 'role')
+      .where('User.email = :email', { email })
+      .getMany();
 
     return this.dbMapper.mapper.map<UserEntity, User>({
       source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,

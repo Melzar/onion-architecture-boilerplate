@@ -16,6 +16,8 @@ import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
  */
 import 'ui/controllers';
 import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
+import { JWTAuthenticationHandler } from 'ui/config/auth/JWTAuthenticationHandler';
+import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 
 export class ApplicationModule extends BaseModule {
   constructor() {
@@ -30,6 +32,7 @@ export class ApplicationModule extends BaseModule {
     this.provideLogger(bind);
     this.provideWinstonLogger(bind);
     this.provideJWTTokenUtil(bind);
+    this.provideJWTAuthenticationHandler(bind);
 
     this.provideExpressApplication(bind);
   }
@@ -72,5 +75,9 @@ export class ApplicationModule extends BaseModule {
 
   private provideJWTTokenUtil(bind: interfaces.Bind): void {
     bind<JWTTokenUtil>(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL).to(JWTTokenUtil);
+  }
+
+  private provideJWTAuthenticationHandler(bind: interfaces.Bind): void {
+    bind<IAuthenticationHandler>(APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER).to(JWTAuthenticationHandler);
   }
 }

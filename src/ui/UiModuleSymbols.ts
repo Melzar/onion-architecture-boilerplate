@@ -1,4 +1,5 @@
 export const APPLICATION_IDENTIFIERS = {
+  JWT_AUTHENTICATION_HANDLER: Symbol.for('JWTAuthenticationHandler'),
   EXPRESS: Symbol.for('Express'),
   EXPRESS_APPLICATION: Symbol.for('ExpressApplication'),
   INVERSIFY_APPLICATION: Symbol.for('InversifyExpressApplication'),

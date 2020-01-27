@@ -7,7 +7,7 @@ import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
 import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { APP_TOKEN_SECRET } from 'ui/config/consts/variables';
-import { AuthenticationService } from 'ui/config/auth/AuthenticationService';
+import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
 import { User } from 'core/domain/User';
 
 @injectable()
@@ -47,10 +47,10 @@ export class ApplicationAuthProvider implements interfaces.AuthProvider {
         id,
         firstName,
         '',
+        role,
         '',
         '',
         0,
-        role,
       ));
 
       return principal;
