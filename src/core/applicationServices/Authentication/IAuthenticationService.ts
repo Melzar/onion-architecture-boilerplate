@@ -1,6 +1,9 @@
+import { AuthenticationRequest } from 'core/domain/Authentication/AuthenticationRequest';
+import { Authentication } from 'core/domain/Authentication/Authentication';
+
 export interface IAuthenticationService {
 
-    authenticate(email: string, password: string): string | undefined; // TODO wrap into request object
+    authenticate(request: AuthenticationRequest): Promise<Authentication | undefined>;
 
     signUp(): void;
 

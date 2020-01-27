@@ -27,13 +27,26 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    ["parent", "sibling", "index"]
+                ],
+                "newlines-between": "always-and-inside-groups"
+            }
+        ],
         "class-methods-use-this": "off",
         "max-len": ["error", { "code": 120 }],
         "no-unused-vars": "error",
         "no-console": "error",
         "no-undef": "error",
         "no-underscore-dangle": "off",
-        "no-useless-constructor": "off"
+        "no-useless-constructor": "off",
+        "no-empty-function": "off"
     },
     "settings":  {
         "import/resolver": {

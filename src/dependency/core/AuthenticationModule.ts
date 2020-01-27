@@ -1,4 +1,5 @@
 import { interfaces } from 'inversify';
+
 import { BaseModule } from 'dependency/BaseModule';
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 import { AuthenticationService } from 'ui/config/auth/AuthenticationService';

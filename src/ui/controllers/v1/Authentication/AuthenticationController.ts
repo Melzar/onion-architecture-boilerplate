@@ -8,7 +8,8 @@ import { IAuthenticationService } from 'core/applicationServices/Authentication/
 import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { isAuthenticated } from 'ui/config/auth/middleware/IsAuthenticated';
-import { Request } from 'express';
+import { AuthenticationRequestBody } from 'ui/controllers/v1/Authentication/requests/AuthenticationRequestBody';
+import { AuthenticationRequest } from 'core/domain/Authentication/AuthenticationRequest';
 
 @controller('/v1/auth')
 export class AuthenticationController extends BaseHttpController {
@@ -23,11 +24,11 @@ export class AuthenticationController extends BaseHttpController {
     }
 
     @httpPost('/')
-    public async index(@requestBody() body: Request): Promise<results.JsonResult> {
-      // @ts-ignore // TODO temporary ignore
-      const token = this.authenticationService.authenticate(body.email, body.password);
-      if (token) {
-        return this.json({ token }, httpStatus.OK); // TODO Add response objects
+    public async index(@requestBody() { email, password }: AuthenticationRequestBody): Promise<results.JsonResult> {
+      const authentication = await this.authenticationService.authenticate(new AuthenticationRequest(email, password));
+      if (authentication) {
+        // TODO Add response objects to show example of ui mapping
+        return this.json(authentication, httpStatus.OK);
       }
       return this.json(
         { code: 'UNAUTHORIZED_CODE', message: '' },

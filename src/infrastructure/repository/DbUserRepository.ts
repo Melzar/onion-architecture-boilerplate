@@ -1,21 +1,21 @@
 import { inject, injectable } from 'inversify';
 
+import { EntityRepository } from 'typeorm';
+
 import { IUserRepository } from 'core/domainServices/IUserRepository';
 import { User } from 'core/domain/User';
-import { User as UserEntity } from 'infrastructure/db/entities/User';
-import { DbRepository } from 'infrastructure/repository/DbRepository';
-import { INFRASTRUCTURE_SYMBOLS } from 'infrastructure/InfrastructureModuleSymbols';
-import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
 
+import { User as UserEntity } from 'infrastructure/db/entities/User';
+import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
+
+import { DbRepository } from 'infrastructure/repository/DbRepository';
+import { DATABASE_MAPPING_IDENTIFIERS, INFRASTRUCTURE_SYMBOLS } from 'infrastructure/InfrastructureModuleSymbols';
 
 @injectable()
+@EntityRepository(UserEntity)
 export class DbUserRepository extends DbRepository<UserEntity> implements IUserRepository {
-  private readonly userMapper: UserMapper;
-
-  constructor(@inject(INFRASTRUCTURE_SYMBOLS.USER_MAPPER) userMapper: UserMapper) {
-    super();
-
-    this.userMapper = userMapper;
+  constructor(@inject(INFRASTRUCTURE_SYMBOLS.DB_MAPPER) private readonly dbMapper: DBMapper) {
+    super(UserEntity);
   }
 
   async addUser(user: User): Promise<boolean> {
@@ -27,18 +27,21 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
 
     let mappedResult;
     if (result) {
-      mappedResult = this.userMapper.getMapper().map<UserEntity, User>(result);
+      mappedResult = this.dbMapper.mapper.map<UserEntity, User>({
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+        destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
+      }, result);
     }
 
     return mappedResult;
   }
 
-  async findUserByEmail(email: string): Promise<User | undefined> {
-    const result = await this.findBy({ email }); // TODO ADD UNIQUE CONSTRAINT TO EMAIL
+  async findUserByEmail(email: string): Promise<User> {
+    const result = await this.findBy({ email }); // TODO ADD UNIQUE CONSTRAINT TO EMAIL, CHECK FOR NULL
 
-    return this.userMapper.getMapper().map<UserEntity, User>({
-      source: Symbol('source'),
-      destination: Symbol('destination'),
+    return this.dbMapper.mapper.map<UserEntity, User>({
+      source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+      destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
     }, result[0]);
   }
 }

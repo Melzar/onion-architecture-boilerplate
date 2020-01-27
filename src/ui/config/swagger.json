@@ -34,18 +34,31 @@
         "tags": [
           "auth"
         ],
-        "description": "Returns onion status",
+        "description": "Authentication endpoint",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "application/json"
         ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthenticationRequest"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Returns server status",
+            "description": "Returns authentication token",
             "schema": {
-              "$ref": "#/definitions/Status"
+              "$ref": "#/definitions/AuthenticationResponse"
             },
-            "example": {
-              "staus": "OK"
+            "examples": {
+              "token": "123456789"
             }
           }
         }
@@ -53,9 +66,19 @@
     }
   },
   "definitions": {
-    "Status": {
+    "AuthenticationResponse": {
       "properties": {
-        "status": {
+        "token": {
+          "type": "string"
+        }
+      }
+    },
+    "AuthenticationRequest": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
           "type": "string"
         }
       }

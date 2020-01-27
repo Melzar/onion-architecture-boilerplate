@@ -1,6 +1,6 @@
 import { Query } from 'infrastructure/repository/common/Query';
 
-export interface IRepository<E> {
+export interface IRepository<E, R> {
     find(id: string): Promise<E | undefined>;
     findBy(condition: Query<E>): Promise<E[]>;
     findMany(ids: string[]): Promise<E[]>;
@@ -14,4 +14,5 @@ export interface IRepository<E> {
     removeAll(entities: E[]): Promise<boolean>;
     save(entity: E): Promise<boolean>;
     saveAll(entities: E[]): Promise<boolean>;
+    custom(): R;
 }

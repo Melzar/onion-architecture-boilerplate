@@ -58,6 +58,7 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
     ); // TODO Move 'combined' to const
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public initializeRoutes(): void {
   }
 

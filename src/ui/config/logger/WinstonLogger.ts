@@ -1,9 +1,11 @@
 import { format as winstonFormat, Logger, transports } from 'winston';
 import { Format } from 'logform';
 import DailyRotateFile from 'winston-daily-rotate-file';
+
+import { inject, injectable } from 'inversify';
+
 import { BaseLogger } from 'ui/config/logger/BaseLogger';
 import { ILogger } from 'ui/config/logger/ILogger';
-import { inject, injectable } from 'inversify';
 
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 

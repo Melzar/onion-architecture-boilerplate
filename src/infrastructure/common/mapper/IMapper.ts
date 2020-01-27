@@ -1,3 +1,5 @@
+import { Mapper } from '@wufe/mapper';
+
 export interface IMapper {
-    configureMappings(): void;
+    configureMappings(mapper: Mapper): void;
 }

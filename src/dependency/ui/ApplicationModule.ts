@@ -57,7 +57,7 @@ export class ApplicationModule extends BaseModule {
         format: 'YY-MM-DD HH:MM:SS',
       }),
       format.printf(
-        info => `${info.label} ${info.timestamp} [${info.level}] : ${info.message} `,
+        (info) => `${info.label} ${info.timestamp} [${info.level}] : ${info.message} `,
       ),
     ));
   }

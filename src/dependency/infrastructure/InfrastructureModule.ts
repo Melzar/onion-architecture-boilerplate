@@ -1,8 +1,13 @@
-import { BaseModule } from 'dependency/BaseModule';
 import { interfaces } from 'inversify';
-import { IMapper } from 'infrastructure/common/mapper/IMapper';
+
+import { BaseModule } from 'dependency/BaseModule';
+
 import { INFRASTRUCTURE_SYMBOLS } from 'infrastructure/InfrastructureModuleSymbols';
-import { UserMapper } from 'infrastructure/common/mapper/UserMapper';
+
+import { IMapper } from 'infrastructure/common/mapper/IMapper';
+
+import { UserEntityToUserDomainMapper } from 'infrastructure/db/mappings/User/UserEntityToUserDomainMapper';
+import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
 
 export class InfrastructureModule extends BaseModule {
   constructor() {
@@ -13,9 +18,14 @@ export class InfrastructureModule extends BaseModule {
 
   public init(bind: interfaces.Bind): void {
     this.provideUserMapper(bind);
+    this.provideDBMapper(bind);
+  }
+
+  private provideDBMapper(bind: interfaces.Bind): void {
+    bind<DBMapper>(INFRASTRUCTURE_SYMBOLS.DB_MAPPER).to(DBMapper);
   }
 
   private provideUserMapper(bind: interfaces.Bind): void {
-    bind<IMapper>(INFRASTRUCTURE_SYMBOLS.USER_MAPPER).to(UserMapper);
+    bind<IMapper>(INFRASTRUCTURE_SYMBOLS.USER_MAPPER).to(UserEntityToUserDomainMapper);
   }
 }

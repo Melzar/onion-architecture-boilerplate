@@ -1,11 +1,15 @@
-import { BaseModule } from 'dependency/BaseModule';
 import { interfaces } from 'inversify';
+
+import { BaseModule } from 'dependency/BaseModule';
+
 import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
 import { BaseOrm } from 'infrastructure/db/orm/BaseOrm';
-import { IUserRepository } from 'core/domainServices/IUserRepository';
+
 import { DbUserRepository } from 'infrastructure/repository/DbUserRepository';
-import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
+
+import { IUserRepository } from 'core/domainServices/IUserRepository';
+import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 export class DatabaseModule extends BaseModule {
   constructor() {

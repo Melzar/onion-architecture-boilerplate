@@ -34,6 +34,7 @@ export class ApplicationAuthProvider implements interfaces.AuthProvider {
       }
 
       const {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
         // @ts-ignore
         user: { // TODO temporary ignore
           id,

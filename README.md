@@ -59,7 +59,7 @@ https://www.slideshare.net/matthidinger/onion-architecture
 ### SETUP
 
 1. **Database**
-    * Look at the `ormconfig.sample.json` file. It's a sample setup of database connection,
+    * Look at the `ormconfig.sample.js` file. It's a sample setup of database connection,
       you can provide your own data for database if needed. From app perspective you have to manually
       create database for development ( in sample with name `onion_dev` ) and for testing `onion_test`.
     * Migrations will autorun on application start 
@@ -70,12 +70,18 @@ https://www.slideshare.net/matthidinger/onion-architecture
     
             node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"   
        
-       
 ### HOW TO RUN LOCALLY
 
 1. Follow `SETUP` section first and install `PREREQUISITIES`
 2. `Yarn install` - installing dependencies
 3. `Yarn dev` - run app with watch and rebuild
+
+### WORKING WITH DATABASE
+
+1. To prepare database with latest migrations run `yarn db:reload`,
+   it also removes all data from db and recreates it. Useful when playing with seed data.
+2. To seed database run `yarn db:seed`   
+2. To generate migration based on changes in entity object run `yarn db:generate <my_migration_name>`
 
 ### SWAGGER
 
@@ -90,30 +96,24 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 
 ### STILL TODO
 
+* Improve Eslint and introduce prettier
+* Provide more complex examples working with repositories - ( working with transactions etc )
+* Provide examples for UI mappers and explain approach
+* Prepare FP version of architecture
+* Introduce Graphql and integration with inversify-graphQL
 * Add fixtures readme and examples with tests integration
 * Add unit tests examples for boilerplate
 * Add database tests examples
 * Resolve TODO's comments
 * Add example implementation of authentication flows
-* Finish fixtures implementation with examples
-* Consider tool to create automatically database if not available
+* Provide more complex seed examples
 * Cleanup and see what can be moved to .env
-* Add list of helpful commands to create migration etc
-* Prepare command line tools like DB:Reload to reload database etc
 * Add mutational testing
 * Add mapping for Application core layer?
 * On complete update `CHANGELOG.MD` and tag v1
 
 ### KNOWN ISSUES
 
-* There is a known issue in `TypeOrm` combined with `Typescript` described
-  here: https://github.com/Microsoft/TypeScript/issues/29112#issuecomment-486107941
+* Seeds issue - currently using external repository with patch, when this PR is merged move to newest version
+  `https://github.com/w3tecch/typeorm-seeding/pull/18`
 
-        Issue can be solved by just removing following function from IRepository and
-        DBRepository but for general usecase it would be a waste to loose it. 
-        
-        public findBy(condition: Query<E>): Promise<E[]> {
-            return this.repository.find(condition);
-        }
-        
-  *Temporary solution* : ***Typescript*** dependency is frozen to version `3.1.6`     

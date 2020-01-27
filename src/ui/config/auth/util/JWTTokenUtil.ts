@@ -1,6 +1,7 @@
+import { IncomingHttpHeaders } from 'http';
+
 import jwt, { Secret } from 'jsonwebtoken';
 import { injectable } from 'inversify';
-import { IncomingHttpHeaders } from 'http';
 
 @injectable()
 export class JWTTokenUtil {

@@ -67,4 +67,4 @@ src/@types/
 # dist
 dist
 
-ormconfig.json
+ormconfig.js

@@ -1,9 +1,11 @@
+import { InversifyExpressServer } from 'inversify-express-utils';
+
 import { BaseContainer } from 'dependency/BaseContainer';
 import { DatabaseModule } from 'dependency/infrastructure/DatabaseModule';
 import { AuthenticationModule } from 'dependency/core/AuthenticationModule';
 import { ApplicationModule } from 'dependency/ui/ApplicationModule';
 import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureModule';
-import { InversifyExpressServer } from 'inversify-express-utils';
+
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
