@@ -14,9 +14,10 @@ import { IAuthenticationService } from 'core/applicationServices/Authentication/
 @injectable()
 export class JWTAuthenticationHandler implements IAuthenticationHandler {
   constructor(
-      @inject(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL) private readonly jwtTokenUtil: JWTTokenUtil,
-      @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
-      private readonly authenticationService: IAuthenticationService,
+    @inject(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)
+    private readonly jwtTokenUtil: JWTTokenUtil,
+    @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
+    private readonly authenticationService: IAuthenticationService
   ) {}
 
   async authenticate(request: AuthenticationRequest) {
@@ -26,11 +27,13 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
       return undefined;
     }
 
-    return new Authentication(this.jwtTokenUtil.generateToken(
-      user,
-      'user',
-      APP_TOKEN_SECRET,
-      APP_TOKEN_LIFE,
-    ));
+    return new Authentication(
+      this.jwtTokenUtil.generateToken(
+        user,
+        'user',
+        APP_TOKEN_SECRET,
+        APP_TOKEN_LIFE
+      )
+    );
   }
 }

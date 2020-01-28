@@ -1,13 +1,13 @@
 export abstract class BaseApplication<T> {
-    protected readonly app: T;
+  protected readonly app: T;
 
-    protected constructor(app: T) {
-      this.app = app;
-    }
+  protected constructor(app: T) {
+    this.app = app;
+  }
 
-    public abstract initialize(): void;
+  public abstract initialize(): void;
 
-    public getApplication(): T {
-      return this.app;
-    }
+  public getApplication(): T {
+    return this.app;
+  }
 }

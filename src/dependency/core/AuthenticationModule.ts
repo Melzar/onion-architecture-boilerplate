@@ -18,6 +18,8 @@ export class AuthenticationModule extends BaseModule {
   }
 
   private provideAuthenticationService(bind: interfaces.Bind): void {
-    bind<IAuthenticationService>(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE).to(AuthenticationService);
+    bind<IAuthenticationService>(
+      APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE
+    ).to(AuthenticationService);
   }
 }

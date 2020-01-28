@@ -17,9 +17,16 @@
     "db:migrate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run",
     "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n"
   },
+  "lint-staged": {
+    "src/**/*.{ts}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
@@ -69,11 +76,15 @@
     "chai-http": "^4.3.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
+    "lint-staged": "^10.0.3",
     "mocha": "^7.0.1",
     "mocha-parallel-tests": "^2.2.2",
     "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
     "ts-node": "^8.6.2",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.10",

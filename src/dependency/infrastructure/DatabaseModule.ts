@@ -29,6 +29,8 @@ export class DatabaseModule extends BaseModule {
   }
 
   private provideDbUserRepository(bind: interfaces.Bind): void {
-    bind<IUserRepository>(REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(DbUserRepository);
+    bind<IUserRepository>(REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(
+      DbUserRepository
+    );
   }
 }

@@ -9,12 +9,19 @@ import { User as UserEntity } from 'infrastructure/db/entities/User';
 import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
 
 import { DbRepository } from 'infrastructure/repository/DbRepository';
-import { DATABASE_MAPPING_IDENTIFIERS, INFRASTRUCTURE_SYMBOLS } from 'infrastructure/InfrastructureModuleSymbols';
+import {
+  DATABASE_MAPPING_IDENTIFIERS,
+  INFRASTRUCTURE_SYMBOLS,
+} from 'infrastructure/InfrastructureModuleSymbols';
 
 @injectable()
 @EntityRepository(UserEntity)
-export class DbUserRepository extends DbRepository<UserEntity> implements IUserRepository {
-  constructor(@inject(INFRASTRUCTURE_SYMBOLS.DB_MAPPER) private readonly dbMapper: DBMapper) {
+export class DbUserRepository extends DbRepository<UserEntity>
+  implements IUserRepository {
+  constructor(
+    @inject(INFRASTRUCTURE_SYMBOLS.DB_MAPPER)
+    private readonly dbMapper: DBMapper
+  ) {
     super(UserEntity);
   }
 
@@ -28,10 +35,13 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
 
     let mappedResult;
     if (result) {
-      mappedResult = this.dbMapper.mapper.map<UserEntity, User>({
-        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
-        destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
-      }, result);
+      mappedResult = this.dbMapper.mapper.map<UserEntity, User>(
+        {
+          source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+          destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        },
+        result
+      );
     }
 
     return mappedResult;
@@ -44,9 +54,12 @@ export class DbUserRepository extends DbRepository<UserEntity> implements IUserR
       .where('User.email = :email', { email })
       .getMany();
 
-    return this.dbMapper.mapper.map<UserEntity, User>({
-      source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
-      destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
-    }, result[0]);
+    return this.dbMapper.mapper.map<UserEntity, User>(
+      {
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+        destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
+      },
+      result[0]
+    );
   }
 }

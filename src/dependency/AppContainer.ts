@@ -50,13 +50,18 @@ export class AppContainer extends BaseContainer {
   }
 
   private provideInversifyExpressApplication(): void {
-    this.bind<InversifyExpressServer>(APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION)
-      .toConstantValue(new InversifyExpressServer(
+    this.bind<InversifyExpressServer>(
+      APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION
+    ).toConstantValue(
+      new InversifyExpressServer(
         this,
         null,
         { rootPath: '/' },
-        this.get<ExpressApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).getApplication(),
-        ApplicationAuthProvider,
-      ));
+        this.get<ExpressApplication>(
+          APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
+        ).getApplication(),
+        ApplicationAuthProvider
+      )
+    );
   }
 }

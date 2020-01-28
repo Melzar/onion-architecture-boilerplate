@@ -2,7 +2,6 @@ import { join } from 'path';
 
 import * as yargs from 'yargs';
 
-
 import { Connection, createConnection, ConnectionOptions } from 'typeorm';
 
 const {
@@ -38,7 +37,7 @@ yargs
             await connection.dropDatabase();
             await connection.runMigrations();
             process.exit(0);
-          },
+          }
         );
       } catch (error) {
         // eslint-disable-next-line no-console

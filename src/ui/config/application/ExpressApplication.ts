@@ -15,12 +15,13 @@ import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import swaggerDocument from 'ui/config/swagger.json';
 
 @injectable()
-export class ExpressApplication extends BaseApplication<express.Application> implements IApplication {
+export class ExpressApplication extends BaseApplication<express.Application>
+  implements IApplication {
   private readonly logger: ILogger;
 
   constructor(
-      @inject(APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
-      @inject(APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application,
+    @inject(APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
+    @inject(APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application
   ) {
     super(app);
     this.logger = logger;
@@ -46,21 +47,20 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
     this.logger.initialize();
     morgan.token(
       'body',
-      (req): string => `\nREQUEST BODY: ${JSON.stringify(req.body)}`,
+      (req): string => `\nREQUEST BODY: ${JSON.stringify(req.body)}`
     ); // TODO you may consider what you want to log on production
     // TODO keep in mind to obfuscate sensitive data if you want to log request or response bodies
     // TODO format can be moved to some other place for easier configuration
     this.app.use(
       morgan(
         ':method :url HTTP/:http-version :status :response-time ms :referrer :user-agent - :body',
-        { stream: this.logger },
-      ),
+        { stream: this.logger }
+      )
     ); // TODO Move 'combined' to const
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  public initializeRoutes(): void {
-  }
+  public initializeRoutes(): void {}
 
   public initializeHandlers(): void {
     // // TODO Export handlers to separate files and apply them here
@@ -89,7 +89,11 @@ export class ExpressApplication extends BaseApplication<express.Application> imp
 
     if (SWAGGER_HOST) {
       swaggerDocument.host = SWAGGER_HOST;
-      this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+      this.app.use(
+        '/api-docs',
+        swaggerUi.serve,
+        swaggerUi.setup(swaggerDocument)
+      );
     }
   }
 }

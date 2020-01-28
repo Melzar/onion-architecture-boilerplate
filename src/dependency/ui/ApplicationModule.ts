@@ -38,31 +38,38 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideExpress(bind: interfaces.Bind): void {
-    bind<express.Application>(APPLICATION_IDENTIFIERS.EXPRESS).toConstantValue(express());
+    bind<express.Application>(APPLICATION_IDENTIFIERS.EXPRESS).toConstantValue(
+      express()
+    );
   }
 
   private provideLogger(bind: interfaces.Bind): void {
-    bind<Logger>(APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(createLogger({
-      exitOnError: false,
-      level: LOG_LEVEL,
-    }));
+    bind<Logger>(APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(
+      createLogger({
+        exitOnError: false,
+        level: LOG_LEVEL,
+      })
+    );
   }
 
   private provideLoggerFormat(bind: interfaces.Bind): void {
-    bind<Format>(APPLICATION_IDENTIFIERS.LOGGER_FORMAT).toConstantValue(format.combine(
-      format.colorize({
-        all: true,
-      }),
-      format.label({
-        label: '[LOGGER]',
-      }),
-      format.timestamp({
-        format: 'YY-MM-DD HH:MM:SS',
-      }),
-      format.printf(
-        (info) => `${info.label} ${info.timestamp} [${info.level}] : ${info.message} `,
-      ),
-    ));
+    bind<Format>(APPLICATION_IDENTIFIERS.LOGGER_FORMAT).toConstantValue(
+      format.combine(
+        format.colorize({
+          all: true,
+        }),
+        format.label({
+          label: '[LOGGER]',
+        }),
+        format.timestamp({
+          format: 'YY-MM-DD HH:MM:SS',
+        }),
+        format.printf(
+          info =>
+            `${info.label} ${info.timestamp} [${info.level}] : ${info.message} `
+        )
+      )
+    );
   }
 
   private provideWinstonLogger(bind: interfaces.Bind): void {
@@ -70,7 +77,9 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideExpressApplication(bind: interfaces.Bind): void {
-    bind<IApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).to(ExpressApplication);
+    bind<IApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).to(
+      ExpressApplication
+    );
   }
 
   private provideJWTTokenUtil(bind: interfaces.Bind): void {
@@ -78,6 +87,8 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideJWTAuthenticationHandler(bind: interfaces.Bind): void {
-    bind<IAuthenticationHandler>(APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER).to(JWTAuthenticationHandler);
+    bind<IAuthenticationHandler>(
+      APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER
+    ).to(JWTAuthenticationHandler);
   }
 }

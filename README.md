@@ -35,7 +35,7 @@ This repository is a real life example of Onion Architecture with use of `Node.j
 1. Multiple environment setup
 2. DB Agnostic setup, supports multiple datasource
 3. Infrastructure -> Domain Mapping ( more TODO )
-4. Migrations, Fixtures ( example TODO )    
+4. Migrations, Fixtures, Seeds   
 5. Multiple API versions support             
 
 ##### Reference
@@ -96,7 +96,6 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 
 ### STILL TODO
 
-* Improve Eslint and introduce prettier
 * Provide more complex examples working with repositories - ( working with transactions etc )
 * Provide examples for UI mappers and explain approach
 * Prepare FP version of architecture
@@ -116,4 +115,4 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
   `https://github.com/w3tecch/typeorm-seeding/pull/18`
 
 * To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
-`https://github.com/OAI/OpenAPI-Specification/issues/583#issuecomment-267554000`
+  `https://github.com/OAI/OpenAPI-Specification/issues/583#issuecomment-267554000`

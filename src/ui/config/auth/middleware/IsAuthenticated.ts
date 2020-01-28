@@ -6,12 +6,12 @@ import { interfaces } from 'inversify-express-utils';
 export const isAuthenticated = (config?: { role: string }) => async (
   req: express.Request,
   res: express.Response,
-  next: express.NextFunction,
+  next: express.NextFunction
 ): Promise<void> => {
   // SOURCE: https://github.com/inversify/InversifyJS/issues/673
   const httpContext: interfaces.HttpContext = Reflect.getMetadata(
     'inversify-express-utils:httpcontext',
-    req,
+    req
   );
 
   // TODO SIMPLIFY IT

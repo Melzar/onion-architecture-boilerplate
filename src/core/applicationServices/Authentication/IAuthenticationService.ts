@@ -2,9 +2,7 @@ import { AuthenticationRequest } from 'core/domain/Authentication/Authentication
 import { User } from 'core/domain/User';
 
 export interface IAuthenticationService {
+  verifyCredentials(request: AuthenticationRequest): Promise<User | undefined>;
 
-    verifyCredentials(request: AuthenticationRequest): Promise<User | undefined>;
-
-    signUp(): void;
-
+  signUp(): void;
 }

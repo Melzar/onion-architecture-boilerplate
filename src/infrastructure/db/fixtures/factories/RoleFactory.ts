@@ -4,7 +4,6 @@ import * as Faker from 'faker';
 import { Role } from 'infrastructure/db/entities/Role';
 import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
 
-
 define(Role, (faker: typeof Faker) => {
   const role = new Role();
 

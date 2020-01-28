@@ -12,16 +12,15 @@ import { AuthenticationRequest } from 'core/domain/Authentication/Authentication
 @injectable()
 export class AuthenticationService implements IAuthenticationService {
   constructor(
-        @inject(REPOSITORY_IDENTIFIERS.USER_REPOSITORY) private readonly repository: IUserRepository,
+    @inject(REPOSITORY_IDENTIFIERS.USER_REPOSITORY)
+    private readonly repository: IUserRepository
   ) {}
 
   async verifyCredentials(request: AuthenticationRequest) {
     const user = await this.repository.findUserByEmail(request.email); // TODO temporary should be handled with RO
-    const {
-      password,
-    } = request;
+    const { password } = request;
 
-    if (!user || !await compare(password, user?.password || '')) {
+    if (!user || !(await compare(password, user?.password || ''))) {
       return undefined;
     }
 
@@ -29,14 +28,6 @@ export class AuthenticationService implements IAuthenticationService {
   }
 
   signUp(): void {
-    this.repository.addUser(new User(
-      0,
-      '',
-      '',
-      'Admin',
-      '',
-      '',
-      0,
-    ));
+    this.repository.addUser(new User(0, '', '', 'Admin', '', '', 0));
   }
 }

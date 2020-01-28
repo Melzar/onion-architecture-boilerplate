@@ -9,7 +9,8 @@ import { IRepository } from 'infrastructure/repository/common/IRepository';
 import { Query } from 'infrastructure/repository/common/Query';
 
 @injectable()
-export abstract class DbRepository<E> extends AbstractRepository<E> implements IRepository<E, Repository<E>> {
+export abstract class DbRepository<E> extends AbstractRepository<E>
+  implements IRepository<E, Repository<E>> {
   protected constructor(protected readonly entity: ObjectType<E>) {
     super();
   }
@@ -35,35 +36,38 @@ export abstract class DbRepository<E> extends AbstractRepository<E> implements I
   }
 
   public async update(condition: string | number, data: E): Promise<boolean> {
-    return !!await getRepository(this.entity).update(condition, data);
+    return !!(await getRepository(this.entity).update(condition, data));
   }
 
-  public async updateAll(condition: string[] | number[], data: E): Promise<boolean> {
-    return !!await getRepository(this.entity).update(condition, data);
+  public async updateAll(
+    condition: string[] | number[],
+    data: E
+  ): Promise<boolean> {
+    return !!(await getRepository(this.entity).update(condition, data));
   }
 
   public async delete(condition: string | number): Promise<boolean> {
-    return !!await getRepository(this.entity).delete(condition);
+    return !!(await getRepository(this.entity).delete(condition));
   }
 
   public async deleteAll(condition: string[] | number[]): Promise<boolean> {
-    return !!await getRepository(this.entity).delete(condition);
+    return !!(await getRepository(this.entity).delete(condition));
   }
 
   public async remove(entity: E): Promise<boolean> {
-    return !!await getRepository(this.entity).remove(entity);
+    return !!(await getRepository(this.entity).remove(entity));
   }
 
   public async removeAll(entities: E[]): Promise<boolean> {
-    return !!await getRepository(this.entity).remove(entities);
+    return !!(await getRepository(this.entity).remove(entities));
   }
 
   public async save(entity: E): Promise<boolean> {
-    return !!await getRepository(this.entity).save(entity);
+    return !!(await getRepository(this.entity).save(entity));
   }
 
   public async saveAll(entities: E[]): Promise<boolean> {
-    return !!await getRepository(this.entity).save(entities);
+    return !!(await getRepository(this.entity).save(entities));
   }
 
   public custom(): Repository<E> {

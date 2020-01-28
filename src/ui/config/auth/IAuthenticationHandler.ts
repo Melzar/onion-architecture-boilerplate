@@ -2,5 +2,7 @@ import { AuthenticationRequest } from 'core/domain/Authentication/Authentication
 import { Authentication } from 'core/domain/Authentication/Authentication';
 
 export interface IAuthenticationHandler {
-    authenticate(request: AuthenticationRequest): Promise<Authentication | undefined>;
+  authenticate(
+    request: AuthenticationRequest
+  ): Promise<Authentication | undefined>;
 }

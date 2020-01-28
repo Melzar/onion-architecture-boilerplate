@@ -12,47 +12,43 @@ import { User } from 'core/domain/User';
 
 @injectable()
 export class ApplicationAuthProvider implements interfaces.AuthProvider {
-    @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
-    private readonly authenticationService!: AuthenticationService;
+  @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
+  private readonly authenticationService!: AuthenticationService;
 
-    @inject(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)
-    private readonly jwtTokenUtil!: JWTTokenUtil;
+  @inject(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)
+  private readonly jwtTokenUtil!: JWTTokenUtil;
 
-    public async getUser(
-      req: Request,
-    ): Promise<interfaces.Principal> {
-      const token = this.jwtTokenUtil.getTokenFromHeaders(req.headers);
-      if (!token) {
-        return new Principal(undefined);
-      }
-      const tokenData = await this.jwtTokenUtil.decodeToken(token, APP_TOKEN_SECRET);
+  public async getUser(req: Request): Promise<interfaces.Principal> {
+    const token = this.jwtTokenUtil.getTokenFromHeaders(req.headers);
+    if (!token) {
+      return new Principal(undefined);
+    }
+    const tokenData = await this.jwtTokenUtil.decodeToken(
+      token,
+      APP_TOKEN_SECRET
+    );
 
-      // TODO Add double check and fetch user for verification
+    // TODO Add double check and fetch user for verification
 
-      if (!tokenData) {
-        return new Principal(undefined);
-      }
+    if (!tokenData) {
+      return new Principal(undefined);
+    }
 
-      const {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-        // @ts-ignore
-        user: { // TODO temporary ignore
-          id,
-          firstName,
-          role,
-        },
-      } = tokenData;
-
-      const principal = new Principal(new User( // TODO CONSIDER HAVING SEPARATE OBJECT FOR USER AND THIS LAYER HERE
+    const {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      // @ts-ignore
+      user: {
+        // TODO temporary ignore
         id,
         firstName,
-        '',
         role,
-        '',
-        '',
-        0,
-      ));
+      },
+    } = tokenData;
 
-      return principal;
-    }
+    const principal = new Principal(
+      new User(id, firstName, '', role, '', '', 0) // TODO CONSIDER HAVING SEPARATE OBJECT FOR USER AND THIS LAYER HERE
+    );
+
+    return principal;
+  }
 }
