@@ -18,10 +18,9 @@
     "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n"
   },
   "lint-staged": {
-    "src/**/*.{ts}": [
+    "src/**/*.ts": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "husky": {
