@@ -1,13 +1,9 @@
 import { interfaces } from 'inversify-express-utils';
 
-import { User } from 'core/domain/User'; // TODO It would be better to have separate ui models and map them from domain
+import { User } from 'ui/common/models/User';
 
 export class Principal implements interfaces.Principal {
-  public details: User;
-
-  public constructor(details: any) {
-    this.details = details;
-  }
+  public constructor(public readonly details: User | undefined) {}
 
   public isAuthenticated(): Promise<boolean> {
     return Promise.resolve(!!this.details);
@@ -18,6 +14,6 @@ export class Principal implements interfaces.Principal {
   }
 
   public isInRole(role: string): Promise<boolean> {
-    return Promise.resolve(role === this.details.role);
+    return Promise.resolve(role === this.details?.role);
   }
 }

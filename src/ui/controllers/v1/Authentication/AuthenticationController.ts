@@ -12,11 +12,11 @@ import { IAuthenticationService } from 'core/applicationServices/Authentication/
 import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { isAuthenticated } from 'ui/config/auth/middleware/IsAuthenticated';
-import { AuthenticationRequestBody } from 'ui/controllers/v1/Authentication/requests/AuthenticationRequestBody';
+import { AuthenticationRequestBody } from 'ui/common/requests/AuthenticationRequestBody';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
-import { AuthenticationRequest } from 'core/domain/Authentication/AuthenticationRequest';
-import { USER_ROLE } from 'core/domain/enum/UserRole';
+import { AuthenticationRequest } from 'core/common/requests/AuthenticationRequest';
+import { USER_ROLE } from 'core/domain/User/UserRole';
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 
 @controller('/v1/auth')

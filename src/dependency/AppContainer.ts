@@ -9,6 +9,7 @@ import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureMo
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UIModule } from 'dependency/ui/UIModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -31,6 +32,8 @@ export class AppContainer extends BaseContainer {
     this.provideApplicationModule();
 
     this.provideInversifyExpressApplication();
+
+    this.provideUIModule();
   }
 
   private provideDatabaseModule(): void {
@@ -47,6 +50,10 @@ export class AppContainer extends BaseContainer {
 
   private provideAuthenticationModule(): void {
     this.load(new AuthenticationModule());
+  }
+
+  private provideUIModule(): void {
+    this.load(new UIModule());
   }
 
   private provideInversifyExpressApplication(): void {

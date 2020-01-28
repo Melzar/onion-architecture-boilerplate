@@ -1,4 +1,4 @@
-import { User } from 'core/domain/User';
+import { User } from 'core/domain/User/User';
 
 export interface IUserRepository {
   findUser(id: string): Promise<User | undefined>;

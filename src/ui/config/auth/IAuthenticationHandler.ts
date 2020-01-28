@@ -1,5 +1,5 @@
-import { AuthenticationRequest } from 'core/domain/Authentication/AuthenticationRequest';
-import { Authentication } from 'core/domain/Authentication/Authentication';
+import { AuthenticationRequest } from 'core/common/requests/AuthenticationRequest';
+import { Authentication } from 'ui/config/auth/model/Authentication';
 
 export interface IAuthenticationHandler {
   authenticate(

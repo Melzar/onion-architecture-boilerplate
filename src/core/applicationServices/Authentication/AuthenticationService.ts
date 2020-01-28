@@ -6,8 +6,8 @@ import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 
 import { IUserRepository } from 'core/domainServices/IUserRepository';
-import { User } from 'core/domain/User';
-import { AuthenticationRequest } from 'core/domain/Authentication/AuthenticationRequest';
+import { User } from 'core/domain/User/User';
+import { AuthenticationRequest } from 'core/common/requests/AuthenticationRequest';
 
 @injectable()
 export class AuthenticationService implements IAuthenticationService {
@@ -24,7 +24,7 @@ export class AuthenticationService implements IAuthenticationService {
       return undefined;
     }
 
-    return new User(user.id, user.firstName, user.email, user.role);
+    return user;
   }
 
   signUp(): void {

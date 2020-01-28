@@ -1,3 +1,8 @@
+export const UI_IDENTIFIERS = {
+  UI_MAPPER: Symbol.for('UIMapper'),
+  USER_MAPPER: Symbol.for('UserUIMapper'),
+};
+
 export const APPLICATION_IDENTIFIERS = {
   JWT_AUTHENTICATION_HANDLER: Symbol.for('JWTAuthenticationHandler'),
   EXPRESS: Symbol.for('Express'),
@@ -9,4 +14,8 @@ export const APPLICATION_IDENTIFIERS = {
   LOGGER_FORMAT: Symbol.for('WinstonFormat'),
   LOGGER_WINSTON: Symbol.for('WinstonLogger'),
   ROOT_ROUTER: Symbol.for('RootRouter'),
+};
+
+export const UI_MAPPINGS_IDENTIFIERS = {
+  USER_UI: Symbol.for('UserUI'),
 };

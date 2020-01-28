@@ -1,6 +1,6 @@
-export const INFRASTRUCTURE_SYMBOLS = {
+export const INFRASTRUCTURE_IDENTIFIERS = {
   DB_MAPPER: Symbol.for('DBMapper'),
-  USER_MAPPER: Symbol.for('UserMapper'),
+  USER_MAPPER: Symbol.for('UserEntityMapper'),
 };
 
 export const DATABASE_IDENTIFIERS = {
@@ -9,5 +9,4 @@ export const DATABASE_IDENTIFIERS = {
 
 export const DATABASE_MAPPING_IDENTIFIERS = {
   USER_ENTITY: Symbol.for('UserEntity'),
-  USER_DOMAIN: Symbol.for('UserDomain'),
 };

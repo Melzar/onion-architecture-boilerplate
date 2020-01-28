@@ -3,7 +3,8 @@ import { inject, injectable } from 'inversify';
 import { EntityRepository } from 'typeorm';
 
 import { IUserRepository } from 'core/domainServices/IUserRepository';
-import { User } from 'core/domain/User';
+import { User } from 'core/domain/User/User';
+import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { User as UserEntity } from 'infrastructure/db/entities/User';
 import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
@@ -11,7 +12,7 @@ import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
 import { DbRepository } from 'infrastructure/repository/DbRepository';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
-  INFRASTRUCTURE_SYMBOLS,
+  INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
 
 @injectable()
@@ -19,7 +20,7 @@ import {
 export class DbUserRepository extends DbRepository<UserEntity>
   implements IUserRepository {
   constructor(
-    @inject(INFRASTRUCTURE_SYMBOLS.DB_MAPPER)
+    @inject(INFRASTRUCTURE_IDENTIFIERS.DB_MAPPER)
     private readonly dbMapper: DBMapper
   ) {
     super(UserEntity);
@@ -38,7 +39,7 @@ export class DbUserRepository extends DbRepository<UserEntity>
       mappedResult = this.dbMapper.mapper.map<UserEntity, User>(
         {
           source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
-          destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
+          destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
         },
         result
       );
@@ -57,7 +58,7 @@ export class DbUserRepository extends DbRepository<UserEntity>
     return this.dbMapper.mapper.map<UserEntity, User>(
       {
         source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
-        destination: DATABASE_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
       },
       result[0]
     );

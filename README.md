@@ -34,7 +34,7 @@ This repository is a real life example of Onion Architecture with use of `Node.j
 
 1. Multiple environment setup
 2. DB Agnostic setup, supports multiple datasource
-3. Infrastructure -> Domain Mapping ( more TODO )
+3. Infrastructure -> Domain Mapping -> UI Mapping
 4. Migrations, Fixtures, Seeds   
 5. Multiple API versions support             
 
@@ -94,10 +94,51 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 1. Prepare tests database first ( `SETUP SECTION` )
 2. Run `Yarn test` - should run mocha tests in parallel when available
 
+### APPLIED CONCEPTS
+
+TODO
+
+#### Request Object
+
+TODO
+
+#### Mapper
+
+TODO
+
+##### Infrastructure -> Domain Mapper
+
+This mapper is prepared for mapping data source format data into domain format. Simplest example would be that, in 
+database we store `first_name` and `last_name` in separate columns, but in domain we need to have field `name` which
+is combined value of previously mentioned columns. In that case we define domain model with required fields and new `name` field.
+In Mapper we can perform merging of those 2 values. Thanks to that we can have separation
+between definition of Entity and Domain, and also we have just plain values in domain object instance without
+any overhead related to persistence data etc, which for sure would be stored by Entity object instance. We can also calculate
+simple values in mappers etc. 
+
+##### Domain -> UI Mapper 
+
+This mapper is for preparing Domain data format into specific ui data format. Sometimes we may need to perform
+some logic in domain services on domain object format but we would like to make a response in totally different format.
+For example we may fetch data as array from database, perform operations in services on array but on ui, we would like to
+group array elements into map structure in different format. In repository we mapped `User` domain object into `User` ui object
+where `UI` object do not contain password field and contains only required fields for authentication purposes.
+
+#### Migrations
+
+Used for managing database changes. In repository we generate migrations based on entity changes. So we can
+add new column on entity and then just use one command to generate required migration. It's recommended to split database related
+changes into multiple migrations instead creating one migration for all related feature changes. For example it's better to
+have separate migration for creating `x` table and separate migration for adding / updating table columns definition to
+table `y`.
+
+#### Seeds
+
+TODO
+
 ### STILL TODO
 
 * Provide more complex examples working with repositories - ( working with transactions etc )
-* Provide examples for UI mappers and explain approach
 * Prepare FP version of architecture
 * Introduce Graphql and integration with inversify-graphQL
 * Add fixtures readme and examples with tests integration

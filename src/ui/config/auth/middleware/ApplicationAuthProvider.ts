@@ -4,11 +4,11 @@ import { Request } from 'express';
 
 import { Principal } from 'ui/config/auth/model/Principal';
 import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
-import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { APP_TOKEN_SECRET } from 'ui/config/consts/variables';
+
+import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
-import { User } from 'core/domain/User';
 
 @injectable()
 export class ApplicationAuthProvider implements interfaces.AuthProvider {
@@ -34,21 +34,10 @@ export class ApplicationAuthProvider implements interfaces.AuthProvider {
       return new Principal(undefined);
     }
 
-    const {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      user: {
-        // TODO temporary ignore
-        id,
-        firstName,
-        role,
-      },
-    } = tokenData;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
+    const { user } = tokenData; // TODO temporary
 
-    const principal = new Principal(
-      new User(id, firstName, '', role, '', '', 0) // TODO CONSIDER HAVING SEPARATE OBJECT FOR USER AND THIS LAYER HERE
-    );
-
-    return principal;
+    return new Principal(user);
   }
 }
