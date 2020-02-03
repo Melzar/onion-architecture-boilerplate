@@ -1,6 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
 
 import { Role } from 'infrastructure/db/entities/Role';
+import { Equipment } from 'infrastructure/db/entities/Equipment';
 
 @Entity()
 export class User {
@@ -27,4 +34,10 @@ export class User {
     role => role.user
   )
   role!: Role;
+
+  @OneToMany(
+    () => Equipment,
+    equipment => equipment.user
+  )
+  equipment!: Equipment;
 }

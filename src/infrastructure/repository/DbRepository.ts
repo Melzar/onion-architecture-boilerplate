@@ -16,7 +16,7 @@ export abstract class DbRepository<E> extends AbstractRepository<E>
   }
 
   public async find(id: string): Promise<E | undefined> {
-    return this.repository.findOne(id);
+    return getRepository(this.entity).findOne(id);
   }
 
   public findBy(condition: Query<E>): Promise<E[]> {

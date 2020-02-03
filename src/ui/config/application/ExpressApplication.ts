@@ -10,7 +10,7 @@ import { IApplication } from 'ui/config/application/IApplication';
 import { BaseApplication } from 'ui/config/application/BaseApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { SWAGGER_HOST } from 'ui/config/consts/variables';
-import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 import swaggerDocument from 'ui/config/swagger.json';
 
@@ -20,8 +20,8 @@ export class ExpressApplication extends BaseApplication<express.Application>
   private readonly logger: ILogger;
 
   constructor(
-    @inject(APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
-    @inject(APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application
+    @inject(UI_APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
+    @inject(UI_APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application
   ) {
     super(app);
     this.logger = logger;

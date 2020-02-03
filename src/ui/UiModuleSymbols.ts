@@ -3,12 +3,12 @@ export const UI_IDENTIFIERS = {
   USER_MAPPER: Symbol.for('UserUIMapper'),
 };
 
-export const APPLICATION_IDENTIFIERS = {
-  JWT_AUTHENTICATION_HANDLER: Symbol.for('JWTAuthenticationHandler'),
+export const UI_APPLICATION_IDENTIFIERS = {
   EXPRESS: Symbol.for('Express'),
   EXPRESS_APPLICATION: Symbol.for('ExpressApplication'),
   INVERSIFY_APPLICATION: Symbol.for('InversifyExpressApplication'),
   IS_AUTHENTICATED: Symbol.for('ApplicationAuthProvider'),
+  JWT_AUTHENTICATION_HANDLER: Symbol.for('JWTAuthenticationHandler'),
   JWT_TOKEN_UTIL: Symbol.for('JWTTokenUtil'),
   LOGGER: Symbol.for('Logger'),
   LOGGER_FORMAT: Symbol.for('WinstonFormat'),

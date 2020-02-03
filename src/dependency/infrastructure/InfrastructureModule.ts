@@ -8,6 +8,8 @@ import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleS
 
 import { UserEntityToUserDomainMapper } from 'infrastructure/db/mappings/User/UserEntityToUserDomainMapper';
 import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
+import { RoleEntityToRoleDomainMapper } from 'infrastructure/db/mappings/Role/RoleEntityToRoleDomainMapper';
+import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/db/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
 
 export class InfrastructureModule extends BaseModule {
   constructor() {
@@ -17,7 +19,10 @@ export class InfrastructureModule extends BaseModule {
   }
 
   public init(bind: interfaces.Bind): void {
+    this.provideRoleMapper(bind);
     this.provideUserMapper(bind);
+    this.provideEquipmentMapper(bind);
+
     this.provideDBMapper(bind);
   }
 
@@ -28,6 +33,18 @@ export class InfrastructureModule extends BaseModule {
   private provideUserMapper(bind: interfaces.Bind): void {
     bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.USER_MAPPER).to(
       UserEntityToUserDomainMapper
+    );
+  }
+
+  private provideRoleMapper(bind: interfaces.Bind): void {
+    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.ROLE_MAPPER).to(
+      RoleEntityToRoleDomainMapper
+    );
+  }
+
+  private provideEquipmentMapper(bind: interfaces.Bind): void {
+    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER).to(
+      EquipmentEntityToEquipmentDomainMapper
     );
   }
 }

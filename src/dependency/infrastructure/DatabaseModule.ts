@@ -6,10 +6,14 @@ import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
 import { BaseOrm } from 'infrastructure/db/orm/BaseOrm';
 
 import { DbUserRepository } from 'infrastructure/repository/DbUserRepository';
+import { DbRoleRepository } from 'infrastructure/repository/DbRoleRepository';
+import { DbEquipmentRepository } from 'infrastructure/repository/DbEquipmentRepository';
 import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 
-import { IUserRepository } from 'core/domainServices/IUserRepository';
-import { REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { IUserRepository } from 'core/domainServices/User/IUserRepository';
+import { DOMAIN_REPOSITORY_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
+import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
 
 export class DatabaseModule extends BaseModule {
   constructor() {
@@ -21,6 +25,8 @@ export class DatabaseModule extends BaseModule {
   public init(bind: interfaces.Bind): void {
     this.provideOrm(bind);
 
+    this.provideDbEquipmentRepository(bind);
+    this.provideDbRoleRepository(bind);
     this.provideDbUserRepository(bind);
   }
 
@@ -29,8 +35,20 @@ export class DatabaseModule extends BaseModule {
   }
 
   private provideDbUserRepository(bind: interfaces.Bind): void {
-    bind<IUserRepository>(REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(
+    bind<IUserRepository>(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(
       DbUserRepository
+    );
+  }
+
+  private provideDbEquipmentRepository(bind: interfaces.Bind): void {
+    bind<IEquipmentRepository>(
+      DOMAIN_REPOSITORY_IDENTIFIERS.EQUIPMENT_REPOSITORY
+    ).to(DbEquipmentRepository);
+  }
+
+  private provideDbRoleRepository(bind: interfaces.Bind): void {
+    bind<IRoleRepository>(DOMAIN_REPOSITORY_IDENTIFIERS.ROLE_REPOSITORY).to(
+      DbRoleRepository
     );
   }
 }

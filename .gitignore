@@ -68,3 +68,6 @@ src/@types/
 dist
 
 ormconfig.js
+
+# stryker temp files
+.stryker-tmp

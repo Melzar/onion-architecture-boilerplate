@@ -9,10 +9,10 @@ export class Role {
   id!: number;
 
   @Column({
-    type: 'enum',
-    enum: USER_ROLE,
     default: USER_ROLE.MEMBER,
+    enum: USER_ROLE,
     nullable: false,
+    type: 'enum',
   })
   name!: string;
 

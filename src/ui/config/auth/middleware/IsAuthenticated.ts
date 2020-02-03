@@ -15,7 +15,6 @@ export const isAuthenticated = (config?: { role: string }) => async (
   );
 
   // TODO SIMPLIFY IT
-
   if (!httpContext.user) {
     const error = { status: httpStatus.UNAUTHORIZED };
     res.status(httpStatus.UNAUTHORIZED).json(error);

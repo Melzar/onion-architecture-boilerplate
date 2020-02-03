@@ -9,25 +9,43 @@ import {
 } from 'inversify-express-utils';
 
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
-import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { isAuthenticated } from 'ui/config/auth/middleware/IsAuthenticated';
-import { AuthenticationRequestBody } from 'ui/common/requests/AuthenticationRequestBody';
-import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
-
-import { AuthenticationRequest } from 'core/common/requests/AuthenticationRequest';
-import { USER_ROLE } from 'core/domain/User/UserRole';
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
+import { AuthenticationRequestBody } from 'ui/controllers/v1/Authentication/requests/AuthenticationRequestBody';
+import { SignUpRequestBody } from 'ui/controllers/v1/Authentication/requests/SignupRequestBody';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+
+import { AuthenticationRequest } from 'core/applicationServices/Authentication/requests/AuthenticationRequest';
+import { USER_ROLE } from 'core/domain/User/UserRole';
+import { SignUpRequest } from 'core/applicationServices/Authentication/requests/SignUpRequest';
+import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 @controller('/v1/auth')
 export class AuthenticationController extends BaseHttpController {
   constructor(
-    @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
+    @inject(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
     private readonly authenticationService: IAuthenticationService,
-    @inject(APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER)
+    @inject(UI_APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER)
     private readonly authenticationHandler: IAuthenticationHandler
   ) {
     super();
+  }
+
+  @httpPost('/signup')
+  public async create(
+    @requestBody()
+    { age, email, firstName, lastName, password }: SignUpRequestBody
+  ): Promise<results.JsonResult> {
+    await this.authenticationService.signUp(
+      new SignUpRequest(firstName, email, lastName, password, age)
+    );
+    return this.json({ status: 'OK' }, httpStatus.OK);
+  }
+
+  @httpPost('/logout', isAuthenticated({ role: USER_ROLE.MEMBER }))
+  public async delete() {
+    return this.json({ status: 'OK' }, httpStatus.OK);
   }
 
   @httpPost('/')
@@ -37,23 +55,14 @@ export class AuthenticationController extends BaseHttpController {
     const authentication = await this.authenticationHandler.authenticate(
       new AuthenticationRequest(email, password)
     );
+
     if (authentication) {
-      // TODO Add response objects to show example of ui mapping
       return this.json(authentication, httpStatus.OK);
     }
     return this.json(
       { code: 'UNAUTHORIZED_CODE', message: '' },
       httpStatus.UNAUTHORIZED
-    ); // TODO Example error message for error codes
-  }
-
-  @httpPost('/signup')
-  public async create(): Promise<results.JsonResult> {
-    return this.json({ status: 'OK' }, httpStatus.OK);
-  }
-
-  @httpPost('/logout', isAuthenticated({ role: USER_ROLE.MEMBER })) // TODO just for manual testing - expected 401
-  public async delete() {
-    return this.json({ status: 'OK' }, httpStatus.OK);
+    );
+    // TODO Example error message for error codes
   }
 }

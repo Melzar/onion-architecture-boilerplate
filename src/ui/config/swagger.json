@@ -88,10 +88,106 @@
         "produces": [
           "application/json"
         ],
-
         "responses": {
           "200": {
             "description": "Returns success status"
+          }
+        }
+      }
+    },
+    "/auth/signup": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "description": "SignUp endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SignUpRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success status"
+          }
+        }
+      }
+    },
+    "/equipment/create": {
+      "post": {
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "equipment"
+        ],
+        "description": "Equipment endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateEquipmentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns success status"
+          }
+        }
+      }
+    },
+    "/user": {
+      "delete": {
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": [
+          "user"
+        ],
+        "description": "User endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserDeleteRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns authentication token"
           }
         }
       }
@@ -113,6 +209,39 @@
         "password": {
           "type": "string"
         }
+      }
+    },
+    "CreateEquipmentRequest": {
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "SignUpRequest": {
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "age": {
+          "type": "number"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      }
+    },
+    "UserDeleteRequest": {
+      "properties": {
+         "id": {
+           "type": "string"
+         }
       }
     }
   }

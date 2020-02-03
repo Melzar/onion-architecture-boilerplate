@@ -9,7 +9,7 @@ import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ILogger } from 'ui/config/logger/ILogger';
 import { WinstonLogger } from 'ui/config/logger/WinstonLogger';
 import { LOG_LEVEL } from 'ui/config/consts/variables';
-import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 /**
  @description Need to import it once for inversify express utils - if you find better way to do it please share
  @link https://github.com/inversify/inversify-express-utils#important-information-about-the-controller-decorator
@@ -38,13 +38,13 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideExpress(bind: interfaces.Bind): void {
-    bind<express.Application>(APPLICATION_IDENTIFIERS.EXPRESS).toConstantValue(
-      express()
-    );
+    bind<express.Application>(
+      UI_APPLICATION_IDENTIFIERS.EXPRESS
+    ).toConstantValue(express());
   }
 
   private provideLogger(bind: interfaces.Bind): void {
-    bind<Logger>(APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(
+    bind<Logger>(UI_APPLICATION_IDENTIFIERS.LOGGER).toConstantValue(
       createLogger({
         exitOnError: false,
         level: LOG_LEVEL,
@@ -53,7 +53,7 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideLoggerFormat(bind: interfaces.Bind): void {
-    bind<Format>(APPLICATION_IDENTIFIERS.LOGGER_FORMAT).toConstantValue(
+    bind<Format>(UI_APPLICATION_IDENTIFIERS.LOGGER_FORMAT).toConstantValue(
       format.combine(
         format.colorize({
           all: true,
@@ -73,22 +73,24 @@ export class ApplicationModule extends BaseModule {
   }
 
   private provideWinstonLogger(bind: interfaces.Bind): void {
-    bind<ILogger>(APPLICATION_IDENTIFIERS.LOGGER_WINSTON).to(WinstonLogger);
+    bind<ILogger>(UI_APPLICATION_IDENTIFIERS.LOGGER_WINSTON).to(WinstonLogger);
   }
 
   private provideExpressApplication(bind: interfaces.Bind): void {
-    bind<IApplication>(APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).to(
+    bind<IApplication>(UI_APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION).to(
       ExpressApplication
     );
   }
 
   private provideJWTTokenUtil(bind: interfaces.Bind): void {
-    bind<JWTTokenUtil>(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL).to(JWTTokenUtil);
+    bind<JWTTokenUtil>(UI_APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL).to(
+      JWTTokenUtil
+    );
   }
 
   private provideJWTAuthenticationHandler(bind: interfaces.Bind): void {
     bind<IAuthenticationHandler>(
-      APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER
+      UI_APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER
     ).to(JWTAuthenticationHandler);
   }
 }

@@ -1,1 +1,3 @@
 src/infrastructure/db/migrations
+tests
+stryker.conf.js

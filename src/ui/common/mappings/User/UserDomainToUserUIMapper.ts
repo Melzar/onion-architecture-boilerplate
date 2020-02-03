@@ -15,8 +15,8 @@ export class UserDomainToUserUIMapper implements IMapper {
   configureMappings(mapper: Mapper): void {
     mapper.createMap<User, UserUI>(
       {
-        source: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
         destination: UI_MAPPINGS_IDENTIFIERS.USER_UI,
+        source: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
       },
       User
     );

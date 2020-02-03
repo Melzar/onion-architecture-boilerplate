@@ -41,7 +41,7 @@
             }
         ],
         "class-methods-use-this": "off",
-        "max-len": ["error", { "code": 120 }],
+        "max-len": "off",
         "no-unused-vars": "error",
         "no-console": "error",
         "no-undef": "error",

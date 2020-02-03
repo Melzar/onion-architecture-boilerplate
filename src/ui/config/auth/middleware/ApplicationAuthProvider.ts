@@ -4,18 +4,18 @@ import { Request } from 'express';
 
 import { Principal } from 'ui/config/auth/model/Principal';
 import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
-import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { APP_TOKEN_SECRET } from 'ui/config/consts/variables';
 
-import { APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
 
 @injectable()
 export class ApplicationAuthProvider implements interfaces.AuthProvider {
-  @inject(APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
+  @inject(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
   private readonly authenticationService!: AuthenticationService;
 
-  @inject(APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)
+  @inject(UI_APPLICATION_IDENTIFIERS.JWT_TOKEN_UTIL)
   private readonly jwtTokenUtil!: JWTTokenUtil;
 
   public async getUser(req: Request): Promise<interfaces.Principal> {
@@ -27,8 +27,6 @@ export class ApplicationAuthProvider implements interfaces.AuthProvider {
       token,
       APP_TOKEN_SECRET
     );
-
-    // TODO Add double check and fetch user for verification
 
     if (!tokenData) {
       return new Principal(undefined);

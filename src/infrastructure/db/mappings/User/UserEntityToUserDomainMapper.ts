@@ -17,8 +17,8 @@ export class UserEntityToUserDomainMapper implements IMapper {
     mapper
       .createMap<UserEntity, User>(
         {
-          source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
           destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+          source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
         },
         User
       )

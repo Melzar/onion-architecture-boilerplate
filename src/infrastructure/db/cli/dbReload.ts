@@ -23,14 +23,14 @@ yargs
     handler: () => {
       try {
         const connectionOptions: ConnectionOptions = {
-          type,
-          host,
-          port,
-          username,
-          password,
           database,
+          host,
           logging,
           migrations,
+          password,
+          port,
+          type,
+          username,
         };
         createConnection(connectionOptions).then(
           async (connection: Connection) => {

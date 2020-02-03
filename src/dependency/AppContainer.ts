@@ -2,14 +2,14 @@ import { InversifyExpressServer } from 'inversify-express-utils';
 
 import { BaseContainer } from 'dependency/BaseContainer';
 import { DatabaseModule } from 'dependency/infrastructure/DatabaseModule';
-import { AuthenticationModule } from 'dependency/core/AuthenticationModule';
 import { ApplicationModule } from 'dependency/ui/ApplicationModule';
 import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureModule';
 
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
-import { APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { UIModule } from 'dependency/ui/UIModule';
+import { CoreModule } from 'dependency/core/CoreModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -27,7 +27,7 @@ export class AppContainer extends BaseContainer {
 
     this.provideInfrastructureModule();
 
-    this.provideAuthenticationModule();
+    this.provideCoreModule();
 
     this.provideApplicationModule();
 
@@ -48,8 +48,8 @@ export class AppContainer extends BaseContainer {
     this.load(new ApplicationModule());
   }
 
-  private provideAuthenticationModule(): void {
-    this.load(new AuthenticationModule());
+  private provideCoreModule(): void {
+    this.load(new CoreModule());
   }
 
   private provideUIModule(): void {
@@ -58,14 +58,14 @@ export class AppContainer extends BaseContainer {
 
   private provideInversifyExpressApplication(): void {
     this.bind<InversifyExpressServer>(
-      APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION
+      UI_APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION
     ).toConstantValue(
       new InversifyExpressServer(
         this,
         null,
         { rootPath: '/' },
         this.get<ExpressApplication>(
-          APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
+          UI_APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
         ).getApplication(),
         ApplicationAuthProvider
       )

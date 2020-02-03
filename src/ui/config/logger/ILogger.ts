@@ -1,5 +1,4 @@
 export interface ILogger {
-  write(message: string): void;
-
   initialize(): void;
+  write(message: string): void;
 }

@@ -1,9 +1,11 @@
 import { interfaces } from 'inversify-express-utils';
 
-import { User } from 'ui/common/models/User';
-
 export class Principal implements interfaces.Principal {
-  public constructor(public readonly details: User | undefined) {}
+  public details: any;
+
+  public constructor(details: any) {
+    this.details = details;
+  }
 
   public isAuthenticated(): Promise<boolean> {
     return Promise.resolve(!!this.details);

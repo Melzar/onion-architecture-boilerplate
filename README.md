@@ -36,7 +36,7 @@ This repository is a real life example of Onion Architecture with use of `Node.j
 2. DB Agnostic setup, supports multiple datasource
 3. Infrastructure -> Domain Mapping -> UI Mapping
 4. Migrations, Fixtures, Seeds   
-5. Multiple API versions support             
+5. Multiple API versions support ( REST implementation )           
 
 ##### Reference
 
@@ -94,17 +94,24 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 1. Prepare tests database first ( `SETUP SECTION` )
 2. Run `Yarn test` - should run mocha tests in parallel when available
 
+#### Mutational Testing
+
+1. Read guide [here](https://stryker-mutator.io/stryker/quickstart) to setup global dependencies
+2. Run `stryker run` command
+
 ### APPLIED CONCEPTS
 
-TODO
+There are some universal concepts in programming ( designed patterns ) which are common for general engineering but
+it's not always obvious how to use environment specific concepts. In this boilerplate I'm going to show how to handle that.
 
 #### Request Object
 
-TODO
+Request object defines parameters / input to specific module input ( domain / infrastructure ), and holds
+required data which cannot be changed on the fly.
 
 #### Mapper
 
-TODO
+Simple concept where one module data structure is translated to another module
 
 ##### Infrastructure -> Domain Mapper
 
@@ -134,20 +141,20 @@ table `y`.
 
 #### Seeds
 
-TODO
+Used for local development or testing - it's just data for specific use cases which can be also used for dev
+environment where QA's can test specific endpoints or screens. It's also useful as start data for local development 
+especially when you are working as a full stack.
 
 ### STILL TODO
 
-* Provide more complex examples working with repositories - ( working with transactions etc )
-* Prepare FP version of architecture
-* Introduce Graphql and integration with inversify-graphQL
+* Cleanup controller methods ( paths, actions etc )
+* Provide future proof dependency module structure
+* Prepare FP version of architecture - separate repo
+* Introduce Graphql and integration with inversify-graphQL - separate repo
 * Add fixtures readme and examples with tests integration
 * Add unit tests examples for boilerplate
 * Add database tests examples
 * Resolve TODO's comments
-* Cleanup and see what can be moved to .env
-* Add mutational testing
-* Add mapping for Application core layer?
 * On complete update `CHANGELOG.MD` and tag v1
 
 ### KNOWN ISSUES
@@ -157,3 +164,6 @@ TODO
 
 * To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
   `https://github.com/OAI/OpenAPI-Specification/issues/583#issuecomment-267554000`
+
+* http context is empty in controllers, looks like http context is incorrectly injected into controller,
+  everything is fine though in middlewares
