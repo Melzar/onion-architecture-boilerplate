@@ -4,6 +4,12 @@
 
 This repository is a real life example of Onion Architecture with use of `Node.js / Express` and `Typescript`
 
+<p align="center">
+  <img src="https://docs.google.com/drawings/d/e/2PACX-1vQ5ps72uaZcEJzwnJbPhzUfEeBbN6CJ04j7hl2i3K2HHatNcsoyG2tgX2vnrN5xxDKLp5Jm5bzzmZdv/pub?w=960&h=657" alt="https://herbertograca.com" width="800" />
+</p>
+
+> This diagram belongs to https://herbertograca.com
+
 ##### Technologies used
 
 1. `Typescript` ( `v3.1.6 / 3.5.1` )
@@ -92,12 +98,12 @@ Update `swagger.json` file located at `ui > config` every time you apply changes
 ### TESTING
 
 1. Prepare tests database first ( `SETUP SECTION` )
-2. Run `Yarn test` - should run mocha tests in parallel when available
+2. Run `yarn test` - should run mocha tests in parallel
 
 #### Mutational Testing
 
 1. Read guide [here](https://stryker-mutator.io/stryker/quickstart) to setup global dependencies
-2. Run `stryker run` command
+2. Run `yarn test:mutate` command
 
 ### APPLIED CONCEPTS
 
@@ -145,15 +151,25 @@ Used for local development or testing - it's just data for specific use cases wh
 environment where QA's can test specific endpoints or screens. It's also useful as start data for local development 
 especially when you are working as a full stack.
 
+#### Tests parallelization
+
+TODO
+
+#### Mutational testing
+
+TODO
+
+#### Integration testing
+
+TODO
+
 ### STILL TODO
 
 * Cleanup controller methods ( paths, actions etc )
+* Apply test coverage for all utils and controllers
 * Provide future proof dependency module structure
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
-* Add fixtures readme and examples with tests integration
-* Add unit tests examples for boilerplate
-* Add database tests examples
 * Resolve TODO's comments
 * On complete update `CHANGELOG.MD` and tag v1
 

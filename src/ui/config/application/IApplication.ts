@@ -23,10 +23,10 @@ export interface IApplication {
   initializePlugins(): void;
 
   /**
-   * Routes
-   * @Description Apply here application routes definition
+   * Extensions
+   * @Description Apply here extensions like swagger etc
    */
-  initializeRoutes(): void;
+  initializeExtensions(): void;
 
   /**
    * Security

@@ -30,9 +30,12 @@ export class ExpressApplication extends BaseApplication<express.Application>
   public initialize(): void {
     this.initializeSecurity();
     this.initializeBodyParsers();
-    this.initializeLogging();
+    if (process.env.NODE_ENV !== 'test') {
+      this.initializeLogging();
+    }
     this.initializeHandlers();
     this.initializePlugins();
+    this.initializeExtensions();
   }
 
   public initializeSecurity(): void {
@@ -59,9 +62,6 @@ export class ExpressApplication extends BaseApplication<express.Application>
     ); // TODO Move 'combined' to const
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  public initializeRoutes(): void {}
-
   public initializeHandlers(): void {
     // // TODO Export handlers to separate files and apply them here
     // // catch 404 and forward to error handler
@@ -86,7 +86,9 @@ export class ExpressApplication extends BaseApplication<express.Application>
     this.app.use(methodOverride());
     this.app.use(helmet());
     this.app.use(cors());
+  }
 
+  public initializeExtensions(): void {
     if (SWAGGER_HOST) {
       swaggerDocument.host = SWAGGER_HOST;
       this.app.use(

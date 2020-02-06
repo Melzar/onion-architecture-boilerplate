@@ -1,43 +1,16 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "dist",
-    "strict": true,
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "baseUrl": "src",
-    "types": [
-      "mocha",
-      "node",
-      "chai"
-    ],
-    "lib": [
-      "es5",
-      "es6"
-    ],
+    "baseUrl": ".",
     "paths": {
-      "core/*": ["core/*"],
-      "dependency/*": ["dependency/*"],
-      "infrastructure/*": ["infrastructure/*"],
-      "ui/*": ["ui/*"],
+      "core/*": ["src/core/*"],
+      "dependency/*": ["src/dependency/*"],
+      "infrastructure/*": ["src/infrastructure/*"],
+      "ui/*": ["src/ui/*"],
+      "config/*": ["test/config/*"],
       "*": [
         "@types/*"
       ]
-    },
-    "plugins": [
-      { "transform": "@zerollup/ts-transform-paths" }
-    ],
-    "esModuleInterop": true
-  },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    }
+  }
 }

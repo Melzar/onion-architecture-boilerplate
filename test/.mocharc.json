@@ -1,0 +1,18 @@
+{
+  "diff": true,
+  "exit": true,
+  "recursive": true,
+  "reporter": "spec",
+  "require": [
+    "dotenv/config",
+    "ts-node/register",
+    "tsconfig-paths/register"
+  ],
+  "extension": [
+    "ts"
+  ],
+  "spec": "test/**/*.spec.ts",
+  "slow": 75,
+  "timeout": 10000,
+  "ui": "bdd"
+}

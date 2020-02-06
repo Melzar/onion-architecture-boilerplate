@@ -1,27 +1,33 @@
-import 'reflect-metadata';
-
 import { InversifyExpressServer } from 'inversify-express-utils';
+
+import { Application } from 'express';
 
 import { AppContainer } from 'dependency/AppContainer';
 
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
-import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { PORT } from 'ui/config/consts/variables';
-import { IOrm } from 'infrastructure/db/orm/IOrm';
 
-(async () => {
-  const appContainer = new AppContainer();
-  appContainer.init();
-  appContainer
+import { IOrm } from 'infrastructure/db/orm/IOrm';
+import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
+
+import { prepareTestTransaction } from 'config/helpers/prepareTestTransaction';
+
+prepareTestTransaction();
+
+export const prepareTestApp = async (): Promise<Application> => {
+  const container = new AppContainer();
+
+  container.init();
+
+  container
     .get<ExpressApplication>(UI_APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION)
     .initialize();
-  await appContainer.get<IOrm>(DATABASE_IDENTIFIERS.ORM).initialize();
-  appContainer
+
+  await container.get<IOrm>(DATABASE_IDENTIFIERS.ORM).initialize();
+
+  return container
     .get<InversifyExpressServer>(
       UI_APPLICATION_IDENTIFIERS.INVERSIFY_APPLICATION
     )
-    .build()
-    // eslint-disable-next-line no-console
-    .listen(PORT, () => console.log(`Server listening on ${PORT}`));
-})();
+    .build();
+};

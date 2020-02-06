@@ -1,19 +1,11 @@
 import { injectable } from 'inversify';
-import { createConnections } from 'typeorm';
+import { createConnection } from 'typeorm';
 
-import { BaseOrm } from 'infrastructure/db/orm/BaseOrm';
+import { IOrm } from 'infrastructure/db/orm/IOrm';
 
 @injectable()
-export class OnionOrm extends BaseOrm {
+export class OnionOrm implements IOrm {
   public async initialize(): Promise<void> {
-    await createConnections().then(
-      async () => {
-        // TODO PERFORM OPERATIONS ON SUCCESS
-      },
-      () => {
-        // TODO PERFORM OPERATIONS ON ERROR
-        // console.log(error);
-      }
-    );
+    await createConnection(process.env.ORM_CONNECTION || '');
   }
 }

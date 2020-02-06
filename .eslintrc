@@ -16,7 +16,8 @@
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
+        "createDefaultProgram": true
     },
     "plugins": [
         "@typescript-eslint"
@@ -26,6 +27,7 @@
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-member-accessibility": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
+        "import/extensions": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
         "import/order": [
@@ -52,7 +54,7 @@
     "settings":  {
         "import/resolver": {
             "node": {
-                "paths": ["src"],
+                "paths": ["src", "test"],
                 "extensions": [
                     ".ts"
                 ]

@@ -3,7 +3,7 @@ import { interfaces } from 'inversify';
 import { BaseModule } from 'dependency/BaseModule';
 
 import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
-import { BaseOrm } from 'infrastructure/db/orm/BaseOrm';
+import { IOrm } from 'infrastructure/db/orm/IOrm';
 
 import { DbUserRepository } from 'infrastructure/repository/DbUserRepository';
 import { DbRoleRepository } from 'infrastructure/repository/DbRoleRepository';
@@ -31,7 +31,7 @@ export class DatabaseModule extends BaseModule {
   }
 
   private provideOrm(bind: interfaces.Bind): void {
-    bind<BaseOrm>(DATABASE_IDENTIFIERS.ORM).to(OnionOrm);
+    bind<IOrm>(DATABASE_IDENTIFIERS.ORM).to(OnionOrm);
   }
 
   private provideDbUserRepository(bind: interfaces.Bind): void {

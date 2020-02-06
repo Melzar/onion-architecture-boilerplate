@@ -6,7 +6,7 @@ export const INFRASTRUCTURE_IDENTIFIERS = {
 };
 
 export const DATABASE_IDENTIFIERS = {
-  ORM: Symbol.for('BaseOrm'),
+  ORM: Symbol.for('Orm'),
 };
 
 export const DATABASE_MAPPING_IDENTIFIERS = {

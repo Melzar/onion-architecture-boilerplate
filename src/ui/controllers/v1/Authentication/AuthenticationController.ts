@@ -3,6 +3,7 @@ import { inject } from 'inversify';
 import {
   BaseHttpController,
   controller,
+  httpDelete,
   httpPost,
   requestBody,
   results,
@@ -43,7 +44,7 @@ export class AuthenticationController extends BaseHttpController {
     return this.json({ status: 'OK' }, httpStatus.OK);
   }
 
-  @httpPost('/logout', isAuthenticated({ role: USER_ROLE.MEMBER }))
+  @httpDelete('/logout', isAuthenticated({ role: USER_ROLE.MEMBER }))
   public async delete() {
     return this.json({ status: 'OK' }, httpStatus.OK);
   }
