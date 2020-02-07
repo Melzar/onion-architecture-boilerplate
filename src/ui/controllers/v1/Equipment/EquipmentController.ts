@@ -32,7 +32,7 @@ export class EquipmentController extends BaseHttpController {
     { name }: CreateEquipmentRequestBody
   ): Promise<results.JsonResult> {
     await this.equipmentService.createEquipment(
-      new CreateEquipmentRequest(name, '2')
+      new CreateEquipmentRequest(name, '2') // TODO resolve issue with authentication
     );
     return this.json({ status: 'OK' }, httpStatus.OK);
   }

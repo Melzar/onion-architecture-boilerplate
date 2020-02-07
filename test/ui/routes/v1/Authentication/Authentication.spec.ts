@@ -59,22 +59,6 @@ describe('/v1/auth requests', () => {
   );
 
   it(
-    'DELETE 200 OK, return object with status OK, when user logout',
-    inTransaction(async () => {
-      const response = await chai
-        .request(expressApplication)
-        .delete('/v1/auth/logout')
-        .set(
-          'Authorization',
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJmaXJzdE5hbWUiOiJEZXN0aW55IiwiZW1haWwiOiJvbmlvbl9tZW1iZXJfdGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJtZW1iZXIiLCJsYXN0TmFtZSI6IkJhcnRlbGwiLCJwYXNzd29yZCI6IiQyYiQxMCQ1TEZnOXVpTVVHQVZlY1JtTlVuSFhlUmhQdWlHSTZVMktPLzBmZnViRG5HMlIvamVCM2g0dSIsImFnZSI6ODB9LCJpYXQiOjE1ODA5OTkyOTQsImV4cCI6MTU4MTAwNjQ5NH0.ifbJt7lq6pgzwYYc4sJKDLOaxNUBkNLahYlBC7GPX88'
-        );
-
-      expect(response.status).to.eql(httpStatus.OK);
-      expect(response.body).to.deep.equal({ status: 'OK' });
-    })
-  );
-
-  it(
     'POST 200 OK, return object with status OK, when credentials are correct',
     inTransaction(async () => {
       const response = await chai

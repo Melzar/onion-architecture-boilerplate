@@ -165,9 +165,7 @@ TODO
 
 ### STILL TODO
 
-* Cleanup controller methods ( paths, actions etc )
 * Apply test coverage for all utils and controllers
-* Provide future proof dependency module structure
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
 * Resolve TODO's comments

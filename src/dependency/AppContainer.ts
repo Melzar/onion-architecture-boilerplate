@@ -1,15 +1,16 @@
 import { InversifyExpressServer } from 'inversify-express-utils';
 
 import { BaseContainer } from 'dependency/BaseContainer';
-import { DatabaseModule } from 'dependency/infrastructure/DatabaseModule';
-import { ApplicationModule } from 'dependency/ui/ApplicationModule';
-import { InfrastructureModule } from 'dependency/infrastructure/InfrastructureModule';
+import { ApplicationModule } from 'dependency/common/ApplicationModule';
 
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
-import { UIModule } from 'dependency/ui/UIModule';
-import { CoreModule } from 'dependency/core/CoreModule';
+import { CommonModule } from 'dependency/common/CommonModule';
+import { AuthenticationModule } from 'dependency/Authentication/AuthenticationModule';
+import { UserModule } from 'dependency/User/UserModule';
+import { RoleModule } from 'dependency/Role/RoleModule';
+import { EquipmentModule } from 'dependency/Equipment/EquipmentModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -23,37 +24,40 @@ export class AppContainer extends BaseContainer {
    * @description Order of initialization matters
    */
   init(): void {
-    this.provideDatabaseModule();
-
-    this.provideInfrastructureModule();
-
-    this.provideCoreModule();
+    this.provideCommonModule();
 
     this.provideApplicationModule();
 
+    this.provideRoleModule();
+    this.provideUserModule();
+    this.provideEquipmentModule();
+    this.provideAuthenticationModule();
+
     this.provideInversifyExpressApplication();
-
-    this.provideUIModule();
-  }
-
-  private provideDatabaseModule(): void {
-    this.load(new DatabaseModule());
-  }
-
-  private provideInfrastructureModule(): void {
-    this.load(new InfrastructureModule());
   }
 
   private provideApplicationModule(): void {
     this.load(new ApplicationModule());
   }
 
-  private provideCoreModule(): void {
-    this.load(new CoreModule());
+  private provideCommonModule(): void {
+    this.load(new CommonModule());
   }
 
-  private provideUIModule(): void {
-    this.load(new UIModule());
+  private provideAuthenticationModule(): void {
+    this.load(new AuthenticationModule());
+  }
+
+  private provideUserModule(): void {
+    this.load(new UserModule());
+  }
+
+  private provideRoleModule(): void {
+    this.load(new RoleModule());
+  }
+
+  private provideEquipmentModule(): void {
+    this.load(new EquipmentModule());
   }
 
   private provideInversifyExpressApplication(): void {

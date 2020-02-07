@@ -3,22 +3,18 @@ import { inject } from 'inversify';
 import {
   BaseHttpController,
   controller,
-  httpDelete,
   httpPost,
   requestBody,
   results,
 } from 'inversify-express-utils';
 
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
-
-import { isAuthenticated } from 'ui/config/auth/middleware/IsAuthenticated';
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 import { AuthenticationRequestBody } from 'ui/controllers/v1/Authentication/requests/AuthenticationRequestBody';
 import { SignUpRequestBody } from 'ui/controllers/v1/Authentication/requests/SignupRequestBody';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 import { AuthenticationRequest } from 'core/applicationServices/Authentication/requests/AuthenticationRequest';
-import { USER_ROLE } from 'core/domain/User/UserRole';
 import { SignUpRequest } from 'core/applicationServices/Authentication/requests/SignUpRequest';
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
@@ -41,11 +37,6 @@ export class AuthenticationController extends BaseHttpController {
     await this.authenticationService.signUp(
       new SignUpRequest(firstName, email, lastName, password, age)
     );
-    return this.json({ status: 'OK' }, httpStatus.OK);
-  }
-
-  @httpDelete('/logout', isAuthenticated({ role: USER_ROLE.MEMBER }))
-  public async delete() {
     return this.json({ status: 'OK' }, httpStatus.OK);
   }
 
