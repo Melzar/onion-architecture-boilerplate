@@ -1,13 +1,39 @@
-import { Connection, getConnection } from 'typeorm';
+import { Connection, createConnection } from 'typeorm';
 import { setConnection } from 'typeorm-seeding';
 
 import 'infrastructure/db/fixtures/factories/RoleFactory';
 import 'infrastructure/db/fixtures/factories/UserFactory';
 
-export const prepareTestDB = async (): Promise<Connection> => {
-  const connection: Connection = getConnection(process.env.ORM_CONNECTION);
-  await connection.dropDatabase();
-  await connection.runMigrations();
-  setConnection(connection);
-  return connection;
+import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
+
+import { prepareTestTransaction } from 'config/helpers/prepareTestTransaction';
+
+import { getPostgresConnection } from 'config/helpers/getPostgresConnection';
+
+import { getCurrentConnection } from 'config/helpers/getCurrentConnection';
+
+prepareTestTransaction();
+
+export const prepareTestDB = async (testName?: string): Promise<Connection> => {
+  const connection = await getCurrentConnection();
+
+  const options = connection.options as PostgresConnectionOptions;
+
+  const db = await getPostgresConnection(
+    connection.options as PostgresConnectionOptions
+  );
+
+  await db.none('CREATE DATABASE $1:name', testName);
+  db.$pool.end();
+
+  const dbConnecton = await createConnection({
+    ...options,
+    name: testName,
+    database: testName,
+  });
+
+  await dbConnecton.dropDatabase();
+  await dbConnecton.runMigrations();
+  setConnection(dbConnecton);
+  return dbConnecton;
 };

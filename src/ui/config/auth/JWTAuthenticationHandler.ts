@@ -5,13 +5,13 @@ import {
   UI_IDENTIFIERS,
   UI_MAPPINGS_IDENTIFIERS,
 } from 'ui/UiModuleSymbols';
-import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
+import { JWTTokenUtil } from 'ui/config/auth/utils/JWTTokenUtil';
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 import { APP_TOKEN_LIFE, APP_TOKEN_SECRET } from 'ui/config/consts/variables';
 import { UIMapper } from 'ui/common/mappings/UIMapper';
 
 import { AuthenticationRequest } from 'core/applicationServices/Authentication/requests/AuthenticationRequest';
-import { Authentication } from 'ui/config/auth/model/Authentication';
+import { Authentication } from 'ui/config/auth/models/Authentication';
 
 import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 

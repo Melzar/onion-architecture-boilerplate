@@ -15,7 +15,7 @@ import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
  @link https://github.com/inversify/inversify-express-utils#important-information-about-the-controller-decorator
  */
 import 'ui/controllers';
-import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
+import { JWTTokenUtil } from 'ui/config/auth/utils/JWTTokenUtil';
 import { JWTAuthenticationHandler } from 'ui/config/auth/JWTAuthenticationHandler';
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 

@@ -4,7 +4,7 @@ import { BaseContainer } from 'dependency/BaseContainer';
 import { ApplicationModule } from 'dependency/common/ApplicationModule';
 
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
-import { ApplicationAuthProvider } from 'ui/config/auth/middleware/ApplicationAuthProvider';
+import { ApplicationAuthProvider } from 'ui/config/auth/middlewares/ApplicationAuthProvider';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { CommonModule } from 'dependency/common/CommonModule';
 import { AuthenticationModule } from 'dependency/Authentication/AuthenticationModule';

@@ -74,7 +74,11 @@ export abstract class DbRepository<E> extends AbstractRepository<E>
     return this.getDBRepository();
   }
 
+  protected getConnectionName(): string | undefined {
+    return process.env.ORM_CONNECTION;
+  }
+
   private getDBRepository(): Repository<E> {
-    return getRepository<E>(this.entity, process.env.ORM_CONNECTION);
+    return getRepository<E>(this.entity, this.getConnectionName());
   }
 }

@@ -1,9 +1,11 @@
 import { interfaces } from 'inversify-express-utils';
 
-export class Principal implements interfaces.Principal {
-  public details: any;
+import { User } from 'ui/common/models/User';
 
-  public constructor(details: any) {
+export class Principal implements interfaces.Principal {
+  public details: User | undefined;
+
+  public constructor(details: User | undefined) {
     this.details = details;
   }
 

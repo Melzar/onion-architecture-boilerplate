@@ -13,7 +13,7 @@ import { IUserService } from 'core/applicationServices/User/IUserService';
 import { USER_ROLE } from 'core/domain/User/UserRole';
 import { RemoveUserRequest } from 'core/applicationServices/User/requests/RemoveUserReuqest';
 
-import { isAuthenticated } from 'ui/config/auth/middleware/IsAuthenticated';
+import { isAuthenticated } from 'ui/config/auth/middlewares/IsAuthenticated';
 import { DeleteUserRequestBody } from 'ui/controllers/v1/User/requests/DeleteUserRequestBody';
 
 @controller('/v1/user')

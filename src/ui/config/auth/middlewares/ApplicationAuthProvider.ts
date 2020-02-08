@@ -2,10 +2,12 @@ import { inject, injectable } from 'inversify';
 import { interfaces } from 'inversify-express-utils';
 import { Request } from 'express';
 
-import { Principal } from 'ui/config/auth/model/Principal';
-import { JWTTokenUtil } from 'ui/config/auth/util/JWTTokenUtil';
+import { Principal } from 'ui/config/auth/models/Principal';
+import { User } from 'ui/common/models/User';
+import { JWTTokenUtil } from 'ui/config/auth/utils/JWTTokenUtil';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { APP_TOKEN_SECRET } from 'ui/config/consts/variables';
+import { TokenPayload } from 'ui/config/auth/types/TokenPayload';
 
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { AuthenticationService } from 'core/applicationServices/Authentication/AuthenticationService';
@@ -32,10 +34,10 @@ export class ApplicationAuthProvider implements interfaces.AuthProvider {
       return new Principal(undefined);
     }
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    const { user } = tokenData; // TODO temporary
+    const { user } = tokenData as TokenPayload;
 
-    return new Principal(user);
+    return new Principal(
+      new User(user.id, user.firstName, user.email, user.role)
+    );
   }
 }

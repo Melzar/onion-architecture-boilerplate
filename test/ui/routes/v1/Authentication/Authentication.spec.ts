@@ -4,27 +4,39 @@ import chaiHttp from 'chai-http';
 
 import { runSeeder } from 'typeorm-seeding';
 
-import { Application } from 'express';
-
 import { Connection } from 'typeorm';
 
-import { prepareTestApp } from 'config/helpers/prepareTestApp';
+import { Application } from 'express';
+
+import sinon from 'sinon';
+
 import { inTransaction } from 'config/helpers/inTransaction';
 import { AuthenticationSeed } from 'config/seeds/AuthenticationSeed';
 import { prepareTestDB } from 'config/helpers/prepareTestDB';
+import { prepareTestApp } from 'config/helpers/prepareTestApp';
+import { clearTestDB } from 'config/helpers/clearTestDB';
+import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
 import { User } from 'infrastructure/db/entities/User';
 
 chai.use(chaiHttp);
 
-describe('/v1/auth requests', () => {
-  let expressApplication: Application;
+describe('/v1/auth', () => {
   let connection: Connection;
+  let expressApplication: Application;
+  let testName: string | undefined;
 
-  before(async () => {
+  before(async function before() {
+    testName = this.test?.parent?.title;
     expressApplication = await prepareTestApp();
-    connection = await prepareTestDB();
+    connection = await prepareTestDB(testName);
     await runSeeder(AuthenticationSeed);
+    mockRepositoryConnectionName(testName);
+  });
+
+  after(async function after() {
+    sinon.restore();
+    await clearTestDB(testName);
   });
 
   it(
@@ -41,17 +53,17 @@ describe('/v1/auth requests', () => {
           age: 10,
         });
 
-      const user = await connection.getRepository<User>(User).findOne({
+      const user = await connection.getRepository<User>(User).findOneOrFail({
         where: {
           email: 'onion_test@example.com',
         },
       });
 
       expect(user).to.not.eql(null);
-      expect(user?.email).to.eql('onion_test@example.com');
-      expect(user?.lastName).to.eql('test last name');
-      expect(user?.firstName).to.eql('test first name');
-      expect(user?.age).to.eql(10);
+      expect(user.email).to.eql('onion_test@example.com');
+      expect(user.lastName).to.eql('test last name');
+      expect(user.firstName).to.eql('test first name');
+      expect(user.age).to.eql(10);
 
       expect(response.status).to.eql(httpStatus.OK);
       expect(response.body).to.deep.equal({ status: 'OK' });

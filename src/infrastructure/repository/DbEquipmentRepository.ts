@@ -74,12 +74,10 @@ export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
 
   async addEquipment({ name, userId }: CreateEquipmentRequest): Promise<void> {
     // TODO using method to avoid circular dependencies issues but it could be also used normally on long run
-    const user = await getRepository(User).findOne(userId);
-
-    // TODO Add error handling
-    if (!user) {
-      return;
-    }
+    const user = await getRepository(
+      User,
+      this.getConnectionName()
+    ).findOneOrFail(userId);
 
     const equipment = new EquipmentEntity();
     equipment.name = name;
