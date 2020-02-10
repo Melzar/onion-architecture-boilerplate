@@ -4,11 +4,11 @@
 
 This repository is a real life example of Onion Architecture with use of `Node.js / Express` and `Typescript`
 
-<p align="center">
-  <img src="https://docs.google.com/drawings/d/e/2PACX-1vQ5ps72uaZcEJzwnJbPhzUfEeBbN6CJ04j7hl2i3K2HHatNcsoyG2tgX2vnrN5xxDKLp5Jm5bzzmZdv/pub?w=960&h=657" alt="https://herbertograca.com" width="800" />
-</p>
+![Onion Diagram](diagram.svg)
 
-> This diagram belongs to https://herbertograca.com
+Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWHAfEDDMUkKpMELM0PruiEs)
+
+> This diagram has some copyrights, if you want to use it on larger scale, feel free to contact me.
 
 ##### Technologies used
 
