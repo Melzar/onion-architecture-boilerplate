@@ -5,9 +5,9 @@ import chaiHttp from 'chai-http';
 
 import { runSeeder } from 'typeorm-seeding';
 
-import httpStatus from 'http-status';
-
 import sinon from 'sinon';
+
+import { OK } from 'http-status-codes';
 
 import { prepareTestApp } from 'config/helpers/prepareTestApp';
 import { prepareTestDB } from 'config/helpers/prepareTestDB';
@@ -63,7 +63,7 @@ describe('/v1/user', () => {
           id: user.id,
         });
 
-      expect(response.status).to.eql(httpStatus.OK);
+      expect(response.status).to.eql(OK);
 
       const userDeleted = await connection.getRepository<User>(User).findOne({
         where: {

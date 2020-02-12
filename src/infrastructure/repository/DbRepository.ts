@@ -54,20 +54,20 @@ export abstract class DbRepository<E> extends AbstractRepository<E>
     return !!(await this.getDBRepository().delete(condition));
   }
 
-  public async remove(entity: E): Promise<boolean> {
-    return !!(await this.getDBRepository().remove(entity));
+  public async remove(entity: E): Promise<E> {
+    return this.getDBRepository().remove(entity);
   }
 
-  public async removeAll(entities: E[]): Promise<boolean> {
-    return !!(await this.getDBRepository().remove(entities));
+  public async removeAll(entities: E[]): Promise<E[]> {
+    return this.getDBRepository().remove(entities);
   }
 
-  public async save(entity: E): Promise<boolean> {
-    return !!(await this.getDBRepository().save(entity));
+  public async save(entity: E): Promise<E> {
+    return this.getDBRepository().save(entity);
   }
 
-  public async saveAll(entities: E[]): Promise<boolean> {
-    return !!(await this.getDBRepository().save(entities));
+  public async saveAll(entities: E[]): Promise<E[]> {
+    return this.getDBRepository().save(entities);
   }
 
   public custom(): Repository<E> {

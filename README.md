@@ -12,7 +12,7 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWH
 
 ##### Technologies used
 
-1. `Typescript` ( `v3.1.6 / 3.5.1` )
+1. `Typescript` ( `v3.7.5` )
 2. `Inversify.js`
 3. `TypeOrm`
 4. `Express.js`
@@ -42,7 +42,9 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWH
 2. DB Agnostic setup, supports multiple datasource
 3. Infrastructure -> Domain Mapping -> UI Mapping
 4. Migrations, Fixtures, Seeds   
-5. Multiple API versions support ( REST implementation )           
+5. Multiple API versions support ( REST implementation )
+6. Global Error Handling
+7. Test Parallelization           
 
 ##### Reference
 
@@ -153,22 +155,23 @@ especially when you are working as a full stack.
 
 #### Tests parallelization
 
-TODO
+Every test runs on it's separate database and we can spawn multiple tests at the same time,
+and run in transaction specific test cases, thanks to which we don't have to clear db after running every test
 
 #### Mutational testing
 
-TODO
+Mutational testing is integrated with `Mocha` test runner and shows how many mutations are still available in 
+system, and where we should apply additional test coverage.
 
 #### Integration testing
 
-TODO
+We are testing whole layers data flow - from `UI` layer up to `Infrastructure`. We are testing
+not only responses but also saved data in database and authentication context.
 
 ### STILL TODO
 
-* Apply test coverage for all utils and controllers
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
-* Resolve TODO's comments
 * On complete update `CHANGELOG.MD` and tag v1
 
 ### KNOWN ISSUES
@@ -185,3 +188,7 @@ TODO
 * bcrypt do not support worker threads - follow [this](https://github.com/kelektiv/node.bcrypt.js/issues/709) issue.
   As long as it's not closed, stay with applied version in package ( this issue is related to 
   parallelization of mocha tests )
+
+* transactions do not work between test cases - take a look at troubleshooting here
+  https://github.com/entrostat/typeorm-test-transactions - it can be caused by the way
+  that we are using db repository. As a workaround we can just truncate db per every run.

@@ -7,3 +7,4 @@ export const APP_TOKEN_LIFE = process.env.APP_TOKEN_LIFE || '24h';
 export const PORT = process.env.PORT || '3000';
 export const LOG_LEVEL = process.env.LOG_LEVEL || 'debug';
 export const { SWAGGER_HOST } = process.env;
+export const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';

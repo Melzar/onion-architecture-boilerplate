@@ -71,30 +71,6 @@
         }
       }
     },
-    "/auth/logout": {
-      "post": {
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "tags": [
-          "auth"
-        ],
-        "description": "Logout endpoint",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "Returns success status"
-          }
-        }
-      }
-    },
     "/auth/signup": {
       "post": {
         "tags": [

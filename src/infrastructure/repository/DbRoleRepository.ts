@@ -7,6 +7,7 @@ import { FindRoleRequest } from 'core/domainServices/Role/request/FindRoleReques
 import { Role } from 'core/domain/Role/Role';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
+import { BaseError } from 'core/common/errors/BaseError';
 
 import { Role as RoleEntity } from 'infrastructure/db/entities/Role';
 import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
@@ -15,6 +16,7 @@ import {
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
 import { DbRepository } from 'infrastructure/repository/DbRepository';
+import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 @injectable()
 @EntityRepository(RoleEntity)
@@ -27,12 +29,11 @@ export class DbRoleRepository extends DbRepository<RoleEntity>
     super(RoleEntity);
   }
 
-  async findRole({ id }: FindRoleRequest): Promise<Role | undefined> {
+  async findRole({ id }: FindRoleRequest): Promise<Role> {
     const role = await this.find(id);
 
-    // TODO ADD ERROR HANDLING
     if (!role) {
-      return undefined;
+      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
     }
 
     return this.dbMapper.mapper.map<RoleEntity, Role>(
@@ -44,9 +45,7 @@ export class DbRoleRepository extends DbRepository<RoleEntity>
     );
   }
 
-  async findRoleByName({
-    name,
-  }: FindRoleByNameRequest): Promise<Role | undefined> {
+  async findRoleByName({ name }: FindRoleByNameRequest): Promise<Role> {
     const role = await this.custom()
       .createQueryBuilder()
       .where('"Role"."name" = :name', {
@@ -54,9 +53,8 @@ export class DbRoleRepository extends DbRepository<RoleEntity>
       })
       .getOne();
 
-    // TODO ADD ERROR HANDLING
     if (!role) {
-      return undefined;
+      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
     }
 
     return this.dbMapper.mapper.map<RoleEntity, Role>(

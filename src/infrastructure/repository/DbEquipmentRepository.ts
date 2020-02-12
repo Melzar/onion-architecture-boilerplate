@@ -16,13 +16,18 @@ import {
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
 import { User } from 'infrastructure/db/entities/User';
+import { BaseError } from 'core/common/errors/BaseError';
+import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
-// FIXME: DONE IT THIS WAY BECAUSE OF THIS ISSUE https://github.com/inversify/InversifyJS/issues/771 and
-// https://github.com/inversify/InversifyJS/issues/941
-// I've tried with lazy loading and nested repositories but because of inversify issue I had to skip this approach
-// Eventually we could use LazyService Loader in inversify but then we would have
-// to swich every repository to separate module
-// It would make sense but in larger codebase to split modules by domain
+/**
+ * @description DONE IT THIS WAY BECAUSE OF THIS ISSUE https://github.com/inversify/InversifyJS/issues/771 and
+ * https://github.com/inversify/InversifyJS/issues/941
+ * I've tried with lazy loading and nested repositories but because of inversify issue I had to skip this approach
+ * Eventually we could use LazyService Loader in inversify but then we would have
+ * to switch every repository to separate module
+ * It would make sense but in larger codebase to split modules by domain
+ */
+
 @injectable()
 @EntityRepository(EquipmentEntity)
 export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
@@ -34,14 +39,11 @@ export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
     super(EquipmentEntity);
   }
 
-  async findEquipment({
-    id,
-  }: FindEquipmentRequest): Promise<Equipment | undefined> {
+  async findEquipment({ id }: FindEquipmentRequest): Promise<Equipment> {
     const equipment = await this.find(id);
 
-    // TODO ADD ERROR HANDLING
     if (!equipment) {
-      return undefined;
+      throw new BaseError(InfrastructureErrors.EQUIPMENT_NOT_FOUND.toString());
     }
 
     return this.dbMapper.mapper.map<EquipmentEntity, Equipment>(
@@ -72,14 +74,20 @@ export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
     );
   }
 
-  async addEquipment({ name, userId }: CreateEquipmentRequest): Promise<void> {
+  async addEquipment({
+    name,
+    userId,
+  }: CreateEquipmentRequest): Promise<Equipment> {
     /**
      * @description using method to avoid circular dependencies issues but it could be also used normally on long run
      */
-    const user = await getRepository(
-      User,
-      this.getConnectionName()
-    ).findOneOrFail(userId);
+    const user = await getRepository(User, this.getConnectionName()).findOne(
+      userId
+    );
+
+    if (!user) {
+      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
+    }
 
     const equipment = new EquipmentEntity();
     equipment.name = name;
@@ -89,6 +97,14 @@ export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
 
     equipment.user = userToAssign;
 
-    await this.save(equipment);
+    const savedEquipment = await this.save(equipment);
+
+    return this.dbMapper.mapper.map<EquipmentEntity, Equipment>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.EQUIPMENT_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.EQUIPMENT_ENTITY,
+      },
+      savedEquipment
+    );
   }
 }

@@ -51,35 +51,22 @@ export class ExpressApplication extends BaseApplication<express.Application>
     morgan.token(
       'body',
       (req): string => `\nREQUEST BODY: ${JSON.stringify(req.body)}`
-    ); // TODO you may consider what you want to log on production
-    // TODO keep in mind to obfuscate sensitive data if you want to log request or response bodies
-    // TODO format can be moved to some other place for easier configuration
+    );
+    /**
+     * @description you may consider what you want to log on production
+     * keep in mind to obfuscate sensitive data if you want to log request or response bodies
+     * format can be moved to some other place for easier configuration
+     */
     this.app.use(
       morgan(
         ':method :url HTTP/:http-version :status :response-time ms :referrer :user-agent - :body',
         { stream: this.logger }
       )
-    ); // TODO Move 'combined' to const
+    );
   }
 
   public initializeHandlers(): void {
-    // // TODO Export handlers to separate files and apply them here
-    // // catch 404 and forward to error handler
-    // this.app.use((req, res, next) => {
-    //   next(createError(404));
-    // });
-    //
-    // // TODO Export handlers to separate files and apply them here
-    // // error handler
-    // this.app.use((err, req, res, next) => {
-    //   // set locals, only providing error in development
-    //   res.locals.message = err.message;
-    //   res.locals.error = req.app.get('env') === 'development' ? err : {};
-    //
-    //   // render the error page
-    //   res.status(err.status || 500);
-    //   res.render('error');
-    // });
+    Error('NOT IMPLEMENTED');
   }
 
   public initializePlugins(): void {

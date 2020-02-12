@@ -5,8 +5,8 @@ import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest'
 import { DeleteUserRequest } from 'core/domainServices/User/request/DeleteUserRequest';
 
 export interface IUserRepository {
-  addUser(request: AddUserRequest): Promise<void>;
+  addUser(request: AddUserRequest): Promise<User>;
   deleteUser(request: DeleteUserRequest): Promise<void>;
-  findUser(request: FindUserRequest): Promise<User | undefined>;
+  findUser(request: FindUserRequest): Promise<User>;
   findUserByEmail(request: FindUserByEmailRequest): Promise<User>;
 }

@@ -11,10 +11,10 @@ export interface IRepository<E, R> {
   findBy(condition: Query<E>): Promise<E[]>;
   findMany(ids: string[]): Promise<E[]>;
   query(query: string, parameters?: any[]): Promise<E[]>;
-  remove(entity: E): Promise<boolean>;
-  removeAll(entities: E[]): Promise<boolean>;
-  save(entity: E): Promise<boolean>;
-  saveAll(entities: E[]): Promise<boolean>;
+  remove(entity: E): Promise<E>;
+  removeAll(entities: E[]): Promise<E[]>;
+  save(entity: E): Promise<E>;
+  saveAll(entities: E[]): Promise<E[]>;
   update(condition: string | number, data: E): Promise<boolean>;
   updateAll(condition: string[] | number[], data: E): Promise<boolean>;
 }

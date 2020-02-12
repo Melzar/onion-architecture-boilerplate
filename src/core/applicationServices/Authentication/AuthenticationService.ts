@@ -10,6 +10,7 @@ import { AuthenticationRequest } from 'core/applicationServices/Authentication/r
 import { FindUserByEmailRequest } from 'core/domainServices/User/request/FindUserByEmailRequest';
 import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest';
 import { SignUpRequest } from 'core/applicationServices/Authentication/requests/SignUpRequest';
+import { User } from 'core/domain/User/User';
 
 @injectable()
 export class AuthenticationService implements IAuthenticationService {
@@ -24,7 +25,7 @@ export class AuthenticationService implements IAuthenticationService {
     lastName,
     password,
     age,
-  }: SignUpRequest): Promise<void> {
+  }: SignUpRequest): Promise<User> {
     return this.repository.addUser(
       new AddUserRequest(firstName, email, lastName, password, age)
     );

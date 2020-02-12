@@ -2,7 +2,5 @@ import { AuthenticationRequest } from 'core/applicationServices/Authentication/r
 import { Authentication } from 'ui/config/auth/models/Authentication';
 
 export interface IAuthenticationHandler {
-  authenticate(
-    request: AuthenticationRequest
-  ): Promise<Authentication | undefined>;
+  authenticate(request: AuthenticationRequest): Promise<Authentication>;
 }

@@ -1,11 +1,13 @@
 import { InversifyExpressServer } from 'inversify-express-utils';
 
-import { BaseContainer } from 'dependency/BaseContainer';
-import { ApplicationModule } from 'dependency/common/ApplicationModule';
+import { errorHandler } from 'ui/config/errors/handlers/errorHandler';
 
 import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { ApplicationAuthProvider } from 'ui/config/auth/middlewares/ApplicationAuthProvider';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+
+import { BaseContainer } from 'dependency/BaseContainer';
+import { ApplicationModule } from 'dependency/common/ApplicationModule';
 import { CommonModule } from 'dependency/common/CommonModule';
 import { AuthenticationModule } from 'dependency/Authentication/AuthenticationModule';
 import { UserModule } from 'dependency/User/UserModule';
@@ -72,7 +74,7 @@ export class AppContainer extends BaseContainer {
           UI_APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
         ).getApplication(),
         ApplicationAuthProvider
-      )
+      ).setErrorConfig(errorHandler)
     );
   }
 }

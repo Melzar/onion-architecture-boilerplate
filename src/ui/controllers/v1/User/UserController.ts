@@ -6,7 +6,7 @@ import {
 } from 'inversify-express-utils';
 import { inject } from 'inversify';
 
-import httpStatus from 'http-status';
+import { OK } from 'http-status-codes';
 
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { IUserService } from 'core/applicationServices/User/IUserService';
@@ -29,6 +29,6 @@ export class UserController extends BaseHttpController {
   public async delete(@requestBody() { id }: DeleteUserRequestBody) {
     await this.userService.removeUser(new RemoveUserRequest(id));
 
-    return this.json({ status: 'OK' }, httpStatus.OK);
+    return this.json(OK);
   }
 }

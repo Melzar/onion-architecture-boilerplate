@@ -7,9 +7,9 @@ import { Application } from 'express';
 
 import { runSeeder } from 'typeorm-seeding';
 
-import httpStatus from 'http-status';
-
 import sinon from 'sinon';
+
+import { FORBIDDEN, OK, UNAUTHORIZED } from 'http-status-codes';
 
 import { inTransaction } from 'config/helpers/inTransaction';
 
@@ -58,7 +58,7 @@ describe('/v1/equipment', () => {
           name: 'test equipment',
         });
 
-      expect(response.status).to.eql(httpStatus.OK);
+      expect(response.status).to.eql(OK);
 
       const equipment = await connection
         .getRepository<Equipment>(Equipment)
@@ -69,6 +69,54 @@ describe('/v1/equipment', () => {
         });
 
       expect(equipment.name).to.eql('test equipment');
+    })
+  );
+
+  it(
+    'POST 401 UNAUTHORIZED, return generic object with code UNAUTHORIZED, when user is unauthorized',
+    inTransaction(async () => {
+      const response = await chai
+        .request(expressApplication)
+        .post('/v1/equipment')
+        .send({
+          name: 'test equipment',
+        });
+
+      expect(response.status).to.eql(UNAUTHORIZED);
+      expect(response.body).to.deep.equal({
+        code: 'UNAUTHORIZED',
+        message: '',
+      });
+    })
+  );
+
+  it(
+    'POST 403 FORBIDDEN, return generic object with code FORBIDDEN, when user is authorized but with not required role',
+    inTransaction(async () => {
+      const token = await prepareAuthenticationToken(
+        'onion_admin_test@example.com',
+        testName
+      );
+
+      const response = await chai
+        .request(expressApplication)
+        .post('/v1/equipment')
+        .set('Authorization', `Bearer ${token}`)
+        .send({
+          name: 'test equipment admin',
+        });
+
+      expect(response.status).to.eql(FORBIDDEN);
+
+      const equipment = await connection
+        .getRepository<Equipment>(Equipment)
+        .findOne({
+          where: {
+            name: 'test equipment admin',
+          },
+        });
+
+      expect(equipment).to.eql(undefined);
     })
   );
 });

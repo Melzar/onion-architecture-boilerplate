@@ -1,5 +1,7 @@
 import { inject, injectable } from 'inversify';
 
+import { getStatusText, UNAUTHORIZED } from 'http-status-codes';
+
 import {
   UI_APPLICATION_IDENTIFIERS,
   UI_IDENTIFIERS,
@@ -22,6 +24,7 @@ import {
 
 import { User } from 'core/domain/User/User';
 import { User as UserUI } from 'ui/common/models/User';
+import { UserInterfaceError } from 'ui/config/errors/UserInterfaceError';
 
 @injectable()
 export class JWTAuthenticationHandler implements IAuthenticationHandler {
@@ -38,7 +41,10 @@ export class JWTAuthenticationHandler implements IAuthenticationHandler {
     const user = await this.authenticationService.verifyCredentials(request);
 
     if (!user) {
-      return undefined;
+      throw new UserInterfaceError(
+        UNAUTHORIZED,
+        getStatusText(UNAUTHORIZED).toUpperCase()
+      );
     }
 
     const userUi = this.uiMapper.mapper.map<User, UserUI>(

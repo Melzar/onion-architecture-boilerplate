@@ -8,9 +8,9 @@ import {
 } from 'inversify-express-utils';
 import { inject } from 'inversify';
 
-import httpStatus from 'http-status';
-
 import { Request } from 'express';
+
+import { OK } from 'http-status-codes';
 
 import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { IEquipmentService } from 'core/applicationServices/Equipment/IEquipmentService';
@@ -39,9 +39,9 @@ export class EquipmentController extends BaseHttpController {
   ): Promise<results.JsonResult> {
     const currentUser = getCurrentUser(req);
 
-    await this.equipmentService.createEquipment(
+    const createdEquipment = await this.equipmentService.createEquipment(
       new CreateEquipmentRequest(name, currentUser.details!.id)
     );
-    return this.json({ status: 'OK' }, httpStatus.OK);
+    return this.json(createdEquipment, OK);
   }
 }

@@ -10,6 +10,9 @@ import { FindUserByEmailRequest } from 'core/domainServices/User/request/FindUse
 import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
+import { DeleteUserRequest } from 'core/domainServices/User/request/DeleteUserRequest';
+import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
+import { BaseError } from 'core/common/errors/BaseError';
 import {
   DOMAIN_MAPPING_IDENTIFIERS,
   DOMAIN_REPOSITORY_IDENTIFIERS,
@@ -17,16 +20,15 @@ import {
 
 import { User as UserEntity } from 'infrastructure/db/entities/User';
 import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
-
 import { DbRepository } from 'infrastructure/repository/DbRepository';
+import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
+import { Role } from 'infrastructure/db/entities/Role';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
-import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
-import { DeleteUserRequest } from 'core/domainServices/User/request/DeleteUserRequest';
-import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
-import { Role } from 'infrastructure/db/entities/Role';
+
+import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 @injectable()
 @EntityRepository(UserEntity)
@@ -49,14 +51,13 @@ export class DbUserRepository extends DbRepository<UserEntity>
     firstName,
     lastName,
     password,
-  }: AddUserRequest): Promise<void> {
+  }: AddUserRequest): Promise<User> {
     const role = await this.roleRepository.findRoleByName(
       new FindRoleByNameRequest(USER_ROLE.MEMBER)
     );
 
     if (!role) {
-      // TODO APPLY ERROR HANDLING
-      return;
+      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
     }
 
     const user = new UserEntity();
@@ -70,24 +71,35 @@ export class DbUserRepository extends DbRepository<UserEntity>
     memberRole.id = +role.id;
     user.role = memberRole;
 
-    this.save(user);
+    const savedUser = await this.save(user);
+
+    return this.dbMapper.mapper.map<UserEntity, User>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+      },
+      savedUser
+    );
   }
 
-  async findUser({ id }: FindUserRequest): Promise<User | undefined> {
-    const result = await this.find(id);
+  async findUser({ id }: FindUserRequest): Promise<User> {
+    const result = await this.custom()
+      .createQueryBuilder()
+      .leftJoinAndSelect('User.role', 'Role')
+      .where('User.id = :id ', { id })
+      .getOne();
 
-    let mappedResult;
-    if (result) {
-      mappedResult = this.dbMapper.mapper.map<UserEntity, User>(
-        {
-          destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
-          source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
-        },
-        result
-      );
+    if (!result) {
+      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
     }
 
-    return mappedResult;
+    return this.dbMapper.mapper.map<UserEntity, User>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+      },
+      result
+    );
   }
 
   async findUserByEmail({ email }: FindUserByEmailRequest): Promise<User> {
@@ -109,9 +121,8 @@ export class DbUserRepository extends DbRepository<UserEntity>
   async deleteUser({ id }: DeleteUserRequest): Promise<void> {
     const user = await this.find(id);
 
-    // TODO APPLY ERROR HANDLING
     if (!user) {
-      return;
+      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
     }
 
     const userEquipment = await this.equipmentRepository.findEquipmentForUser(

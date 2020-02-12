@@ -1,7 +1,9 @@
 import * as express from 'express';
-import httpStatus from 'http-status';
+
+import { FORBIDDEN, getStatusText, UNAUTHORIZED } from 'http-status-codes';
 
 import { getCurrentUser } from 'ui/config/auth/utils/getHttpContext';
+import { UserInterfaceError } from 'ui/config/errors/UserInterfaceError';
 
 export const isAuthenticated = (config?: { role: string }) => async (
   req: express.Request,
@@ -10,28 +12,36 @@ export const isAuthenticated = (config?: { role: string }) => async (
 ): Promise<void> => {
   const user = getCurrentUser(req);
 
-  // TODO SIMPLIFY IT
   if (!user) {
-    const error = { status: httpStatus.UNAUTHORIZED };
-    res.status(httpStatus.UNAUTHORIZED).json(error);
-    next(error);
+    next(
+      new UserInterfaceError(
+        UNAUTHORIZED,
+        getStatusText(UNAUTHORIZED).toUpperCase()
+      )
+    );
     return;
   }
 
   const isAuthenticatedUser = await user.isAuthenticated();
 
   if (!isAuthenticatedUser) {
-    const error = { status: httpStatus.UNAUTHORIZED };
-    res.status(httpStatus.UNAUTHORIZED).json(error);
-    next(error);
+    next(
+      new UserInterfaceError(
+        UNAUTHORIZED,
+        getStatusText(UNAUTHORIZED).toUpperCase()
+      )
+    );
     return;
   }
   if (config) {
     const isInRole = await user.isInRole(config.role);
     if (!isInRole) {
-      const error = { status: httpStatus.UNAUTHORIZED };
-      res.status(httpStatus.UNAUTHORIZED).json(error);
-      next({ error }); // TODO ADD ERROR HANDLERS
+      next(
+        new UserInterfaceError(
+          FORBIDDEN,
+          getStatusText(FORBIDDEN).toUpperCase()
+        )
+      );
       return;
     }
   }

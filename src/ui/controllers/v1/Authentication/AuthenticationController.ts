@@ -1,4 +1,3 @@
-import httpStatus from 'http-status';
 import { inject } from 'inversify';
 import {
   BaseHttpController,
@@ -8,15 +7,27 @@ import {
   results,
 } from 'inversify-express-utils';
 
-import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
+import { OK } from 'http-status-codes';
+
 import { IAuthenticationHandler } from 'ui/config/auth/IAuthenticationHandler';
 import { AuthenticationRequestBody } from 'ui/controllers/v1/Authentication/requests/AuthenticationRequestBody';
 import { SignUpRequestBody } from 'ui/controllers/v1/Authentication/requests/SignupRequestBody';
-import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import {
+  UI_APPLICATION_IDENTIFIERS,
+  UI_IDENTIFIERS,
+  UI_MAPPINGS_IDENTIFIERS,
+} from 'ui/UiModuleSymbols';
 
+import { IAuthenticationService } from 'core/applicationServices/Authentication/IAuthenticationService';
 import { AuthenticationRequest } from 'core/applicationServices/Authentication/requests/AuthenticationRequest';
 import { SignUpRequest } from 'core/applicationServices/Authentication/requests/SignUpRequest';
-import { DOMAIN_APPLICATION_SERVICE_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import {
+  DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
+  DOMAIN_MAPPING_IDENTIFIERS,
+} from 'core/CoreModuleSymbols';
+import { User } from 'core/domain/User/User';
+import { User as UserUI } from 'ui/common/models/User';
+import { UIMapper } from 'ui/common/mappings/UIMapper';
 
 @controller('/v1/auth')
 export class AuthenticationController extends BaseHttpController {
@@ -24,7 +35,9 @@ export class AuthenticationController extends BaseHttpController {
     @inject(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.AUTHENTICATION_SERVICE)
     private readonly authenticationService: IAuthenticationService,
     @inject(UI_APPLICATION_IDENTIFIERS.JWT_AUTHENTICATION_HANDLER)
-    private readonly authenticationHandler: IAuthenticationHandler
+    private readonly authenticationHandler: IAuthenticationHandler,
+    @inject(UI_IDENTIFIERS.UI_MAPPER)
+    private readonly uiMapper: UIMapper
   ) {
     super();
   }
@@ -34,10 +47,18 @@ export class AuthenticationController extends BaseHttpController {
     @requestBody()
     { age, email, firstName, lastName, password }: SignUpRequestBody
   ): Promise<results.JsonResult> {
-    await this.authenticationService.signUp(
+    const user = await this.authenticationService.signUp(
       new SignUpRequest(firstName, email, lastName, password, age)
     );
-    return this.json({ status: 'OK' }, httpStatus.OK);
+
+    const createdUser = this.uiMapper.mapper.map<User, UserUI>(
+      {
+        destination: UI_MAPPINGS_IDENTIFIERS.USER_UI,
+        source: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+      },
+      user
+    );
+    return this.json(createdUser, OK);
   }
 
   @httpPost('/')
@@ -48,13 +69,6 @@ export class AuthenticationController extends BaseHttpController {
       new AuthenticationRequest(email, password)
     );
 
-    if (authentication) {
-      return this.json(authentication, httpStatus.OK);
-    }
-    return this.json(
-      { code: 'UNAUTHORIZED_CODE', message: '' },
-      httpStatus.UNAUTHORIZED
-    );
-    // TODO Example error message for error codes
+    return this.json(authentication, OK);
   }
 }

@@ -8,6 +8,7 @@ import { BaseLogger } from 'ui/config/logger/BaseLogger';
 import { ILogger } from 'ui/config/logger/ILogger';
 
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { IS_DEVELOPMENT } from 'ui/config/consts/variables';
 
 @injectable()
 export class WinstonLogger extends BaseLogger<Logger> implements ILogger {
@@ -55,8 +56,7 @@ export class WinstonLogger extends BaseLogger<Logger> implements ILogger {
       })
     );
 
-    if (process.env.NODE_ENV === 'development') {
-      // TODO Export to some config file conditional statement
+    if (IS_DEVELOPMENT) {
       this.logger.add(
         new transports.Console({
           format: winstonFormat.combine(winstonFormat.colorize(), this.format),

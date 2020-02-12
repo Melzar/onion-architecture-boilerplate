@@ -1,5 +1,4 @@
 import chai, { expect } from 'chai';
-import httpStatus from 'http-status';
 import chaiHttp from 'chai-http';
 
 import { runSeeder } from 'typeorm-seeding';
@@ -9,6 +8,8 @@ import { Connection } from 'typeorm';
 import { Application } from 'express';
 
 import sinon from 'sinon';
+
+import { OK, UNAUTHORIZED } from 'http-status-codes';
 
 import { inTransaction } from 'config/helpers/inTransaction';
 import { AuthenticationSeed } from 'config/seeds/AuthenticationSeed';
@@ -53,20 +54,32 @@ describe('/v1/auth', () => {
           age: 10,
         });
 
-      const user = await connection.getRepository<User>(User).findOneOrFail({
+      const {
+        id,
+        email,
+        lastName,
+        firstName,
+        age,
+      } = await connection.getRepository<User>(User).findOneOrFail({
         where: {
           email: 'onion_test@example.com',
         },
       });
 
-      expect(user).to.not.eql(null);
-      expect(user.email).to.eql('onion_test@example.com');
-      expect(user.lastName).to.eql('test last name');
-      expect(user.firstName).to.eql('test first name');
-      expect(user.age).to.eql(10);
+      expect(email).to.eql('onion_test@example.com');
+      expect(lastName).to.eql('test last name');
+      expect(firstName).to.eql('test first name');
+      expect(age).to.eql(10);
 
-      expect(response.status).to.eql(httpStatus.OK);
-      expect(response.body).to.deep.equal({ status: 'OK' });
+      expect(response.status).to.eql(OK);
+      expect(response.body).to.deep.equal({
+        id,
+        email: 'onion_test@example.com',
+        password: 'onion_test_123',
+        lastName: 'test last name',
+        firstName: 'test first name',
+        age: 10,
+      });
     })
   );
 
@@ -80,7 +93,7 @@ describe('/v1/auth', () => {
           email: 'onion_member_test@example.com',
           password: 'onion_test_123',
         });
-      expect(response.status).to.eql(httpStatus.OK);
+      expect(response.status).to.eql(OK);
       expect(response.body).to.have.property('token');
     })
   );
@@ -95,9 +108,9 @@ describe('/v1/auth', () => {
           email: 'onion_member_nonexist@example.com',
           password: 'onion_test_123',
         });
-      expect(response.status).to.eql(httpStatus.UNAUTHORIZED);
+      expect(response.status).to.eql(UNAUTHORIZED);
       expect(response.body).to.deep.equal({
-        code: 'UNAUTHORIZED_CODE',
+        code: 'UNAUTHORIZED',
         message: '',
       });
     })
