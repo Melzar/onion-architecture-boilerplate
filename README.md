@@ -156,7 +156,7 @@ especially when you are working as a full stack.
 #### Tests parallelization
 
 Every test runs on it's separate database and we can spawn multiple tests at the same time,
-and run in transaction specific test cases, thanks to which we don't have to clear db after running every test
+and run in transaction specific test cases, thanks to which we don't have to clear db after running every test.
 
 #### Mutational testing
 
