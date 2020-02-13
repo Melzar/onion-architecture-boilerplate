@@ -18,11 +18,11 @@ import {
   DOMAIN_REPOSITORY_IDENTIFIERS,
 } from 'core/CoreModuleSymbols';
 
-import { User as UserEntity } from 'infrastructure/db/entities/User';
-import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
-import { DbRepository } from 'infrastructure/repository/DbRepository';
-import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
-import { Role } from 'infrastructure/db/entities/Role';
+import { User as UserEntity } from 'infrastructure/database/entities/User';
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
+import { Repository } from 'infrastructure/database/repository/Repository';
+import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
+import { Role } from 'infrastructure/database/entities/Role';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
@@ -32,7 +32,7 @@ import { InfrastructureErrors } from 'infrastructure/common/errors/Infrastructur
 
 @injectable()
 @EntityRepository(UserEntity)
-export class DbUserRepository extends DbRepository<UserEntity>
+export class UserRepository extends Repository<UserEntity>
   implements IUserRepository {
   constructor(
     @inject(INFRASTRUCTURE_IDENTIFIERS.DB_MAPPER)

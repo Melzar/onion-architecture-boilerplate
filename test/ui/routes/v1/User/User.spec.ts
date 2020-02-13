@@ -18,7 +18,7 @@ import { inTransaction } from 'config/helpers/inTransaction';
 import { prepareAuthenticationToken } from 'config/helpers/prepareAuthenticationToken';
 import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
-import { User } from 'infrastructure/db/entities/User';
+import { User } from 'infrastructure/database/entities/User';
 
 chai.use(chaiHttp);
 

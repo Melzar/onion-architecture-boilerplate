@@ -3,8 +3,8 @@ import { interfaces } from 'inversify';
 import { BaseModule } from 'dependency/BaseModule';
 
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { RoleEntityToRoleDomainMapper } from 'infrastructure/db/mappings/Role/RoleEntityToRoleDomainMapper';
-import { DbRoleRepository } from 'infrastructure/repository/DbRoleRepository';
+import { RoleEntityToRoleDomainMapper } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomainMapper';
+import { RoleRepository } from 'infrastructure/database/repository/RoleRepository';
 
 import { IMapper } from 'core/common/mapper/IMapper';
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
@@ -20,7 +20,7 @@ export class RoleModule extends BaseModule {
   init(bind: interfaces.Bind): void {
     this.provideRoleMapper(bind);
 
-    this.provideDbRoleRepository(bind);
+    this.provideRoleRepository(bind);
   }
 
   private provideRoleMapper(bind: interfaces.Bind): void {
@@ -29,9 +29,9 @@ export class RoleModule extends BaseModule {
     );
   }
 
-  private provideDbRoleRepository(bind: interfaces.Bind): void {
+  private provideRoleRepository(bind: interfaces.Bind): void {
     bind<IRoleRepository>(DOMAIN_REPOSITORY_IDENTIFIERS.ROLE_REPOSITORY).to(
-      DbRoleRepository
+      RoleRepository
     );
   }
 }

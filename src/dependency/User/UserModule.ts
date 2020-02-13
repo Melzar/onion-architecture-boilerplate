@@ -11,9 +11,10 @@ import {
   DOMAIN_REPOSITORY_IDENTIFIERS,
 } from 'core/CoreModuleSymbols';
 
-import { DbUserRepository } from 'infrastructure/repository/DbUserRepository';
+import { UserRepository } from 'infrastructure/database/repository/UserRepository';
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { UserEntityToUserDomainMapper } from 'infrastructure/db/mappings/User/UserEntityToUserDomainMapper';
+import { UserEntityToUserDomainMapper } from 'infrastructure/database/mappings/User/UserEntityToUserDomainMapper';
+
 import { UI_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { UserDomainToUserUIMapper } from 'ui/common/mappings/User/UserDomainToUserUIMapper';
 
@@ -25,7 +26,7 @@ export class UserModule extends BaseModule {
   }
 
   public init(bind: interfaces.Bind): void {
-    this.provideDbUserRepository(bind);
+    this.provideUserRepository(bind);
 
     this.provideUserUIMapper(bind);
     this.provideUserEntityMapper(bind);
@@ -38,9 +39,9 @@ export class UserModule extends BaseModule {
     );
   }
 
-  private provideDbUserRepository(bind: interfaces.Bind): void {
+  private provideUserRepository(bind: interfaces.Bind): void {
     bind<IUserRepository>(DOMAIN_REPOSITORY_IDENTIFIERS.USER_REPOSITORY).to(
-      DbUserRepository
+      UserRepository
     );
   }
 

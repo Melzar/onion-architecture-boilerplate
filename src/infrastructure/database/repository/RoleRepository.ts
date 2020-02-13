@@ -9,18 +9,18 @@ import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
 import { BaseError } from 'core/common/errors/BaseError';
 
-import { Role as RoleEntity } from 'infrastructure/db/entities/Role';
-import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
+import { Role as RoleEntity } from 'infrastructure/database/entities/Role';
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
-import { DbRepository } from 'infrastructure/repository/DbRepository';
+import { Repository } from 'infrastructure/database/repository/Repository';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 @injectable()
 @EntityRepository(RoleEntity)
-export class DbRoleRepository extends DbRepository<RoleEntity>
+export class RoleRepository extends Repository<RoleEntity>
   implements IRoleRepository {
   constructor(
     @inject(INFRASTRUCTURE_IDENTIFIERS.DB_MAPPER)

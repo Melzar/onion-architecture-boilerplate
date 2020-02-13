@@ -1,8 +1,8 @@
 import { define } from 'typeorm-seeding';
 import * as Faker from 'faker';
 
-import { Role } from 'infrastructure/db/entities/Role';
-import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
+import { Role } from 'infrastructure/database/entities/Role';
+import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
 
 define(Role, (faker: typeof Faker) => {
   const role = new Role();

@@ -7,7 +7,7 @@ import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 
 import { DATABASE_MAPPING_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { Equipment as EquipmentEntity } from 'infrastructure/db/entities/Equipment';
+import { Equipment as EquipmentEntity } from 'infrastructure/database/entities/Equipment';
 
 @injectable()
 export class EquipmentEntityToEquipmentDomainMapper implements IMapper {

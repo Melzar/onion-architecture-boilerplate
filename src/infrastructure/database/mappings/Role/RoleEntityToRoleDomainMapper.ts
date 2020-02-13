@@ -6,7 +6,7 @@ import { Role } from 'core/domain/Role/Role';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { DATABASE_MAPPING_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { Role as RoleEntity } from 'infrastructure/db/entities/Role';
+import { Role as RoleEntity } from 'infrastructure/database/entities/Role';
 
 @injectable()
 export class RoleEntityToRoleDomainMapper implements IMapper {

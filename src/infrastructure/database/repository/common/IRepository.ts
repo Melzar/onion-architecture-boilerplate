@@ -1,4 +1,4 @@
-import { Query } from 'infrastructure/repository/common/Query';
+import { Query } from 'infrastructure/database/repository/common/Query';
 
 export interface IRepository<E, R> {
   custom(): R;

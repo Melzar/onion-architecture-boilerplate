@@ -1,6 +1,6 @@
 import { getConnection } from 'typeorm';
 
-import { User } from 'infrastructure/db/entities/User';
+import { User } from 'infrastructure/database/entities/User';
 
 import { JWTTokenUtil } from 'ui/config/auth/utils/JWTTokenUtil';
 

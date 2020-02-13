@@ -6,8 +6,8 @@ import {
   OneToMany,
 } from 'typeorm';
 
-import { Role } from 'infrastructure/db/entities/Role';
-import { Equipment } from 'infrastructure/db/entities/Equipment';
+import { Role } from 'infrastructure/database/entities/Role';
+import { Equipment } from 'infrastructure/database/entities/Equipment';
 
 @Entity()
 export class User {

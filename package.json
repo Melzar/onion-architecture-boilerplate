@@ -14,7 +14,7 @@
     "test:mutate": "DOTENV_CONFIG_PATH=\".env.test\" stryker run",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "db:seed": "ts-node -r tsconfig-paths/register -r dotenv/config node_modules/typeorm-seeding/dist/cli.js seed --config ormconfig.js default",
-    "db:reload": "TS_NODE_COMPILER_OPTIONS='{\"noImplicitAny\": false}' ts-node -r dotenv/config -r ts-node/register src/infrastructure/db/cli/dbReload.ts reload",
+    "db:reload": "TS_NODE_COMPILER_OPTIONS='{\\\"noImplicitAny\\\": false}' ts-node -r dotenv/config -r ts-node/register src/infrastructure/database/cli/dbReload.ts reload",
     "db:migrate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run",
     "db:generate": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate -n"
   },

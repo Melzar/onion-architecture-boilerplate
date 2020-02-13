@@ -3,14 +3,14 @@ import { injectable } from 'inversify';
 
 import { ObjectType } from 'typeorm/common/ObjectType';
 
-import { Repository } from 'typeorm/repository/Repository';
+import { Repository as ORMRepository } from 'typeorm/repository/Repository';
 
-import { IRepository } from 'infrastructure/repository/common/IRepository';
-import { Query } from 'infrastructure/repository/common/Query';
+import { IRepository } from 'infrastructure/database/repository/common/IRepository';
+import { Query } from 'infrastructure/database/repository/common/Query';
 
 @injectable()
-export abstract class DbRepository<E> extends AbstractRepository<E>
-  implements IRepository<E, Repository<E>> {
+export abstract class Repository<E> extends AbstractRepository<E>
+  implements IRepository<E, ORMRepository<E>> {
   protected constructor(protected readonly entity: ObjectType<E>) {
     super();
   }
@@ -70,7 +70,7 @@ export abstract class DbRepository<E> extends AbstractRepository<E>
     return this.getDBRepository().save(entities);
   }
 
-  public custom(): Repository<E> {
+  public custom(): ORMRepository<E> {
     return this.getDBRepository();
   }
 
@@ -78,7 +78,7 @@ export abstract class DbRepository<E> extends AbstractRepository<E>
     return process.env.ORM_CONNECTION;
   }
 
-  private getDBRepository(): Repository<E> {
+  private getDBRepository(): ORMRepository<E> {
     return getRepository<E>(this.entity, this.getConnectionName());
   }
 }

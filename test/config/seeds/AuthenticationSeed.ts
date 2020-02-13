@@ -1,8 +1,8 @@
 import { Factory, Seeder } from 'typeorm-seeding';
 
-import { Role } from 'infrastructure/db/entities/Role';
-import { USER_ROLE } from 'infrastructure/db/enum/UserRole';
-import { User } from 'infrastructure/db/entities/User';
+import { Role } from 'infrastructure/database/entities/Role';
+import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
+import { User } from 'infrastructure/database/entities/User';
 
 export class AuthenticationSeed implements Seeder {
   async run(factory: Factory): Promise<any> {

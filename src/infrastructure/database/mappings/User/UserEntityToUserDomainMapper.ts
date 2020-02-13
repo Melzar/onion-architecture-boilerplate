@@ -7,7 +7,7 @@ import { IMapper } from 'core/common/mapper/IMapper';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
 import { User } from 'core/domain/User/User';
-import { User as UserEntity } from 'infrastructure/db/entities/User';
+import { User as UserEntity } from 'infrastructure/database/entities/User';
 
 import { DATABASE_MAPPING_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 

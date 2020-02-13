@@ -8,14 +8,14 @@ import { CreateEquipmentRequest } from 'core/applicationServices/Equipment/reque
 import { Equipment } from 'core/domain/Equipment/Equipment';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
-import { DbRepository } from 'infrastructure/repository/DbRepository';
-import { Equipment as EquipmentEntity } from 'infrastructure/db/entities/Equipment';
-import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
+import { Repository } from 'infrastructure/database/repository/Repository';
+import { Equipment as EquipmentEntity } from 'infrastructure/database/entities/Equipment';
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
-import { User } from 'infrastructure/db/entities/User';
+import { User } from 'infrastructure/database/entities/User';
 import { BaseError } from 'core/common/errors/BaseError';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
@@ -30,7 +30,7 @@ import { InfrastructureErrors } from 'infrastructure/common/errors/Infrastructur
 
 @injectable()
 @EntityRepository(EquipmentEntity)
-export class DbEquipmentRepository extends DbRepository<EquipmentEntity>
+export class EquipmentRepository extends Repository<EquipmentEntity>
   implements IEquipmentRepository {
   constructor(
     @inject(INFRASTRUCTURE_IDENTIFIERS.DB_MAPPER)

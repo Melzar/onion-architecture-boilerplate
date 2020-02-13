@@ -1,7 +1,7 @@
 import { injectable } from 'inversify';
 import { createConnection } from 'typeorm';
 
-import { IOrm } from 'infrastructure/db/orm/IOrm';
+import { IOrm } from 'infrastructure/database/orm/IOrm';
 
 @injectable()
 export class OnionOrm implements IOrm {

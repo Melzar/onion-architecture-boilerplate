@@ -1,6 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
-import { User } from 'infrastructure/db/entities/User';
+import { User } from 'infrastructure/database/entities/User';
 
 @Entity()
 export class Equipment {

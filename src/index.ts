@@ -8,7 +8,7 @@ import { ExpressApplication } from 'ui/config/application/ExpressApplication';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { DATABASE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 import { PORT } from 'ui/config/consts/variables';
-import { IOrm } from 'infrastructure/db/orm/IOrm';
+import { IOrm } from 'infrastructure/database/orm/IOrm';
 
 (async () => {
   const appContainer = new AppContainer();

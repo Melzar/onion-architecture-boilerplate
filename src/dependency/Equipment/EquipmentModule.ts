@@ -11,10 +11,10 @@ import {
   DOMAIN_REPOSITORY_IDENTIFIERS,
 } from 'core/CoreModuleSymbols';
 
-import { DbEquipmentRepository } from 'infrastructure/repository/DbEquipmentRepository';
+import { EquipmentRepository } from 'infrastructure/database/repository/EquipmentRepository';
 import { IMapper } from 'core/common/mapper/IMapper';
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/db/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
+import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
 
 export class EquipmentModule extends BaseModule {
   constructor() {
@@ -24,16 +24,16 @@ export class EquipmentModule extends BaseModule {
   }
 
   public init(bind: interfaces.Bind): void {
-    this.provideDbEquipmentRepository(bind);
+    this.provideEquipmentRepository(bind);
 
     this.provideEquipmentMapper(bind);
     this.provideEquipmentService(bind);
   }
 
-  private provideDbEquipmentRepository(bind: interfaces.Bind): void {
+  private provideEquipmentRepository(bind: interfaces.Bind): void {
     bind<IEquipmentRepository>(
       DOMAIN_REPOSITORY_IDENTIFIERS.EQUIPMENT_REPOSITORY
-    ).to(DbEquipmentRepository);
+    ).to(EquipmentRepository);
   }
 
   private provideEquipmentService(bind: interfaces.Bind): void {

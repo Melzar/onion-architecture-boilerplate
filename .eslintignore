@@ -1,3 +1,3 @@
-src/infrastructure/db/migrations
+src/infrastructure/database/migrations
 stryker.conf.js
 diagram.svg

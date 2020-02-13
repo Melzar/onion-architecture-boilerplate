@@ -18,7 +18,7 @@ import { prepareTestApp } from 'config/helpers/prepareTestApp';
 import { clearTestDB } from 'config/helpers/clearTestDB';
 import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
-import { User } from 'infrastructure/db/entities/User';
+import { User } from 'infrastructure/database/entities/User';
 
 chai.use(chaiHttp);
 

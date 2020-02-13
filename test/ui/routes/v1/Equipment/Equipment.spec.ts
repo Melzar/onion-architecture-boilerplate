@@ -20,7 +20,7 @@ import { AuthenticationSeed } from 'config/seeds/AuthenticationSeed';
 import { clearTestDB } from 'config/helpers/clearTestDB';
 import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
-import { Equipment } from 'infrastructure/db/entities/Equipment';
+import { Equipment } from 'infrastructure/database/entities/Equipment';
 
 chai.use(chaiHttp);
 

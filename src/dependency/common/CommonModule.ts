@@ -1,14 +1,14 @@
 import { interfaces } from 'inversify';
 
 import { BaseModule } from 'dependency/BaseModule';
-import { DBMapper } from 'infrastructure/db/mappings/DBMapper';
+import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 
 import {
   DATABASE_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
-import { IOrm } from 'infrastructure/db/orm/IOrm';
-import { OnionOrm } from 'infrastructure/db/orm/OnionOrm';
+import { IOrm } from 'infrastructure/database/orm/IOrm';
+import { OnionOrm } from 'infrastructure/database/orm/OnionOrm';
 
 import { UIMapper } from 'ui/common/mappings/UIMapper';
 import { UI_IDENTIFIERS } from 'ui/UiModuleSymbols';

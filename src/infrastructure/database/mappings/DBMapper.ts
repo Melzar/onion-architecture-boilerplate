@@ -1,10 +1,10 @@
 import { Mapper } from '@wufe/mapper';
 import { inject, injectable } from 'inversify';
 
-import { UserEntityToUserDomainMapper } from 'infrastructure/db/mappings/User/UserEntityToUserDomainMapper';
+import { UserEntityToUserDomainMapper } from 'infrastructure/database/mappings/User/UserEntityToUserDomainMapper';
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/db/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
-import { RoleEntityToRoleDomainMapper } from 'infrastructure/db/mappings/Role/RoleEntityToRoleDomainMapper';
+import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
+import { RoleEntityToRoleDomainMapper } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomainMapper';
 
 @injectable()
 export class DBMapper {

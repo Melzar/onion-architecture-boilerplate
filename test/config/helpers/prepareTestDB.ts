@@ -1,8 +1,8 @@
 import { Connection, createConnection } from 'typeorm';
 import { setConnection } from 'typeorm-seeding';
 
-import 'infrastructure/db/fixtures/factories/RoleFactory';
-import 'infrastructure/db/fixtures/factories/UserFactory';
+import 'infrastructure/database/fixtures/factories/RoleFactory';
+import 'infrastructure/database/fixtures/factories/UserFactory';
 
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
