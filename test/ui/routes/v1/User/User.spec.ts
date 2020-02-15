@@ -19,21 +19,23 @@ import { prepareAuthenticationToken } from 'config/helpers/prepareAuthentication
 import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
 import { User } from 'infrastructure/database/entities/User';
+import { TransactionConnectionName } from 'config/db/TransactionCreator';
 
 chai.use(chaiHttp);
 
 describe('/v1/user', () => {
   let connection: Connection;
   let expressApplication: Application;
-  let testName: string | undefined;
+  let testName: string;
 
   before(async function before() {
-    testName = this.test?.parent?.title;
+    testName = this.test?.parent?.title || '/v1/user';
     expressApplication = await prepareTestApp();
     connection = await prepareTestDB(testName);
     await runSeeder(AuthenticationSeed);
     await runSeeder(UserSeed);
     mockRepositoryConnectionName(testName);
+    sinon.stub(TransactionConnectionName, 'connectionName').returns(testName);
   });
 
   after(async function after() {

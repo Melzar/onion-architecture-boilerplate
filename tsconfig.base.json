@@ -12,7 +12,8 @@
     "moduleResolution": "node",
     "lib": [
       "es5",
-      "es6"
+      "es6",
+      "dom"
     ],
     "plugins": [
       { "transform": "@zerollup/ts-transform-paths" }

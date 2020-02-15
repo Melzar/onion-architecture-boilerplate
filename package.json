@@ -61,7 +61,7 @@
     "swagger-ui-express": "^4.1.3",
     "typeorm": "^0.2.22",
     "typeorm-seeding": "betiol/typeorm-seeding",
-    "typeorm-transactional-cls-hooked": "^0.1.11",
+    "typeorm-transactional-cls-hooked": "^0.1.12",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.4.2",
     "yargs": "^15.1.0"

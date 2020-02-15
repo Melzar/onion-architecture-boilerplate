@@ -2,6 +2,8 @@ import { inject, injectable } from 'inversify';
 
 import { EntityRepository } from 'typeorm';
 
+import { Transactional } from 'typeorm-transactional-cls-hooked';
+
 import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 import { User } from 'core/domain/User/User';
 import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest';
@@ -118,6 +120,9 @@ export class UserRepository extends Repository<UserEntity>
     );
   }
 
+  @Transactional({
+    connectionName: () => process.env.ORM_CONNECTION || '',
+  })
   async deleteUser({ id }: DeleteUserRequest): Promise<void> {
     const user = await this.find(id);
 
@@ -129,12 +134,7 @@ export class UserRepository extends Repository<UserEntity>
       new FindEquipmentForUserRequest(id)
     );
 
-    // https://github.com/typeorm/typeorm/blob/master/docs/transactions.md
-    await this.custom().manager.transaction(
-      async transactionalEntityManager => {
-        await transactionalEntityManager.remove(userEquipment);
-        await transactionalEntityManager.remove(user);
-      }
-    );
+    await this.custom().manager.remove(userEquipment);
+    await this.custom().manager.remove(user);
   }
 }

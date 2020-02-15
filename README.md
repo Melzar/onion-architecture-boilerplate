@@ -188,7 +188,3 @@ not only responses but also saved data in database and authentication context.
 * bcrypt do not support worker threads - follow [this](https://github.com/kelektiv/node.bcrypt.js/issues/709) issue.
   As long as it's not closed, stay with applied version in package ( this issue is related to 
   parallelization of mocha tests )
-
-* transactions do not work between test cases - take a look at troubleshooting here
-  https://github.com/entrostat/typeorm-test-transactions - it can be caused by the way
-  that we are using db repository. As a workaround we can just truncate db per every run.
