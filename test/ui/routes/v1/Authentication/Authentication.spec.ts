@@ -20,8 +20,6 @@ import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnect
 
 import { User } from 'infrastructure/database/entities/User';
 
-import { TransactionConnectionName } from 'config/db/TransactionCreator';
-
 chai.use(chaiHttp);
 
 describe('/v1/auth', () => {
@@ -35,7 +33,6 @@ describe('/v1/auth', () => {
     connection = await prepareTestDB(testName);
     await runSeeder(AuthenticationSeed);
     mockRepositoryConnectionName(testName);
-    sinon.stub(TransactionConnectionName, 'connectionName').returns(testName);
   });
 
   after(async function after() {

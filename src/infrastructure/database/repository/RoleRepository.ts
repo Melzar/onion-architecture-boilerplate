@@ -33,7 +33,9 @@ export class RoleRepository extends Repository<RoleEntity>
     const role = await this.find(id);
 
     if (!role) {
-      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.ROLE_NOT_FOUND]
+      );
     }
 
     return this.dbMapper.mapper.map<RoleEntity, Role>(
@@ -54,7 +56,9 @@ export class RoleRepository extends Repository<RoleEntity>
       .getOne();
 
     if (!role) {
-      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.ROLE_NOT_FOUND]
+      );
     }
 
     return this.dbMapper.mapper.map<RoleEntity, Role>(

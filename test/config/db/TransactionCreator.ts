@@ -8,13 +8,9 @@ import { RollbackException } from 'config/db/RollbackException';
 
 import { RunFunction } from 'config/types/RunFunction';
 
-export const TransactionConnectionName = {
-  connectionName: (): string => process.env.ORM_CONNECTION || '',
-};
-
 export class TransactionCreator {
   @Transactional({
-    connectionName: TransactionConnectionName.connectionName,
+    connectionName: () => process.env.ORM_CONNECTION,
     propagation: Propagation.NESTED,
     isolationLevel: IsolationLevel.SERIALIZABLE,
   })

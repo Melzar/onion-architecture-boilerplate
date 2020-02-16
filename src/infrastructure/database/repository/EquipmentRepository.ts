@@ -43,7 +43,9 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
     const equipment = await this.find(id);
 
     if (!equipment) {
-      throw new BaseError(InfrastructureErrors.EQUIPMENT_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.EQUIPMENT_NOT_FOUND]
+      );
     }
 
     return this.dbMapper.mapper.map<EquipmentEntity, Equipment>(
@@ -86,7 +88,9 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
     );
 
     if (!user) {
-      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]
+      );
     }
 
     const equipment = new EquipmentEntity();

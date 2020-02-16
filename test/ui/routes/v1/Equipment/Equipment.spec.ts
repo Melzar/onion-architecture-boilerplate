@@ -22,8 +22,6 @@ import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnect
 
 import { Equipment } from 'infrastructure/database/entities/Equipment';
 
-import { TransactionConnectionName } from 'config/db/TransactionCreator';
-
 chai.use(chaiHttp);
 
 describe('/v1/equipment', () => {
@@ -37,7 +35,6 @@ describe('/v1/equipment', () => {
     connection = await prepareTestDB(testName);
     await runSeeder(AuthenticationSeed);
     mockRepositoryConnectionName(testName);
-    sinon.stub(TransactionConnectionName, 'connectionName').returns(testName);
   });
 
   after(async function after() {
@@ -115,7 +112,7 @@ describe('/v1/equipment', () => {
         .getRepository<Equipment>(Equipment)
         .findOne({
           where: {
-            name: 'test equipment',
+            name: 'test equipment admin',
           },
         });
 

@@ -59,7 +59,9 @@ export class UserRepository extends Repository<UserEntity>
     );
 
     if (!role) {
-      throw new BaseError(InfrastructureErrors.ROLE_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.ROLE_NOT_FOUND]
+      );
     }
 
     const user = new UserEntity();
@@ -92,7 +94,9 @@ export class UserRepository extends Repository<UserEntity>
       .getOne();
 
     if (!result) {
-      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]
+      );
     }
 
     return this.dbMapper.mapper.map<UserEntity, User>(
@@ -121,13 +125,15 @@ export class UserRepository extends Repository<UserEntity>
   }
 
   @Transactional({
-    connectionName: () => process.env.ORM_CONNECTION || '',
+    connectionName: () => process.env.ORM_CONNECTION,
   })
   async deleteUser({ id }: DeleteUserRequest): Promise<void> {
     const user = await this.find(id);
 
     if (!user) {
-      throw new BaseError(InfrastructureErrors.USER_NOT_FOUND.toString());
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]
+      );
     }
 
     const userEquipment = await this.equipmentRepository.findEquipmentForUser(

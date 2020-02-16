@@ -1,1 +1,1 @@
-export const enum CoreErrors {}
+export enum CoreErrors {}
