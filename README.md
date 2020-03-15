@@ -172,7 +172,6 @@ not only responses but also saved data in database and authentication context.
 
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
-* On complete update `CHANGELOG.MD` and tag v1
 
 ### KNOWN ISSUES
 
