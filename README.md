@@ -178,7 +178,6 @@ not only responses but also saved data in database and authentication context.
 
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
-* Introduce Unit of work pattern for handling transactions
 
 ### KNOWN ISSUES
 
