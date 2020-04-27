@@ -1,3 +1,10 @@
+### RELEASE v1.1.0
+
+Release which includes following features:
+
+1. Introduced Unit Of Work Pattern
+2. Maintenance related patches and bugfixes
+
 ### RELEASE v1.0.0
 
 Release which includes following features:

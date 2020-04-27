@@ -10,6 +10,11 @@ export const DOMAIN_REPOSITORY_IDENTIFIERS = {
   USER_REPOSITORY: Symbol.for('IUserRepository'),
 };
 
+export const DOMAIN_UNIT_OF_WORK_IDENTIFIERS = {
+  EQUIPMENT_UNIT_OF_WORK: Symbol.for('IEquipmentUnitOfWork'),
+  USER_UNIT_OF_WORK: Symbol.for('IUserUnitOfWork'),
+};
+
 export const DOMAIN_MAPPING_IDENTIFIERS = {
   EQUIPMENT_DOMAIN: Symbol.for('EquipmentDomain'),
   ROLE_DOMAIN: Symbol.for('RoleDomain'),

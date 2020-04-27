@@ -1,5 +1,5 @@
 import { inject, injectable } from 'inversify';
-import { EntityRepository, getRepository } from 'typeorm';
+import { EntityRepository } from 'typeorm';
 
 import { BaseError } from 'core/common/errors/BaseError';
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
@@ -9,7 +9,7 @@ import { AddEquipmentRequest } from 'core/domainServices/Equipment/request/AddEq
 import { Equipment } from 'core/domain/Equipment/Equipment';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
-import { Repository } from 'infrastructure/database/repository/Repository';
+import { Repository } from 'infrastructure/database/repository/common/Repository';
 import { Equipment as EquipmentEntity } from 'infrastructure/database/entities/Equipment';
 import { DBMapper } from 'infrastructure/database/mappings/DBMapper';
 import {
@@ -18,15 +18,6 @@ import {
 } from 'infrastructure/InfrastructureModuleSymbols';
 import { User } from 'infrastructure/database/entities/User';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
-
-/**
- * @description DONE IT THIS WAY BECAUSE OF THIS ISSUE https://github.com/inversify/InversifyJS/issues/771 and
- * https://github.com/inversify/InversifyJS/issues/941
- * I've tried with lazy loading and nested repositories but because of inversify issue I had to skip this approach
- * Eventually we could use LazyService Loader in inversify but then we would have
- * to switch every repository to separate module
- * It would make sense but in larger codebase to split modules by domain
- */
 
 @injectable()
 @EntityRepository(EquipmentEntity)
@@ -80,25 +71,11 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
     name,
     userId,
   }: AddEquipmentRequest): Promise<Equipment> {
-    // TODO Introduce unit of work pattern to resolve circular dependencies issues when it comes to repository
-    /**
-     * @description using method to avoid circular dependencies issues but it could be also used normally on long run
-     */
-    const user = await getRepository(User, this.getConnectionName()).findOne(
-      userId
-    );
-
-    if (!user) {
-      throw new BaseError(
-        InfrastructureErrors[InfrastructureErrors.USER_NOT_FOUND]
-      );
-    }
-
     const equipment = new EquipmentEntity();
     equipment.name = name;
 
     const userToAssign = new User();
-    userToAssign.id = user.id;
+    userToAssign.id = +userId;
 
     equipment.user = userToAssign;
 

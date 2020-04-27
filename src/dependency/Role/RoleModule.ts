@@ -4,7 +4,7 @@ import { BaseModule } from 'dependency/BaseModule';
 
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 import { RoleEntityToRoleDomainMapper } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomainMapper';
-import { RoleRepository } from 'infrastructure/database/repository/RoleRepository';
+import { RoleRepository } from 'infrastructure/database/repository/Role/RoleRepository';
 
 import { IMapper } from 'core/common/mapper/IMapper';
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';

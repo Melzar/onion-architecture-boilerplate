@@ -1,7 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class createEquipment1580567781829 implements MigrationInterface {
-  name = 'createEquipment1580567781829';
 
   public async up(queryRunner: QueryRunner): Promise<any> {
     await queryRunner.query(

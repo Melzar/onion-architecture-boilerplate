@@ -19,6 +19,7 @@ import { prepareAuthenticationToken } from 'config/helpers/prepareAuthentication
 import { mockRepositoryConnectionName } from 'config/mocks/mockRepositoryConnectionName';
 
 import { User } from 'infrastructure/database/entities/User';
+import { Equipment } from 'infrastructure/database/entities/Equipment';
 
 chai.use(chaiHttp);
 
@@ -71,6 +72,15 @@ describe('/v1/user', () => {
         },
       });
 
+      const userEquipment = await connection
+        .getRepository<Equipment>(Equipment)
+        .find({
+          where: {
+            userId: user.id,
+          },
+        });
+
+      expect(userEquipment.length).to.eql(0);
       expect(userDeleted).to.eql(undefined);
     })
   );

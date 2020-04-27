@@ -119,7 +119,9 @@ required data which cannot be changed on the fly.
 
 #### Unit Of Work
 
-TODO
+Unit Of Work is simply speaking - a wrapper. It wraps repositories and performs required operations usually in transaction.
+It solves issue related to circular repository dependency in ioc, or nested repository dependency on each other. With unit 
+of work specific repository methods don't have any reference to external repositories which makes them more atomic.
 
 #### Mapper
 

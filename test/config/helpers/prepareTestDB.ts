@@ -3,13 +3,12 @@ import { setConnection } from 'typeorm-seeding';
 
 import 'infrastructure/database/fixtures/factories/RoleFactory';
 import 'infrastructure/database/fixtures/factories/UserFactory';
+import 'infrastructure/database/fixtures/factories/EquipmentFactory';
 
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
 import { prepareTestTransaction } from 'config/helpers/prepareTestTransaction';
-
 import { getPostgresConnection } from 'config/helpers/getPostgresConnection';
-
 import { getCurrentConnection } from 'config/helpers/getCurrentConnection';
 
 prepareTestTransaction();

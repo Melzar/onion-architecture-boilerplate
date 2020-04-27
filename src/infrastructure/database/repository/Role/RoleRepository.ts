@@ -15,7 +15,7 @@ import {
   DATABASE_MAPPING_IDENTIFIERS,
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
-import { Repository } from 'infrastructure/database/repository/Repository';
+import { Repository } from 'infrastructure/database/repository/common/Repository';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 @injectable()
