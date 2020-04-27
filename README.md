@@ -117,6 +117,10 @@ it's not always obvious how to use environment specific concepts. In this boiler
 Request object defines parameters / input to specific module input ( domain / infrastructure ), and holds
 required data which cannot be changed on the fly.
 
+#### Unit Of Work
+
+TODO
+
 #### Mapper
 
 Simple concept where one module data structure is translated to another module
@@ -172,6 +176,7 @@ not only responses but also saved data in database and authentication context.
 
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
+* Introduce Unit of work pattern for handling transactions
 
 ### KNOWN ISSUES
 

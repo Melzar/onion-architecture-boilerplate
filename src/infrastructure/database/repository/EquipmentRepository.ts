@@ -1,10 +1,11 @@
 import { inject, injectable } from 'inversify';
 import { EntityRepository, getRepository } from 'typeorm';
 
+import { BaseError } from 'core/common/errors/BaseError';
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
 import { FindEquipmentRequest } from 'core/domainServices/Equipment/request/FindEquipmentRequest';
 import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
-import { CreateEquipmentRequest } from 'core/applicationServices/Equipment/requests/CreateEquipmentRequest';
+import { AddEquipmentRequest } from 'core/domainServices/Equipment/request/AddEquipmentRequest';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
@@ -16,7 +17,6 @@ import {
   INFRASTRUCTURE_IDENTIFIERS,
 } from 'infrastructure/InfrastructureModuleSymbols';
 import { User } from 'infrastructure/database/entities/User';
-import { BaseError } from 'core/common/errors/BaseError';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 
 /**
@@ -79,7 +79,8 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
   async addEquipment({
     name,
     userId,
-  }: CreateEquipmentRequest): Promise<Equipment> {
+  }: AddEquipmentRequest): Promise<Equipment> {
+    // TODO Introduce unit of work pattern to resolve circular dependencies issues when it comes to repository
     /**
      * @description using method to avoid circular dependencies issues but it could be also used normally on long run
      */
