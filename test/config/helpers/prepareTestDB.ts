@@ -1,5 +1,5 @@
-import { Connection, createConnection } from 'typeorm';
-import { setConnection } from 'typeorm-seeding';
+import { Connection } from 'typeorm';
+import { createConnection } from 'typeorm-seeding';
 
 import 'infrastructure/database/fixtures/factories/RoleFactory';
 import 'infrastructure/database/fixtures/factories/UserFactory';
@@ -33,6 +33,5 @@ export const prepareTestDB = async (testName?: string): Promise<Connection> => {
 
   await dbConnecton.dropDatabase();
   await dbConnecton.runMigrations();
-  setConnection(dbConnecton);
   return dbConnecton;
 };

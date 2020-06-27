@@ -11,17 +11,17 @@ export class UserSeed implements Seeder {
   }
 
   private async prepareUserSeedToDelete(factory: Factory): Promise<void> {
-    const memberRole = await factory(Role)().seed({
+    const memberRole = await factory(Role)().create({
       name: USER_ROLE.MEMBER,
     });
 
-    const user = await factory(User)().seed({
+    const user = await factory(User)().create({
       email: 'onion_member_test_delete@example.com',
       role: memberRole,
     });
 
     await times(5, async () => {
-      await factory(Equipment)().seed({
+      await factory(Equipment)().create({
         user,
       });
     });

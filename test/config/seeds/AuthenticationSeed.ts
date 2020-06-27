@@ -13,11 +13,11 @@ export class AuthenticationSeed implements Seeder {
   private async prepareAuthenticationMemberUserSeed(
     factory: Factory
   ): Promise<void> {
-    const memberRole = await factory(Role)().seed({
+    const memberRole = await factory(Role)().create({
       name: USER_ROLE.MEMBER,
     });
 
-    await factory(User)().seed({
+    await factory(User)().create({
       email: 'onion_member_test@example.com',
       role: memberRole,
     });
@@ -26,11 +26,11 @@ export class AuthenticationSeed implements Seeder {
   private async prepareAuthenticationAdminUserSeed(
     factory: Factory
   ): Promise<void> {
-    const adminRole = await factory(Role)().seed({
+    const adminRole = await factory(Role)().create({
       name: USER_ROLE.ADMIN,
     });
 
-    await factory(User)().seed({
+    await factory(User)().create({
       email: 'onion_admin_test@example.com',
       role: adminRole,
     });

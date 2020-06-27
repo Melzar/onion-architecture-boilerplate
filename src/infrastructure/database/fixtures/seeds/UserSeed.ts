@@ -13,28 +13,28 @@ export class UserSeed implements Seeder {
   }
 
   private async prepareAdminUserSeeds(factory: Factory): Promise<void> {
-    const adminRole = await factory(Role)().seed({
+    const adminRole = await factory(Role)().create({
       name: USER_ROLE.ADMIN,
     });
 
-    await factory(User)().seed({
+    await factory(User)().create({
       email: 'onion_admin@example.com',
       role: adminRole,
     });
   }
 
   private async prepareMemberUserSeeds(factory: Factory): Promise<void> {
-    const memberRole = await factory(Role)().seed({
+    const memberRole = await factory(Role)().create({
       name: USER_ROLE.MEMBER,
     });
 
-    const user = await factory(User)().seed({
+    const user = await factory(User)().create({
       email: 'onion_member_1@example.com',
       role: memberRole,
     });
 
     await times(5, async () => {
-      await factory(Equipment)().seed({
+      await factory(Equipment)().create({
         user,
       });
     });

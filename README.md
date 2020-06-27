@@ -142,12 +142,12 @@ simple values in mappers etc.
 This mapper is for preparing Domain data format into specific ui data format. Sometimes we may need to perform
 some logic in domain services on domain object format but we would like to make a response in totally different format.
 For example we may fetch data as array from database, perform operations in services on array but on ui, we would like to
-group array elements into map structure in different format. In repository we mapped `User` domain object into `User` ui object
+group array elements into map structure in different format. In repository, we mapped `User` domain object into `User` ui object
 where `UI` object do not contain password field and contains only required fields for authentication purposes.
 
 #### Migrations
 
-Used for managing database changes. In repository we generate migrations based on entity changes. So we can
+Used for managing database changes. In repository, we generate migrations based on entity changes. So we can
 add new column on entity and then just use one command to generate required migration. It's recommended to split database related
 changes into multiple migrations instead creating one migration for all related feature changes. For example it's better to
 have separate migration for creating `x` table and separate migration for adding / updating table columns definition to
@@ -161,7 +161,7 @@ especially when you are working as a full stack.
 
 #### Tests parallelization
 
-Every test runs on it's separate database and we can spawn multiple tests at the same time,
+Every test runs on it's separate database, and we can spawn multiple tests at the same time,
 and run in transaction specific test cases, thanks to which we don't have to clear db after running every test.
 
 #### Mutational testing
@@ -180,10 +180,6 @@ not only responses but also saved data in database and authentication context.
 * Introduce Graphql and integration with inversify-graphQL - separate repo
 
 ### KNOWN ISSUES
-
-* Seeds issue - currently using external repository with patch, when this PR is merged move to newest version
-  `https://github.com/w3tecch/typeorm-seeding/pull/18`
-
 * To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
   `https://github.com/OAI/OpenAPI-Specification/issues/583#issuecomment-267554000`
 
