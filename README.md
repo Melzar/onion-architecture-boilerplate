@@ -185,7 +185,3 @@ not only responses but also saved data in database and authentication context.
 
 * http context is empty in controllers, looks like http context is incorrectly injected into controller,
   everything is fine though in middlewares - applied workaround take a look at `getCurrentUser` helper
-  
-* bcrypt do not support worker threads - follow [this](https://github.com/kelektiv/node.bcrypt.js/issues/709) issue.
-  As long as it's not closed, stay with applied version in package ( this issue is related to 
-  parallelization of mocha tests )
