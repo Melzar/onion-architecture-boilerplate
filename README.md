@@ -8,7 +8,7 @@ This repository is a real life example of Onion Architecture with use of `Node.j
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWHAfEDDMUkKpMELM0PruiEs)
 
-> This diagram has some copyrights, if you want to use it on larger scale, feel free to contact me.
+> Diagrams have copyrights, if you want to use it on larger scale, feel free to contact me.
 
 ##### Technologies used
 
@@ -35,7 +35,40 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWH
 4. ui
 
         Contains definition of presentation layer like controller, express setup etc  
-        
+
+##### Data flow
+
+It's important to keep data flow as simple as possible. Generally it's simple to follow - for entry data always specify request object,
+for output translate data to specific layer. For easier understanding I've prepared a diagram.
+
+![Onion Data Flow Diagram](diagram.flow.svg)
+
+Diagram available [here](https://drive.google.com/uc?export=view&id=1cpdb56cnzkxT_LA_NSW9aRFDDcS_3GFl)
+
+##### Data visibility
+
+Every layer has its own rules when it comes to access to another layer. 
+
+* `Dependency injection` has access to every layer to provide proper implementations.
+* `UI` have access only to `Core Layer`
+    * `Domains` can be grouped into `Bounded Context`
+    * Given `Domains` do not see each other, but defines `protocol` of communication like `CLI`, `REST` etc.
+* `Infrastructure` have access only to `Core Layer`
+    * `Functionalities` can be grouped into `Functionality Group` like `Messaging`, `Persistence` etc
+    * Given `Functionalities` do not see each other, but have access to `Data Source`
+* `Core Layer` don`t have access to any layer. It means that it's fully independent of implementations and can be
+   extracted from project if needed
+    * `Application Service` here have access to `Domain Services` and `Domain Models`
+    * `Domain Serivce` have access only to domain models, and `Domain Services` don`t see one each other
+    * `Domain Model` don`t have access to any upper layer
+
+Visual representation of above restrictions can be seen in diagram.
+
+![Onion Data Layers Visibility](diagram.layers.svg)
+
+Diagram available [here](https://drive.google.com/uc?export=view&id=1xonZCgIalsW1UCBqusK6Rqz5__I0-T8p)
+
+
 ##### What is supported?
 
 1. Multiple environment setup
@@ -183,7 +216,6 @@ not only responses but also saved data in database and authentication context.
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
 * Provide example of interactor / use case / scenario pattern
 * Provide additional diagrams
-    * Data flow through layers diagram
     * Detailed diagram per layer
     * Project lifespan diagram ( direction on how to expand project codebase and when to switch to specific phase, dividing project development into phases)
 
