@@ -45,7 +45,7 @@ for output translate data to specific layer. For easier understanding I've prepa
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1cpdb56cnzkxT_LA_NSW9aRFDDcS_3GFl)
 
-##### Data visibility
+##### Architecture layers access
 
 Every layer has its own rules when it comes to access to another layer. 
 
