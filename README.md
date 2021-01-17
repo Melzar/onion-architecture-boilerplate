@@ -178,6 +178,14 @@ not only responses but also saved data in database and authentication context.
 
 * Prepare FP version of architecture - separate repo
 * Introduce Graphql and integration with inversify-graphQL - separate repo
+* Introduce docker into project  
+* Provide example how to integrate two or more protocols of communication within same codebase ( add `GraphQL` )
+* Provide example of project modularization ( `lerna` + `yarn workspaces` )
+* Provide example of interactor / use case / scenario pattern
+* Provide additional diagrams
+    * Data flow through layers diagram
+    * Detailed diagram per layer
+    * Project lifespan diagram ( direction on how to expand project codebase and when to switch to specific phase, dividing project development into phases)
 
 ### KNOWN ISSUES
 * To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
