@@ -16,12 +16,12 @@ import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
 import { Equipment } from 'infrastructure/database/entities/Equipment';
 import { User as UserEntity } from 'infrastructure/database/entities/User';
 
-import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest';
-import { FindUserRequest } from 'core/domainServices/User/request/FindUserRequest';
-import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
-import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
-import { AddUserUnitOfWorkRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRequest';
-import { DeleteUserUnitOfWorkRequest } from 'core/domainServices/User/request/DeleteUserUnitOfWorkRequest';
+import { AddUserRepositoryRequest } from 'core/domainServices/User/request/AddUserRepositoryRequest';
+import { FindUserRepositoryRequest } from 'core/domainServices/User/request/FindUserRepositoryRequest';
+import { FindEquipmentForUserRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRepositoryRequest';
+import { FindRoleByNameRepositoryRequest } from 'core/domainServices/Role/request/FindRoleByNameRepositoryRequest';
+import { AddUserUnitOfWorkRepositoryRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRepositoryRequest';
+import { DeleteUserUnitOfWorkRepositoryRequest } from 'core/domainServices/User/request/DeleteUserUnitOfWorkRepositoryRequest';
 
 @injectable()
 export class UserUnitOfWork extends UnitOfWork implements IUserUnitOfWork {
@@ -42,25 +42,36 @@ export class UserUnitOfWork extends UnitOfWork implements IUserUnitOfWork {
     firstName,
     lastName,
     age,
-  }: AddUserUnitOfWorkRequest): Promise<User> {
+  }: AddUserUnitOfWorkRepositoryRequest): Promise<User> {
     const { id } = await this.roleRepository.findRoleByName(
-      new FindRoleByNameRequest(USER_ROLE.MEMBER)
+      new FindRoleByNameRepositoryRequest(USER_ROLE.MEMBER)
     );
 
     return this.userRepository.addUser(
-      new AddUserRequest(firstName, email, lastName, password, age, +id)
+      new AddUserRepositoryRequest(
+        firstName,
+        email,
+        lastName,
+        password,
+        age,
+        +id
+      )
     );
   }
 
   @Transactional({
     connectionName: () => process.env.ORM_CONNECTION,
   })
-  async deleteUser({ id }: DeleteUserUnitOfWorkRequest): Promise<void> {
+  async deleteUser({
+    id,
+  }: DeleteUserUnitOfWorkRepositoryRequest): Promise<void> {
     const equipment = await this.equipmentRepository.findEquipmentForUser(
-      new FindEquipmentForUserRequest(id)
+      new FindEquipmentForUserRepositoryRequest(id)
     );
 
-    const user = await this.userRepository.findUser(new FindUserRequest(id));
+    const user = await this.userRepository.findUser(
+      new FindUserRepositoryRequest(id)
+    );
 
     await this.getManager<Equipment>(Equipment).remove(equipment);
     await this.getManager<UserEntity>(UserEntity).remove(user);

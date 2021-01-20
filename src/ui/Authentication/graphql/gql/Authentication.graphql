@@ -1,0 +1,15 @@
+extend type Mutation {
+    authenticate(input: AuthenticateInput): Authentication!
+}
+
+input AuthenticateInput {
+    email: String!
+    password: String!
+}
+
+type Authentication {
+    token: String!
+}
+
+
+

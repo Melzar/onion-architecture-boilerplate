@@ -20,6 +20,12 @@ import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleS
 import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
 import { EquipmentUnitOfWork } from 'infrastructure/database/repository/Equipment/EquipmentUnitOfWork';
 
+import { UI_SCHEMA_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { IResolver } from 'ui/common/config/application/apollo/common/IResolver';
+import { EquipmentQuery } from 'ui/Equipment/graphql/EquipmentQuery';
+import { EquipmentMutation } from 'ui/Equipment/graphql/EquipmentMutation';
+import { EquipmentSubquery } from 'ui/Equipment/graphql/EquipmentSubquery';
+
 export class EquipmentModule extends BaseModule {
   constructor() {
     super((bind: interfaces.Bind): void => {
@@ -33,6 +39,10 @@ export class EquipmentModule extends BaseModule {
 
     this.provideEquipmentMapper(bind);
     this.provideEquipmentService(bind);
+
+    this.provideEquipmentQuery(bind);
+    this.provideEquipmentMutation(bind);
+    this.provideEquipmentSubquery(bind);
   }
 
   private provideEquipmentRepository(bind: interfaces.Bind): void {
@@ -47,15 +57,31 @@ export class EquipmentModule extends BaseModule {
     ).to(EquipmentUnitOfWork);
   }
 
+  private provideEquipmentMapper(bind: interfaces.Bind): void {
+    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER).to(
+      EquipmentEntityToEquipmentDomainMapper
+    );
+  }
+
   private provideEquipmentService(bind: interfaces.Bind): void {
     bind<IEquipmentService>(
       DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.EQUIPMENT_SERVICE
     ).to(EquipmentService);
   }
 
-  private provideEquipmentMapper(bind: interfaces.Bind): void {
-    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER).to(
-      EquipmentEntityToEquipmentDomainMapper
+  private provideEquipmentQuery(bind: interfaces.Bind): void {
+    bind<IResolver>(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_QUERIES).to(EquipmentQuery);
+  }
+
+  private provideEquipmentMutation(bind: interfaces.Bind): void {
+    bind<IResolver>(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_MUTATIONS).to(
+      EquipmentMutation
+    );
+  }
+
+  private provideEquipmentSubquery(bind: interfaces.Bind): void {
+    bind<IResolver>(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_SUBQUERIES).to(
+      EquipmentSubquery
     );
   }
 }

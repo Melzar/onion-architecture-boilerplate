@@ -1,8 +1,8 @@
 import { User } from 'core/domain/User/User';
-import { AddUserUnitOfWorkRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRequest';
-import { DeleteUserUnitOfWorkRequest } from 'core/domainServices/User/request/DeleteUserUnitOfWorkRequest';
+import { AddUserUnitOfWorkRepositoryRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRepositoryRequest';
+import { DeleteUserUnitOfWorkRepositoryRequest } from 'core/domainServices/User/request/DeleteUserUnitOfWorkRepositoryRequest';
 
 export interface IUserUnitOfWork {
-  addUser(request: AddUserUnitOfWorkRequest): Promise<User>;
-  deleteUser(request: DeleteUserUnitOfWorkRequest): Promise<void>;
+  addUser(request: AddUserUnitOfWorkRepositoryRequest): Promise<User>;
+  deleteUser(request: DeleteUserUnitOfWorkRepositoryRequest): Promise<void>;
 }

@@ -13,9 +13,9 @@ import { IUserUnitOfWork } from 'core/domainServices/User/IUserUnitOfWork';
 import { User } from 'core/domain/User/User';
 
 import { AuthenticationRequest } from 'core/applicationServices/Authentication/requests/AuthenticationRequest';
-import { FindUserByEmailRequest } from 'core/domainServices/User/request/FindUserByEmailRequest';
+import { FindUserByEmailRepositoryRequest } from 'core/domainServices/User/request/FindUserByEmailRepositoryRequest';
 import { SignUpRequest } from 'core/applicationServices/Authentication/requests/SignUpRequest';
-import { AddUserUnitOfWorkRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRequest';
+import { AddUserUnitOfWorkRepositoryRequest } from 'core/domainServices/User/request/AddUserUnitOfWorkRepositoryRequest';
 
 @injectable()
 export class AuthenticationService implements IAuthenticationService {
@@ -34,13 +34,19 @@ export class AuthenticationService implements IAuthenticationService {
     age,
   }: SignUpRequest): Promise<User> {
     return this.userUnitOfWork.addUser(
-      new AddUserUnitOfWorkRequest(firstName, email, lastName, password, age)
+      new AddUserUnitOfWorkRepositoryRequest(
+        firstName,
+        email,
+        lastName,
+        password,
+        age
+      )
     );
   }
 
   async verifyCredentials({ email, password }: AuthenticationRequest) {
     const user = await this.userRepository.findUserByEmail(
-      new FindUserByEmailRequest(email)
+      new FindUserByEmailRepositoryRequest(email)
     );
 
     if (!user || !(await compare(password, user?.password || ''))) {

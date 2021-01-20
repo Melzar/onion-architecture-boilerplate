@@ -1,12 +1,12 @@
 import { Equipment } from 'core/domain/Equipment/Equipment';
-import { FindEquipmentRequest } from 'core/domainServices/Equipment/request/FindEquipmentRequest';
-import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
-import { AddEquipmentRequest } from 'core/domainServices/Equipment/request/AddEquipmentRequest';
+import { FindEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentRepositoryRequest';
+import { FindEquipmentForUserRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRepositoryRequest';
+import { AddEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentRepositoryRequest';
 
 export interface IEquipmentRepository {
-  addEquipment(request: AddEquipmentRequest): Promise<Equipment>;
-  findEquipment(request: FindEquipmentRequest): Promise<Equipment>;
+  addEquipment(request: AddEquipmentRepositoryRequest): Promise<Equipment>;
+  findEquipment(request: FindEquipmentRepositoryRequest): Promise<Equipment>;
   findEquipmentForUser(
-    request: FindEquipmentForUserRequest
+    request: FindEquipmentForUserRepositoryRequest
   ): Promise<Equipment[]>;
 }

@@ -2,7 +2,7 @@ import { getConnection } from 'typeorm';
 
 import { User } from 'infrastructure/database/entities/User';
 
-import { JWTTokenUtil } from 'ui/config/auth/utils/JWTTokenUtil';
+import { JWTTokenUtil } from '../../../src/ui/common/config/application/common/auth/utils/JWTTokenUtil';
 
 export const prepareAuthenticationToken = async (
   email: string,
@@ -28,8 +28,8 @@ export const prepareAuthenticationToken = async (
       email: user.email,
       role: user.role.name,
     },
-    'user',
     process.env.APP_TOKEN_SECRET || '',
-    process.env.APP_TOKEN_LIFE || ''
+    process.env.APP_TOKEN_LIFE || '',
+    'user'
   );
 };

@@ -1,9 +1,9 @@
 import { InversifyExpressServer } from 'inversify-express-utils';
 
-import { errorHandler } from 'ui/config/errors/handlers/errorHandler';
+import { errorHandler } from 'ui/common/config/errors/handlers/errorHandler';
 
-import { ExpressApplication } from 'ui/config/application/ExpressApplication';
-import { ApplicationAuthProvider } from 'ui/config/auth/middlewares/ApplicationAuthProvider';
+import { ExpressApplication } from 'ui/common/config/application/express/ExpressApplication';
+import { ApplicationAuthProvider } from 'ui/common/config/application/express/auth/middlewares/ApplicationAuthProvider';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 import { BaseContainer } from 'dependency/BaseContainer';

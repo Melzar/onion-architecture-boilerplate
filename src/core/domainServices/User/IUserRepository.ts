@@ -1,10 +1,11 @@
 import { User } from 'core/domain/User/User';
-import { FindUserByEmailRequest } from 'core/domainServices/User/request/FindUserByEmailRequest';
-import { FindUserRequest } from 'core/domainServices/User/request/FindUserRequest';
-import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest';
+import { FindUserByEmailRepositoryRequest } from 'core/domainServices/User/request/FindUserByEmailRepositoryRequest';
+import { FindUserRepositoryRequest } from 'core/domainServices/User/request/FindUserRepositoryRequest';
+import { AddUserRepositoryRequest } from 'core/domainServices/User/request/AddUserRepositoryRequest';
 
 export interface IUserRepository {
-  addUser(request: AddUserRequest): Promise<User>;
-  findUser(request: FindUserRequest): Promise<User>;
-  findUserByEmail(request: FindUserByEmailRequest): Promise<User>;
+  addUser(request: AddUserRepositoryRequest): Promise<User>;
+  findUser(request: FindUserRepositoryRequest): Promise<User>;
+  findUserByEmail(request: FindUserByEmailRepositoryRequest): Promise<User>;
+  getUsers(): Promise<User[]>;
 }

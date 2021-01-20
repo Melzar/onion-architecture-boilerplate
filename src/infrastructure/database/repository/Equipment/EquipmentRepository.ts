@@ -3,9 +3,9 @@ import { EntityRepository } from 'typeorm';
 
 import { BaseError } from 'core/common/errors/BaseError';
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
-import { FindEquipmentRequest } from 'core/domainServices/Equipment/request/FindEquipmentRequest';
-import { FindEquipmentForUserRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRequest';
-import { AddEquipmentRequest } from 'core/domainServices/Equipment/request/AddEquipmentRequest';
+import { FindEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentRepositoryRequest';
+import { FindEquipmentForUserRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRepositoryRequest';
+import { AddEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentRepositoryRequest';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
@@ -30,7 +30,9 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
     super(EquipmentEntity);
   }
 
-  async findEquipment({ id }: FindEquipmentRequest): Promise<Equipment> {
+  async findEquipment({
+    id,
+  }: FindEquipmentRepositoryRequest): Promise<Equipment> {
     const equipment = await this.find(id);
 
     if (!equipment) {
@@ -50,7 +52,7 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
 
   async findEquipmentForUser({
     userId,
-  }: FindEquipmentForUserRequest): Promise<Equipment[]> {
+  }: FindEquipmentForUserRepositoryRequest): Promise<Equipment[]> {
     const userEquipment = await this.custom()
       .createQueryBuilder()
       .where('"Equipment"."userId" = :userId', {
@@ -70,7 +72,7 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
   async addEquipment({
     name,
     userId,
-  }: AddEquipmentRequest): Promise<Equipment> {
+  }: AddEquipmentRepositoryRequest): Promise<Equipment> {
     const equipment = new EquipmentEntity();
     equipment.name = name;
 

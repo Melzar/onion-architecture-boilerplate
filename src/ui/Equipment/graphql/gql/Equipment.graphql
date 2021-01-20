@@ -1,0 +1,13 @@
+extend type Mutation {
+    createEquipment(input: CreateEquipmentInput): Equipment! @isAuthenticated(role: [admin])
+}
+
+input CreateEquipmentInput {
+    name: String!
+}
+
+type Equipment {
+    id: ID!
+    name: String!
+}
+

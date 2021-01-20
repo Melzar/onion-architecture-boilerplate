@@ -1,8 +1,8 @@
 import { Role } from 'core/domain/Role/Role';
-import { FindRoleRequest } from 'core/domainServices/Role/request/FindRoleRequest';
-import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
+import { FindRoleRepositoryRequest } from 'core/domainServices/Role/request/FindRoleRepositoryRequest';
+import { FindRoleByNameRepositoryRequest } from 'core/domainServices/Role/request/FindRoleByNameRepositoryRequest';
 
 export interface IRoleRepository {
-  findRole(request: FindRoleRequest): Promise<Role>;
-  findRoleByName(request: FindRoleByNameRequest): Promise<Role>;
+  findRole(request: FindRoleRepositoryRequest): Promise<Role>;
+  findRoleByName(request: FindRoleByNameRepositoryRequest): Promise<Role>;
 }

@@ -16,7 +16,9 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1BPV_0a7QHWH
 2. `Inversify.js`
 3. `TypeOrm`
 4. `Express.js`
-5. `Mocha / Chai` for testing
+5. `Apollo Server`
+6. `GraphQL`   
+7. `Mocha / Chai` for testing
 
 ##### Structure
 
@@ -68,7 +70,6 @@ Visual representation of above restrictions can be seen in diagram.
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1xonZCgIalsW1UCBqusK6Rqz5__I0-T8p)
 
-
 ##### What is supported?
 
 1. Multiple environment setup
@@ -77,7 +78,8 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1xonZCgIalsW
 4. Migrations, Fixtures, Seeds   
 5. Multiple API versions support ( REST implementation )
 6. Global Error Handling
-7. Test Parallelization           
+7. Test Parallelization
+8. Multiple protocols within one codebase ( GraphQL / REST )
 
 ##### Reference
 
@@ -129,6 +131,10 @@ https://www.slideshare.net/matthidinger/onion-architecture
 When there is a swagger host provided in `.env` file then you can navigate to `http://localhost:3000/api-docs/`
 
 Update `swagger.json` file located at `ui > config` every time you apply changes to api.
+
+### GraphQL Playground
+
+Navigate to `http://localhost:3000/graphql` to make queries through `GraphQL` playground
           
 ### TESTING
 
@@ -210,9 +216,10 @@ not only responses but also saved data in database and authentication context.
 ### STILL TODO
 
 * Prepare FP version of architecture - separate repo
-* Introduce Graphql and integration with inversify-graphQL - separate repo
 * Introduce docker into project  
-* Provide example how to integrate two or more protocols of communication within same codebase ( add `GraphQL` )
+* Resolve TODO's and revisit folder structure for improvements, revisit IOC implementation ( some injections do not have dependencies, so we can define it as pure functions )
+* Provide more real life examples of `GraphQL` + `Rest` - define Story for that case
+* Provide more `Queries` / `Mutations` for `GraphQL`  
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
 * Provide example of interactor / use case / scenario pattern
 * Provide additional diagrams

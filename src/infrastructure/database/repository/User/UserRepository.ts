@@ -4,9 +4,9 @@ import { EntityRepository } from 'typeorm';
 
 import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 import { User } from 'core/domain/User/User';
-import { AddUserRequest } from 'core/domainServices/User/request/AddUserRequest';
-import { FindUserRequest } from 'core/domainServices/User/request/FindUserRequest';
-import { FindUserByEmailRequest } from 'core/domainServices/User/request/FindUserByEmailRequest';
+import { AddUserRepositoryRequest } from 'core/domainServices/User/request/AddUserRepositoryRequest';
+import { FindUserRepositoryRequest } from 'core/domainServices/User/request/FindUserRepositoryRequest';
+import { FindUserByEmailRepositoryRequest } from 'core/domainServices/User/request/FindUserByEmailRepositoryRequest';
 import { BaseError } from 'core/common/errors/BaseError';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
@@ -39,7 +39,7 @@ export class UserRepository extends Repository<UserEntity>
     lastName,
     password,
     roleId,
-  }: AddUserRequest): Promise<User> {
+  }: AddUserRepositoryRequest): Promise<User> {
     const user = new UserEntity();
     user.age = age;
     user.email = email;
@@ -62,7 +62,7 @@ export class UserRepository extends Repository<UserEntity>
     );
   }
 
-  async findUser({ id }: FindUserRequest): Promise<User> {
+  async findUser({ id }: FindUserRepositoryRequest): Promise<User> {
     const result = await this.custom()
       .createQueryBuilder()
       .leftJoinAndSelect('User.role', 'Role')
@@ -84,7 +84,9 @@ export class UserRepository extends Repository<UserEntity>
     );
   }
 
-  async findUserByEmail({ email }: FindUserByEmailRequest): Promise<User> {
+  async findUserByEmail({
+    email,
+  }: FindUserByEmailRepositoryRequest): Promise<User> {
     const result = await this.custom()
       .createQueryBuilder()
       .leftJoinAndSelect('User.role', 'role')
@@ -97,6 +99,21 @@ export class UserRepository extends Repository<UserEntity>
         source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
       },
       result[0]
+    );
+  }
+
+  async getUsers(): Promise<User[]> {
+    const users = await this.custom()
+      .createQueryBuilder()
+      .leftJoinAndSelect('User.role', 'role')
+      .getMany();
+
+    return this.dbMapper.mapper.map<UserEntity[], User[]>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.USER_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.USER_ENTITY,
+      },
+      users
     );
   }
 }

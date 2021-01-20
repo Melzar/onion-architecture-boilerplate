@@ -1,6 +1,8 @@
-import { AddEquipmentUnitOfWorkRequest } from 'core/domainServices/Equipment/request/AddEquipmentUnitOfWorkRequest';
+import { AddEquipmentUnitOfWorkRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentUnitOfWorkRepositoryRequest';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 
 export interface IEquipmentUnitOfWork {
-  addEquipment(request: AddEquipmentUnitOfWorkRequest): Promise<Equipment>;
+  addEquipment(
+    request: AddEquipmentUnitOfWorkRepositoryRequest
+  ): Promise<Equipment>;
 }

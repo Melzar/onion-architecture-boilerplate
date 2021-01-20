@@ -3,10 +3,10 @@ import { inject, injectable } from 'inversify';
 import { EntityRepository } from 'typeorm';
 
 import { IRoleRepository } from 'core/domainServices/Role/IRoleRepository';
-import { FindRoleRequest } from 'core/domainServices/Role/request/FindRoleRequest';
+import { FindRoleRepositoryRequest } from 'core/domainServices/Role/request/FindRoleRepositoryRequest';
 import { Role } from 'core/domain/Role/Role';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
-import { FindRoleByNameRequest } from 'core/domainServices/Role/request/FindRoleByNameRequest';
+import { FindRoleByNameRepositoryRequest } from 'core/domainServices/Role/request/FindRoleByNameRepositoryRequest';
 import { BaseError } from 'core/common/errors/BaseError';
 
 import { Role as RoleEntity } from 'infrastructure/database/entities/Role';
@@ -29,7 +29,7 @@ export class RoleRepository extends Repository<RoleEntity>
     super(RoleEntity);
   }
 
-  async findRole({ id }: FindRoleRequest): Promise<Role> {
+  async findRole({ id }: FindRoleRepositoryRequest): Promise<Role> {
     const role = await this.find(id);
 
     if (!role) {
@@ -47,7 +47,9 @@ export class RoleRepository extends Repository<RoleEntity>
     );
   }
 
-  async findRoleByName({ name }: FindRoleByNameRequest): Promise<Role> {
+  async findRoleByName({
+    name,
+  }: FindRoleByNameRepositoryRequest): Promise<Role> {
     const role = await this.custom()
       .createQueryBuilder()
       .where('"Role"."name" = :name', {

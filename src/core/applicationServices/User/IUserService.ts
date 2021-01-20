@@ -4,5 +4,6 @@ import { FetchUserRequest } from 'core/applicationServices/User/requests/FetchUs
 
 export interface IUserService {
   fetchUser(request: FetchUserRequest): Promise<User>;
+  getUsers(): Promise<User[]>;
   removeUser(request: RemoveUserRequest): Promise<void>;
 }

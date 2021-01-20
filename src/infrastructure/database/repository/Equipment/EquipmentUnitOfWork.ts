@@ -6,9 +6,9 @@ import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRe
 import { IUserRepository } from 'core/domainServices/User/IUserRepository';
 import { IEquipmentUnitOfWork } from 'core/domainServices/Equipment/IEquipmentUnitOfWork';
 
-import { AddEquipmentRequest } from 'core/domainServices/Equipment/request/AddEquipmentRequest';
-import { AddEquipmentUnitOfWorkRequest } from 'core/domainServices/Equipment/request/AddEquipmentUnitOfWorkRequest';
-import { FindUserRequest } from 'core/domainServices/User/request/FindUserRequest';
+import { AddEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentRepositoryRequest';
+import { AddEquipmentUnitOfWorkRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentUnitOfWorkRepositoryRequest';
+import { FindUserRepositoryRequest } from 'core/domainServices/User/request/FindUserRepositoryRequest';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 
 import { UnitOfWork } from 'infrastructure/database/repository/common/UnitOfWork';
@@ -28,13 +28,13 @@ export class EquipmentUnitOfWork extends UnitOfWork
   async addEquipment({
     userId,
     name,
-  }: AddEquipmentUnitOfWorkRequest): Promise<Equipment> {
+  }: AddEquipmentUnitOfWorkRepositoryRequest): Promise<Equipment> {
     const { id } = await this.userRepository.findUser(
-      new FindUserRequest(userId)
+      new FindUserRepositoryRequest(userId)
     );
 
     return this.equipmentRepository.addEquipment(
-      new AddEquipmentRequest(name, id)
+      new AddEquipmentRepositoryRequest(name, id)
     );
   }
 }
