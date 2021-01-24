@@ -15,7 +15,7 @@ export abstract class Repository<E> extends AbstractRepository<E>
     super();
   }
 
-  public async find(id: string): Promise<E | undefined> {
+  public async find(id: string | number): Promise<E | undefined> {
     return this.getDBRepository().findOne(id);
   }
 
@@ -23,7 +23,7 @@ export abstract class Repository<E> extends AbstractRepository<E>
     return this.getDBRepository().find(condition);
   }
 
-  public async findMany(ids: string[]): Promise<E[]> {
+  public async findMany(ids: string[] | number[]): Promise<E[]> {
     return this.getDBRepository().findByIds(ids);
   }
 

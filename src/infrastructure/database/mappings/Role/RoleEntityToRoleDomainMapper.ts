@@ -4,7 +4,6 @@ import { Mapper } from '@wufe/mapper';
 import { IMapper } from 'core/common/mapper/IMapper';
 import { Role } from 'core/domain/Role/Role';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
-
 import { DATABASE_MAPPING_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 import { Role as RoleEntity } from 'infrastructure/database/entities/Role';
 

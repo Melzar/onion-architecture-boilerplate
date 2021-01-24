@@ -13,6 +13,8 @@ import { AuthenticationModule } from 'dependency/Authentication/AuthenticationMo
 import { UserModule } from 'dependency/User/UserModule';
 import { RoleModule } from 'dependency/Role/RoleModule';
 import { EquipmentModule } from 'dependency/Equipment/EquipmentModule';
+import { RateModule } from 'dependency/Rate/RateModule';
+import { StateModule } from 'dependency/State/StateModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -31,7 +33,9 @@ export class AppContainer extends BaseContainer {
     this.provideApplicationModule();
 
     this.provideRoleModule();
+    this.provideRateModule();
     this.provideUserModule();
+    this.provideStateModule();
     this.provideEquipmentModule();
     this.provideAuthenticationModule();
 
@@ -50,8 +54,16 @@ export class AppContainer extends BaseContainer {
     this.load(new AuthenticationModule());
   }
 
+  private provideRateModule(): void {
+    this.load(new RateModule());
+  }
+
   private provideUserModule(): void {
     this.load(new UserModule());
+  }
+
+  private provideStateModule(): void {
+    this.load(new StateModule());
   }
 
   private provideRoleModule(): void {

@@ -1,5 +1,5 @@
 extend type Mutation {
-    createEquipment(input: CreateEquipmentInput): Equipment! @isAuthenticated(role: [admin])
+    createEquipment(input: CreateEquipmentInput): Equipment! @isAuthenticated(role: [ADMIN])
 }
 
 input CreateEquipmentInput {

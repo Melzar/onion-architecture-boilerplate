@@ -1,5 +1,5 @@
 extend type Query {
-    getUsers: [User!]! @isAuthenticated(role: [admin])
+    getUsers: [User!]! @isAuthenticated(role: [ADMIN])
 }
 
 extend type Mutation {
