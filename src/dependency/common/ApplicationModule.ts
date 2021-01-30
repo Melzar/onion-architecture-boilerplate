@@ -48,6 +48,7 @@ export class ApplicationModule extends BaseModule {
 
   init(bind: interfaces.Bind): void {
     this.provideExpress(bind);
+    this.provideExpressRouter(bind);
 
     this.provideApolloContext(bind);
     this.provideApolloRequestDidStartPlugin(bind);
@@ -76,6 +77,18 @@ export class ApplicationModule extends BaseModule {
     bind<express.Application>(
       UI_APPLICATION_IDENTIFIERS.EXPRESS
     ).toConstantValue(express());
+  }
+
+  private provideExpressRouter(bind: interfaces.Bind): void {
+    bind<express.Router>(
+      UI_APPLICATION_IDENTIFIERS.EXPRESS_ROUTER
+    ).toConstantValue(
+      express.Router({
+        caseSensitive: false,
+        mergeParams: false,
+        strict: false,
+      })
+    );
   }
 
   private provideApolloContext(bind: interfaces.Bind): void {

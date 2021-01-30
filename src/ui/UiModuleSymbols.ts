@@ -5,6 +5,7 @@ export const UI_IDENTIFIERS = {
 
 export const UI_APPLICATION_IDENTIFIERS = {
   EXPRESS: Symbol.for('Express'),
+  EXPRESS_ROUTER: Symbol.for('ExpressRouter'),
 
   APOLLO_SERVER: Symbol.for('ApolloServer'),
   APOLLO_SERVER_CONFIG: Symbol.for('ApolloServerConfig'),

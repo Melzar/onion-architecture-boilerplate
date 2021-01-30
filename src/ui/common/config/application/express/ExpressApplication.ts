@@ -24,12 +24,16 @@ export class ExpressApplication extends BaseApplication<express.Application>
   implements IApplication {
   private readonly logger: ILogger;
 
+  private readonly router: express.Router;
+
   constructor(
     @inject(UI_APPLICATION_IDENTIFIERS.LOGGER_WINSTON) logger: ILogger,
-    @inject(UI_APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application
+    @inject(UI_APPLICATION_IDENTIFIERS.EXPRESS) app: express.Application,
+    @inject(UI_APPLICATION_IDENTIFIERS.EXPRESS_ROUTER) router: express.Router
   ) {
     super(app);
     this.logger = logger;
+    this.router = router;
   }
 
   public initialize(): void {
@@ -81,7 +85,7 @@ export class ExpressApplication extends BaseApplication<express.Application>
   }
 
   public initializeExtensions(): void {
-    this.app.use(unless(APOLLO_BASE_PATH, this.app._router));
+    this.app.use(unless(APOLLO_BASE_PATH, this.router));
 
     if (SWAGGER_HOST) {
       swaggerDocument.host = SWAGGER_HOST;

@@ -1,5 +1,7 @@
 import { InversifyExpressServer } from 'inversify-express-utils';
 
+import express from 'express';
+
 import { errorHandler } from 'ui/common/config/errors/handlers/errorHandler';
 
 import { ExpressApplication } from 'ui/common/config/application/express/ExpressApplication';
@@ -131,7 +133,7 @@ export class AppContainer extends BaseContainer {
     ).toConstantValue(
       new InversifyExpressServer(
         this,
-        null,
+        this.get<express.Router>(UI_APPLICATION_IDENTIFIERS.EXPRESS_ROUTER),
         { rootPath: '/' },
         this.get<ExpressApplication>(
           UI_APPLICATION_IDENTIFIERS.EXPRESS_APPLICATION
