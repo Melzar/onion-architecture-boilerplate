@@ -2,6 +2,7 @@ export const DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
   AUTHENTICATION_SERVICE: Symbol.for('AuthenticationService'),
   EQUIPMENT_SERVICE: Symbol.for('EquipmentService'),
   USER_SERVICE: Symbol.for('UserService'),
+  USER_EQUIPMENT_SERVICE: Symbol.for('UserEquipmentService'),
   RATE_SERVICE: Symbol.for('RateService'),
   STATE_SERVICE: Symbol.for('StateService'),
 };

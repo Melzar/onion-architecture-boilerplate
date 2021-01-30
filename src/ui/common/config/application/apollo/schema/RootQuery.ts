@@ -10,14 +10,17 @@ export class RootQuery implements IResolver<IResolvers> {
   readonly resolvers: IResolvers;
 
   constructor(
-    @inject(UI_SCHEMA_IDENTIFIERS.USER_QUERIES)
-    public readonly userQueries: IResolver,
-    @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_QUERIES)
-    public readonly equipmentQueries: IResolver
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_QUERIES)
+    public readonly administrationQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_QUERIES)
+    public readonly portalQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.SHARED_QUERIES)
+    public readonly sharedQueries: IResolver
   ) {
     this.resolvers = {
-      ...this.userQueries.resolvers,
-      ...this.equipmentQueries.resolvers,
+      ...this.administrationQueries.resolvers,
+      ...this.portalQueries.resolvers,
+      ...this.sharedQueries.resolvers,
     };
   }
 }

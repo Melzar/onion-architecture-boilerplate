@@ -1,0 +1,8 @@
+extend type Query {
+    rates: [Rate!]! @isAuthenticated(role: [ADMIN])
+}
+
+type Rate {
+    id: ID!
+    value: Float
+}

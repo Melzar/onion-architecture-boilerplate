@@ -1,6 +1,6 @@
 export type Context = {
   viewer?: {
-    id: string;
+    id: number;
     name: string;
     type?: string;
     email: string;

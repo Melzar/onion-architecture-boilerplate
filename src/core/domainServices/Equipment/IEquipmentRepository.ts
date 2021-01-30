@@ -5,8 +5,9 @@ import { AddEquipmentRepositoryRequest } from 'core/domainServices/Equipment/req
 
 export interface IEquipmentRepository {
   addEquipment(request: AddEquipmentRepositoryRequest): Promise<Equipment>;
+  getEquipment(): Promise<Equipment[]>;
   findEquipment(request: FindEquipmentRepositoryRequest): Promise<Equipment>;
   findEquipmentForUser(
     request: FindEquipmentForUserRepositoryRequest
-  ): Promise<Equipment[]>;
+  ): Promise<Equipment[]>; // TODO Candidate for extraction to separate repository
 }

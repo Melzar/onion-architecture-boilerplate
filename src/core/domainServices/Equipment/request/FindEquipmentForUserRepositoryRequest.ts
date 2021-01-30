@@ -1,3 +1,3 @@
 export class FindEquipmentForUserRepositoryRequest {
-  constructor(public readonly userId: string) {}
+  constructor(public readonly userId: number) {}
 }

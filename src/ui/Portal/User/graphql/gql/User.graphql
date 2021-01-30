@@ -1,0 +1,3 @@
+extend type Query {
+    me: User! @isAuthenticated(role: [USER])
+}

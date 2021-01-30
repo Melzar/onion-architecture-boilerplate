@@ -3,7 +3,7 @@ export type GraphQLTokenPayload = {
     role: string;
   };
   viewer: {
-    id: string;
+    id: number;
     name: string;
     email: string;
     type?: string;

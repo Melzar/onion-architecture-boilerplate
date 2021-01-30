@@ -34,7 +34,7 @@ export class UserService implements IUserService {
     return this.userRepository.findUser(new FindUserRepositoryRequest(id));
   }
 
-  getUsers(): Promise<User[]> {
+  fetchUsers(): Promise<User[]> {
     return this.userRepository.getUsers();
   }
 }

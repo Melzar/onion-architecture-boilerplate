@@ -10,14 +10,17 @@ export class RootSubQuery implements IResolver<IResolvers> {
   readonly resolvers: IResolvers;
 
   constructor(
-    @inject(UI_SCHEMA_IDENTIFIERS.USER_SUBQUERIES)
-    public readonly userSubqueries: IResolver,
-    @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_SUBQUERIES)
-    public readonly equipmentSubqueries: IResolver
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_SUBQUERIES)
+    public readonly administrationSubQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_SUBQUERIES)
+    public readonly portalSubQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.SHARED_SUBQUERIES)
+    public readonly sharedSubQueries: IResolver
   ) {
     this.resolvers = {
-      ...this.userSubqueries.resolvers,
-      ...this.equipmentSubqueries.resolvers,
+      ...this.administrationSubQueries.resolvers,
+      ...this.portalSubQueries.resolvers,
+      ...this.sharedSubQueries.resolvers,
     };
   }
 }

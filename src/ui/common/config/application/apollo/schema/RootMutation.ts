@@ -10,17 +10,17 @@ export class RootMutation implements IResolver<IResolvers> {
   readonly resolvers: IResolvers;
 
   constructor(
-    @inject(UI_SCHEMA_IDENTIFIERS.AUTHENTICATION_MUTATIONS)
-    public readonly authenticationMutations: IResolver,
-    @inject(UI_SCHEMA_IDENTIFIERS.USER_MUTATIONS)
-    public readonly userMutations: IResolver,
-    @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_MUTATIONS)
-    public readonly equipmentMutations: IResolver
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_MUTATIONS)
+    public readonly administrationMutations: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_MUTATIONS)
+    public readonly portalMutations: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.SHARED_MUTATIONS)
+    public readonly sharedMutations: IResolver
   ) {
     this.resolvers = {
-      ...this.authenticationMutations.resolvers,
-      ...this.userMutations.resolvers,
-      ...this.equipmentMutations.resolvers,
+      ...this.administrationMutations.resolvers,
+      ...this.portalMutations.resolvers,
+      ...this.sharedMutations.resolvers,
     };
   }
 }

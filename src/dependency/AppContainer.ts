@@ -9,12 +9,18 @@ import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { BaseContainer } from 'dependency/BaseContainer';
 import { ApplicationModule } from 'dependency/common/ApplicationModule';
 import { CommonModule } from 'dependency/common/CommonModule';
-import { AuthenticationModule } from 'dependency/Authentication/AuthenticationModule';
-import { UserModule } from 'dependency/User/UserModule';
-import { RoleModule } from 'dependency/Role/RoleModule';
-import { EquipmentModule } from 'dependency/Equipment/EquipmentModule';
-import { RateModule } from 'dependency/Rate/RateModule';
-import { StateModule } from 'dependency/State/StateModule';
+import { AuthenticationModule } from 'dependency/shared/Authentication/AuthenticationModule';
+import { UserModule } from 'dependency/shared/User/UserModule';
+import { UserModule as PortalUserModule } from 'dependency/Portal/User/UserModule';
+import { UserModule as AdministrationUserModule } from 'dependency/Administration/User/UserModule';
+import { RoleModule } from 'dependency/Administration/Role/RoleModule';
+import { RateModule } from 'dependency/Administration/Rate/RateModule';
+import { StateModule } from 'dependency/Administration/State/StateModule';
+import { EquipmentModule as UserEquipmentModule } from 'dependency/Portal/Equipment/EquipmentModule';
+import { EquipmentModule } from 'dependency/shared/Equipment/EquipmentModule';
+import { AdministrationModule } from 'dependency/Administration/common/AdministrationModule';
+import { PortalModule } from 'dependency/Portal/common/PortalModule';
+import { SharedModule } from 'dependency/shared/common/SharedModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -32,14 +38,35 @@ export class AppContainer extends BaseContainer {
 
     this.provideApplicationModule();
 
-    this.provideRoleModule();
-    this.provideRateModule();
-    this.provideUserModule();
-    this.provideStateModule();
-    this.provideEquipmentModule();
-    this.provideAuthenticationModule();
+    this.initializeSharedNamespace();
+    this.initializeAdministrationNamespace();
+    this.initializePortalNamespace();
 
     this.provideInversifyExpressApplication();
+  }
+
+  private initializeSharedNamespace(): void {
+    this.provideAuthenticationModule();
+    this.provideEquipmentModule();
+    this.provideUserModule();
+
+    this.provideSharedModule();
+  }
+
+  private initializeAdministrationNamespace(): void {
+    this.provideRoleModule();
+    this.provideRateModule();
+    this.provideStateModule();
+    this.provideAdministrationUserModule();
+
+    this.provideAdministrationModule();
+  }
+
+  private initializePortalNamespace(): void {
+    this.provideUserEquipmentModule();
+    this.providePortalUserModule();
+
+    this.providePortalModule();
   }
 
   private provideApplicationModule(): void {
@@ -62,8 +89,20 @@ export class AppContainer extends BaseContainer {
     this.load(new UserModule());
   }
 
+  private provideSharedModule(): void {
+    this.load(new SharedModule());
+  }
+
   private provideStateModule(): void {
     this.load(new StateModule());
+  }
+
+  private provideAdministrationUserModule(): void {
+    this.load(new AdministrationUserModule());
+  }
+
+  private provideAdministrationModule(): void {
+    this.load(new AdministrationModule());
   }
 
   private provideRoleModule(): void {
@@ -72,6 +111,18 @@ export class AppContainer extends BaseContainer {
 
   private provideEquipmentModule(): void {
     this.load(new EquipmentModule());
+  }
+
+  private provideUserEquipmentModule(): void {
+    this.load(new UserEquipmentModule());
+  }
+
+  private providePortalUserModule(): void {
+    this.load(new PortalUserModule());
+  }
+
+  private providePortalModule(): void {
+    this.load(new PortalModule());
   }
 
   private provideInversifyExpressApplication(): void {

@@ -1,0 +1,21 @@
+extend type Query {
+    users: [User!]! @isAuthenticated(role: [ADMIN])
+}
+
+extend type Mutation {
+    removeUser(input: RemoveUserInput): Boolean
+}
+
+input RemoveUserInput {
+    id: ID!
+}
+
+type User {
+    id: ID!
+    firstName: String!
+    email: String!
+    role: String!
+    lastName: String!
+    password: String!
+    age: Int!
+}

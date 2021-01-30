@@ -33,20 +33,37 @@ export const UI_APPLICATION_IDENTIFIERS = {
   SCHEMA_SUBQUERIES: Symbol.for('SchemaSubqueries'),
 };
 
+// TODO CANDIDATE TO SPLIT
 export const UI_SCHEMA_IDENTIFIERS = {
   AUTHENTICATION_MUTATIONS: Symbol.for('AuthenticationMutations'),
 
   USER_QUERIES: Symbol.for('UserQueries'),
-  USER_MUTATIONS: Symbol.for('UserMutations'),
-  USER_SUBQUERIES: Symbol.for('UserSubqueries'),
+
+  ADMINISTRATION_USER_QUERIES: Symbol.for('AdministrationUserQueries'),
+  ADMINISTRATION_USER_MUTATIONS: Symbol.for('AdministrationUserMutations'),
+  ADMINISTRATION_USER_SUBQUERIES: Symbol.for('AdministrationUserSubQueries'),
+
+  PORTAL_EQUIPMENT_QUERIES: Symbol.for('PortalEquipmentQueries'),
 
   EQUIPMENT_QUERIES: Symbol.for('EquipmentQueries'),
   EQUIPMENT_MUTATIONS: Symbol.for('EquipmentMutations'),
-  EQUIPMENT_SUBQUERIES: Symbol.for('EquipmentSubqueries'),
+  EQUIPMENT_SUBQUERIES: Symbol.for('EquipmentSubQueries'),
 
-  ROLE_QUERIES: Symbol.for('RoleQueries'),
-  ROLE_MUTATIONS: Symbol.for('RoleMutations'),
-  ROLE_SUBQUERIES: Symbol.for('RoleSubqueries'),
+  RATE_QUERIES: Symbol.for('RateQueries'),
+
+  STATE_QUERIES: Symbol.for('StateQueries'),
+
+  ADMINISTRATION_QUERIES: Symbol.for('AdministrationQueries'),
+  ADMINISTRATION_MUTATIONS: Symbol.for('AdministrationMutations'),
+  ADMINISTRATION_SUBQUERIES: Symbol.for('AdministrationSubQueries'),
+
+  PORTAL_QUERIES: Symbol.for('PortalQueries'),
+  PORTAL_MUTATIONS: Symbol.for('PortalMutations'),
+  PORTAL_SUBQUERIES: Symbol.for('PortalSubQueries'),
+
+  SHARED_QUERIES: Symbol.for('CommonQueries'),
+  SHARED_MUTATIONS: Symbol.for('CommonMutations'),
+  SHARED_SUBQUERIES: Symbol.for('CommonSubQueries'),
 };
 
 export const UI_MAPPINGS_IDENTIFIERS = {

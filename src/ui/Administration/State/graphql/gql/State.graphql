@@ -1,0 +1,8 @@
+extend type Query {
+    states: [State!] @isAuthenticated(role: [ADMIN])
+}
+
+type State {
+    id: ID!
+    name: String!
+}

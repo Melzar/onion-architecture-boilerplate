@@ -91,4 +91,16 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
       savedEquipment
     );
   }
+
+  async getEquipment(): Promise<Equipment[]> {
+    const userEquipment = await this.findAll();
+
+    return this.dbMapper.mapper.map<EquipmentEntity[], Equipment[]>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.EQUIPMENT_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.EQUIPMENT_ENTITY,
+      },
+      userEquipment
+    );
+  }
 }
