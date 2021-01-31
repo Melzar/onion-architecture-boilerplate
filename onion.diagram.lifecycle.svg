@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 34764 16294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.16667,0,0,4.16667,0,0)">
+        <g id="Initial-Phase" serif:id="Initial Phase">
+            <g transform="matrix(0.723857,0,0,1.81036,0,6.21725e-15)">
+                <g id="Data-Flow-Chart" serif:id="Data Flow Chart">
+                    <rect id="User-Interface" serif:id="User Interface" x="0" y="0" width="1920" height="2160" style="fill:rgb(251,252,253);"/>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <g transform="matrix(1,-1.76473e-18,-1.8171e-18,1,-598.514,3000.8)">
+                        <text x="1088.94px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                    </g>
+                    <g>
+                        <g transform="matrix(0.522667,0,0,0.538178,-231.941,-237.678)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:10.8px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,1.91326,1.17154e-16,-245.106,5124.8)">
+                                <text x="1173.93px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.522667,0,0,0.538178,-231.941,560.664)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:10.8px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,1.91326,1.17154e-16,-245.106,5124.8)">
+                                <text x="1173.93px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.522667,0,0,0.538178,-231.941,1359.01)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:10.8px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,1.91326,1.17154e-16,-245.106,5124.8)">
+                                <text x="1173.93px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.558534,0,0,0.597839,-1125.47,763.641)">
+                            <g transform="matrix(3.12273,0,0,1.01071,727.05,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,251,244);stroke:rgb(238,81,104);stroke-width:2.55px;stroke-dasharray:12.77,12.77,0,0;"/>
+                            </g>
+                            <g>
+                                <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                    <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.37px;"/>
+                                </g>
+                                <g transform="matrix(5.20003e-17,-2.00723,2.14848,3.10946e-16,3199.41,5626.34)">
+                                    <text x="2250.25px" y="188.924px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,0,736.477)">
+                                <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                    <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.37px;"/>
+                                </g>
+                                <g transform="matrix(5.20003e-17,-2.00723,2.14848,3.10946e-16,3199.41,5626.34)">
+                                    <text x="2250.25px" y="188.924px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,0,1480.7)">
+                                <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                    <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.37px;"/>
+                                </g>
+                                <g transform="matrix(5.20003e-17,-2.00723,2.14848,3.10946e-16,3199.41,5626.34)">
+                                    <text x="2250.25px" y="188.924px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,3.89207,2217.18)">
+                                <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                    <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.37px;"/>
+                                </g>
+                                <g transform="matrix(5.20003e-17,-2.00723,2.14848,3.10946e-16,3199.41,5626.34)">
+                                    <text x="2250.25px" y="188.924px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,2247.01,0)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:9.99px;"/>
+                                </g>
+                                <g transform="matrix(1.22907e-16,-2.00723,2.14848,1.31556e-16,-389.613,3782.76)">
+                                    <text x="1010.55px" y="690.183px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,2247.01,1480.7)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:9.99px;"/>
+                                </g>
+                                <g transform="matrix(1.22907e-16,-2.00723,2.14848,1.31556e-16,-389.613,3782.76)">
+                                    <text x="1010.55px" y="690.183px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,2.04901,1929.92,-528.557)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,249,237);stroke:rgb(238,81,104);stroke-width:7.15px;"/>
+                                </g>
+                                <g transform="matrix(1.20648e-16,-0.979609,2.14848,1.08395e-16,-1112.86,4545.56)">
+                                    <text x="3021.86px" y="1029.45px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:71.111px;fill:rgb(239,192,81);fill-opacity:0.3;">APPLICA<tspan x="3313.27px 3355.58px " y="1029.45px 1029.45px ">TI</tspan>ON SERVICE</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.523486,0,0,0.538178,-1327.51,559.233)">
+                            <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:10.78px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,1.85812,-1.91027,1.1697e-16,5885.93,-1224.8)">
+                                <text x="1055.08px" y="696.673px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.523486,0,0,0.538178,-1327.51,1357.57)">
+                            <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:10.78px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,1.85812,-1.91027,1.1697e-16,5885.93,-1224.8)">
+                                <text x="1055.08px" y="696.673px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.523486,0,0,0.538178,-1327.51,2155.92)">
+                            <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:10.78px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,1.85812,-1.91027,1.1697e-16,5885.93,-1224.8)">
+                                <text x="1055.08px" y="696.673px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Infra-Info-Block" serif:id="Infra Info Block" transform="matrix(1.54697,0,0,0.534608,-4067.51,-1518.55)">
+                    <g transform="matrix(1.00765,-2.79196e-17,1.66783e-17,-1.17242,963.545,3247.87)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(240,247,253);"/>
+                    </g>
+                    <g transform="matrix(0.646426,0,0,1.87053,2614.81,-1048.27)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(125,186,241);">In initial phase focus on la<tspan x="347.678px 358.323px 369.502px " y="2208.86px 2208.86px 2208.86px ">yer</tspan>s separ<tspan x="442.697px 453.513px " y="2208.86px 2208.86px ">at</tspan>ion and introducing Onion Architecture - UI La<tspan x="889.907px 900.553px 911.731px 918.921px 923.443px " y="2208.86px 2208.86px 2208.86px 2208.86px 2208.86px ">yer, </tspan>Core La<tspan x="999.369px 1010.01px 1021.19px 1028.38px 1032.9px " y="2208.86px 2208.86px 2208.86px 2208.86px 2208.86px ">yer, </tspan>Infr<tspan x="1070.81px 1081.63px " y="2208.86px 2208.86px ">as</tspan>tructure la<tspan x="1188.91px 1199.56px 1210.74px 1217.93px 1222.45px " y="2208.86px 2208.86px 2208.86px 2208.86px 2208.86px ">yer. </tspan>Apply</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(125,186,241);">speciﬁc grouping model for e<tspan x="377.459px 388.105px 399.283px " y="2240.86px 2240.86px 2240.86px ">ver</tspan>y la<tspan x="438.857px 449.502px 460.681px " y="2240.86px 2240.86px 2240.86px ">yer</tspan> ( Domains, Application Services etc ). In the beginning of the project y<tspan x="1109.62px 1121.48px " y="2240.86px 2240.86px ">ou</tspan> won<tspan x="1176.76px 1181.66px " y="2240.86px 2240.86px ">&apos;t</tspan> notice</text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(125,186,241);">problems with scale. When project will e<tspan x="483.635px 494.281px 506.142px 511.603px 522.249px 533.427px " y="2272.86px 2272.86px 2272.86px 2272.86px 2272.86px 2272.86px ">volve </tspan>and y<tspan x="586.91px 598.771px " y="2272.86px 2272.86px ">ou</tspan> see that splitting code into domains is not enough mo<tspan x="1103.9px 1114.55px 1125.73px " y="2272.86px 2272.86px 2272.86px ">ve </tspan>to ne<tspan x="1176.18px 1186.93px " y="2272.86px 2272.86px ">xt</tspan> phase.</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Bounded-Context-Phase" serif:id="Bounded Context Phase">
+            <g transform="matrix(4.40133,0,0,1.19247,-1489.02,-314.221)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:1.03px;stroke-dasharray:5.17,5.17,0,0;"/>
+            </g>
+            <g>
+                <g>
+                    <g>
+                        <g transform="matrix(0.469314,0,0,0.710952,316.478,609.723)">
+                            <g>
+                                <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,251);stroke:rgb(210,130,211);stroke-width:3.68px;stroke-dasharray:18.42,18.42,0,0;"/>
+                                </g>
+                                <g transform="matrix(8.61272e-17,1.40656,-2.13077,1.30472e-16,6617.44,-612.856)">
+                                    <text x="1274.37px" y="833.99px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">FUNCTIONALITY GR<tspan x="2188.1px 2264.85px " y="833.99px 833.99px ">OU</tspan>P</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,497.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:12.3px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,2.40107,-2.09124,1.28052e-16,5997.11,-1729.92)">
+                                    <text x="969.192px" y="691.608px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,1366.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:12.3px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,2.40107,-2.09124,1.28052e-16,5997.11,-1729.92)">
+                                    <text x="969.192px" y="691.608px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,2235.58)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:12.3px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,2.40107,-2.09124,1.28052e-16,5997.11,-1729.92)">
+                                    <text x="969.192px" y="691.608px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.447714,0,0,0.710952,903.684,633.041)">
+                            <g transform="matrix(1,0,0,1,697.638,-32.7985)">
+                                <g transform="matrix(2.25538,0,0,1.01071,-952.955,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(82,90,108);stroke-width:3.8px;stroke-dasharray:19.02,19.02,0,0;"/>
+                                </g>
+                                <g transform="matrix(8.61272e-17,-1.40656,2.23357,1.36767e-16,-1046.98,4547.98)">
+                                    <text x="1361.13px" y="829.583px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,-402.646)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:12.32px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,-2.40107,2.09452,1.28252e-16,-356.461,5629.92)">
+                                    <text x="1088.04px" y="691.524px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,466.349)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:12.32px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,-2.40107,2.09452,1.28252e-16,-356.461,5629.92)">
+                                    <text x="1088.04px" y="691.524px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,1335.34)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:12.32px;"/>
+                                </g>
+                                <g transform="matrix(1.47023e-16,-2.40107,2.09452,1.28252e-16,-356.461,5629.92)">
+                                    <text x="1088.04px" y="691.524px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.5102,0,0,0.597839,412.66,763.641)">
+                            <g>
+                                <g transform="matrix(3.12273,0,0,1.01071,727.05,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,251,244);stroke:rgb(238,81,104);stroke-width:2.77px;stroke-dasharray:13.83,13.83,0,0;"/>
+                                </g>
+                                <g>
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.47px;"/>
+                                    </g>
+                                    <g transform="matrix(5.20003e-17,-2.00723,2.35202,3.40404e-16,3171.42,5626.34)">
+                                        <text x="2250.25px" y="185.549px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,736.477)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.47px;"/>
+                                    </g>
+                                    <g transform="matrix(5.20003e-17,-2.00723,2.35202,3.40404e-16,3171.42,5626.34)">
+                                        <text x="2250.25px" y="185.549px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,1480.7)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.47px;"/>
+                                    </g>
+                                    <g transform="matrix(5.20003e-17,-2.00723,2.35202,3.40404e-16,3171.42,5626.34)">
+                                        <text x="2250.25px" y="185.549px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,3.89207,2217.18)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:4.47px;"/>
+                                    </g>
+                                    <g transform="matrix(5.20003e-17,-2.00723,2.35202,3.40404e-16,3171.42,5626.34)">
+                                        <text x="2250.25px" y="185.549px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,0)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:10.63px;"/>
+                                    </g>
+                                    <g transform="matrix(1.22907e-16,-2.00723,2.35202,1.4402e-16,-514.659,3782.76)">
+                                        <text x="1010.55px" y="685.679px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,1480.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:10.63px;"/>
+                                    </g>
+                                    <g transform="matrix(1.22907e-16,-2.00723,2.35202,1.4402e-16,-514.659,3782.76)">
+                                        <text x="1010.55px" y="685.679px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,2.04901,1929.92,-528.557)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,249,237);stroke:rgb(238,81,104);stroke-width:7.37px;"/>
+                                    </g>
+                                    <g transform="matrix(1.20648e-16,-0.979609,2.35202,1.18664e-16,-1306.42,4545.56)">
+                                        <text x="3021.86px" y="1024.95px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:71.111px;fill:rgb(239,192,81);fill-opacity:0.3;">APPLICA<tspan x="3313.27px 3355.58px " y="1024.95px 1024.95px ">TI</tspan>ON SERVICE</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,-1.54923e-18,-2.06987e-18,1,721.719,3000.8)">
+                        <text x="938.795px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT PHASE</text>
+                    </g>
+                </g>
+                <g id="Infra-Info-Block1" serif:id="Infra Info Block" transform="matrix(1.54697,0,0,0.534608,-2677.7,-1518.55)">
+                    <g transform="matrix(1.00765,-2.79196e-17,1.66783e-17,-1.17242,963.545,3247.87)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(231,235,245);"/>
+                    </g>
+                    <g transform="matrix(0.646426,0,0,1.87053,2614.81,-1048.27)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">Ha<tspan x="138.121px 149.043px " y="2208.86px 2208.86px ">vi</tspan>ng multiple domains after some time becomes problematic, but it&apos;s usually easy to group them into Bounded Conte<tspan x="1209.08px 1219.83px " y="2208.86px 2208.86px ">xt</tspan>. Group</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">y<tspan x="122.163px 134.025px " y="2240.86px 2240.86px ">ou</tspan>r domains when y<tspan x="307.422px 319.283px " y="2240.86px 2240.86px ">ou</tspan> notice that it&apos;s possible to wr<tspan x="600.841px 611.657px " y="2240.86px 2240.86px ">ap</tspan> part of the codebase into groups. Same thing comes for speciﬁc</text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">functionalities.</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Bounded-Context-Growth-Phase" serif:id="Bounded Context Growth Phase">
+            <g transform="matrix(4.40133,0,0,1.19247,-99.2242,-314.221)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);"/>
+            </g>
+            <g>
+                <g id="Infra-Info-Block2" serif:id="Infra Info Block" transform="matrix(1.54697,0,0,0.534608,-1287.4,-1518.55)">
+                    <g transform="matrix(1.00765,-2.79196e-17,1.66783e-17,-1.17242,963.545,3247.87)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(231,235,245);"/>
+                    </g>
+                    <g transform="matrix(0.646426,0,0,1.87053,2614.81,-1048.27)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">Y<tspan x="123.23px 135.091px " y="2208.86px 2208.86px ">ou</tspan> will notice that with progress of time, y<tspan x="508.873px 520.734px " y="2208.86px 2208.86px ">ou</tspan>r project will e<tspan x="663.561px 674.313px " y="2208.86px 2208.86px ">xp</tspan>and into multiple bounded conte<tspan x="985.694px 996.446px " y="2208.86px 2208.86px ">xt</tspan>, functionality groups which in</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">gener<tspan x="164.83px 175.646px " y="2240.86px 2240.86px ">al</tspan> is right direction of growth. When y<tspan x="512.073px 523.934px " y="2240.86px 2240.86px ">ou</tspan> notice that ha<tspan x="667.358px 678.281px " y="2240.86px 2240.86px ">vi</tspan>ng bounded conte<tspan x="849.459px 860.211px " y="2240.86px 2240.86px ">xt</tspan>s within one codebase is introducing</text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(95,120,178);">maintenance problems mo<tspan x="356.894px 367.539px 378.718px " y="2272.86px 2272.86px 2272.86px ">ve </tspan>to ne<tspan x="429.171px 439.923px " y="2272.86px 2272.86px ">xt</tspan> phase.</text>
+                    </g>
+                </g>
+                <g>
+                    <g transform="matrix(0.902791,0,0,0.902791,337.754,187.347)">
+                        <g transform="matrix(0.513775,0,0,0.508133,1532.85,88.3403)">
+                            <g>
+                                <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,251);stroke:rgb(210,130,211);stroke-width:4.12px;stroke-dasharray:20.6,20.6,0,0;"/>
+                                </g>
+                                <g transform="matrix(1.3348e-16,2.17989,-2.15596,1.32014e-16,6635.13,-1120.46)">
+                                    <text x="856.41px" y="832.872px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">FUNCTIONALITY GR<tspan x="1770.14px 1846.89px " y="832.872px 832.872px ">OU</tspan>P</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,497.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,1366.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,2235.58)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.490128,0,0,0.508133,2188.61,105.006)">
+                            <g transform="matrix(1,0,0,1,697.638,-32.7985)">
+                                <g transform="matrix(2.25538,0,0,1.01071,-952.955,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(82,90,108);stroke-width:4.28px;stroke-dasharray:21.42,21.42,0,0;"/>
+                                </g>
+                                <g transform="matrix(1.3348e-16,-2.17989,2.25997,1.38383e-16,-1065.53,5055.58)">
+                                    <text x="943.17px" y="828.516px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,-402.646)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,466.349)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,1335.34)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.558534,0,0,0.508133,1644.06,88.3403)">
+                            <g>
+                                <g transform="matrix(3.12273,0,0,1.01071,727.05,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,251,244);stroke:rgb(238,81,104);stroke-width:2.87px;stroke-dasharray:14.36,14.36,0,0;"/>
+                                </g>
+                                <g>
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,736.477)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,1480.7)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,3.89207,2217.18)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,0)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:11.55px;"/>
+                                    </g>
+                                    <g transform="matrix(1.60176e-16,-2.61587,2.37982,1.45722e-16,-531.74,4349)">
+                                        <text x="973.967px" y="681.161px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:53.333px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,1480.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:11.55px;"/>
+                                    </g>
+                                    <g transform="matrix(1.60176e-16,-2.61587,2.37982,1.45722e-16,-531.74,4349)">
+                                        <text x="973.967px" y="681.161px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:53.333px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,2.04901,1929.92,-528.557)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,249,237);stroke:rgb(238,81,104);stroke-width:8.74px;"/>
+                                    </g>
+                                    <g transform="matrix(1.57231e-16,-1.27665,2.37982,1.20067e-16,-1332.86,5343.09)">
+                                        <text x="2854.23px" y="1024.39px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:71.111px;fill:rgb(239,192,81);fill-opacity:0.3;">APPLICA<tspan x="3145.64px 3187.95px " y="1024.39px 1024.39px ">TI</tspan>ON SERVICE</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(0.902791,0,0,0.902791,337.754,1758.33)">
+                        <g transform="matrix(0.513775,0,0,0.508133,1532.85,88.3403)">
+                            <g>
+                                <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,251);stroke:rgb(210,130,211);stroke-width:4.12px;stroke-dasharray:20.6,20.6,0,0;"/>
+                                </g>
+                                <g transform="matrix(1.3348e-16,2.17989,-2.15596,1.32014e-16,6635.13,-1120.46)">
+                                    <text x="856.41px" y="832.872px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">FUNCTIONALITY GR<tspan x="1770.14px 1846.89px " y="832.872px 832.872px ">OU</tspan>P</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,497.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,1366.59)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.0189,0,0,0.585807,-85.7301,2235.58)">
+                                <g transform="matrix(0.708245,0,0,0.430445,4025.44,390.438)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:13.31px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,3.72118,-2.11596,1.29565e-16,6012.3,-2958.06)">
+                                    <text x="960.568px" y="682.067px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.490128,0,0,0.508133,2188.61,105.006)">
+                            <g transform="matrix(1,0,0,1,697.638,-32.7985)">
+                                <g transform="matrix(2.25538,0,0,1.01071,-952.955,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(82,90,108);stroke-width:4.28px;stroke-dasharray:21.42,21.42,0,0;"/>
+                                </g>
+                                <g transform="matrix(1.3348e-16,-2.17989,2.25997,1.38383e-16,-1065.53,5055.58)">
+                                    <text x="943.17px" y="828.516px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,-402.646)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,466.349)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                            <g transform="matrix(1.06639,0,0,0.585807,618.572,1335.34)">
+                                <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:13.33px;"/>
+                                </g>
+                                <g transform="matrix(2.27857e-16,-3.72118,2.11928,1.29768e-16,-371.672,6858.06)">
+                                    <text x="1034.85px" y="681.984px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">DOMAIN</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.558534,0,0,0.508133,1644.06,88.3403)">
+                            <g>
+                                <g transform="matrix(3.12273,0,0,1.01071,727.05,44.0714)">
+                                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,251,244);stroke:rgb(238,81,104);stroke-width:2.87px;stroke-dasharray:14.36,14.36,0,0;"/>
+                                </g>
+                                <g>
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,736.477)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,0,1480.7)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,3.89207,2217.18)">
+                                    <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                                        <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(252,227,201);stroke:rgb(238,81,104);stroke-width:5.43px;"/>
+                                    </g>
+                                    <g transform="matrix(6.7768e-17,-2.61587,2.37982,3.44427e-16,3167.59,6974.91)">
+                                        <text x="2237.85px" y="182.656px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:26.667px;fill:rgb(246,151,57);fill-opacity:0.5;">DOMAIN MODEL</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,0)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:11.55px;"/>
+                                    </g>
+                                    <g transform="matrix(1.60176e-16,-2.61587,2.37982,1.45722e-16,-531.74,4349)">
+                                        <text x="973.967px" y="681.161px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:53.333px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,2247.01,1480.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,241,232);stroke:rgb(238,81,104);stroke-width:11.55px;"/>
+                                    </g>
+                                    <g transform="matrix(1.60176e-16,-2.61587,2.37982,1.45722e-16,-531.74,4349)">
+                                        <text x="973.967px" y="681.161px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:53.333px;fill:rgb(244,217,196);">DOMAIN SERVICE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,2.04901,1929.92,-528.557)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,249,237);stroke:rgb(238,81,104);stroke-width:8.74px;"/>
+                                    </g>
+                                    <g transform="matrix(1.57231e-16,-1.27665,2.37982,1.20067e-16,-1332.86,5343.09)">
+                                        <text x="2854.23px" y="1024.39px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:71.111px;fill:rgb(239,192,81);fill-opacity:0.3;">APPLICA<tspan x="3145.64px 3187.95px " y="1024.39px 1024.39px ">TI</tspan>ON SERVICE</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,-1.07831e-18,-2.97382e-18,1,1923.07,3000.8)">
+                        <text x="975.938px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT GR<tspan x="1706.18px 1757.35px " y="696.582px 696.582px ">OW</tspan>TH PHASE</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Modularization-Phase" serif:id="Modularization Phase">
+            <g transform="matrix(4.40133,0,0,1.19247,1294.94,-314.221)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:1.03px;stroke-dasharray:5.17,5.17,0,0;"/>
+            </g>
+            <g>
+                <g id="UI-Info-Block" serif:id="UI Info Block" transform="matrix(1.19018,0,0,0.727672,1386.44,-2099.56)">
+                    <g transform="matrix(1.22064,3.86388e-17,-5.05782e-17,-0.861359,363.741,3184.6)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(249,238,252);"/>
+                    </g>
+                    <g transform="matrix(0.840211,0,0,1.37425,2370.8,28.2968)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">When y<tspan x="182.921px 194.782px " y="2208.86px 2208.86px ">ou</tspan> notice that maintaining Bounded Conte<tspan x="575.326px 586.078px " y="2208.86px 2208.86px ">xt</tspan> is getting harder in one codebase it&apos;s time to detach into separ<tspan x="1169.27px 1180.08px " y="2208.86px 2208.86px ">at</tspan>e</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">modules. It&apos;s not lik<tspan x="289.267px 300.446px " y="2240.86px 2240.86px ">e </tspan>we resign from Bounded Conte<tspan x="592.222px 602.974px " y="2240.86px 2240.86px ">xt</tspan> pattern, we modularize project codebase basing on it. After that</text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">we will still e<tspan x="228.617px 239.262px 251.123px 256.585px 267.23px 278.409px " y="2272.86px 2272.86px 2272.86px 2272.86px 2272.86px 2272.86px ">volve </tspan>towards Bounded Conte<tspan x="508.766px 519.518px " y="2272.86px 2272.86px ">xt</tspan>s within Module scope starting with initial phase.</text>
+                    </g>
+                </g>
+                <g>
+                    <g transform="matrix(0.495792,0,0,0.301105,2908.37,318.744)">
+                        <g transform="matrix(3.28148,0,0,1,-11680.2,2.27374e-13)">
+                            <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(1.82904e-16,3.3211,-0.614653,-2.06466e-15,5552.26,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(2.96656e-16,7.97725,-1.08549,1.09443e-16,6874.25,-6333.82)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:2.75px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,0.416321,2.54923e-17,674.557,5124.8)">
+                                <text x="1088.94px" y="906.729px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(0.495792,0,0,0.301105,2908.37,1362.77)">
+                        <g transform="matrix(3.28148,0,0,1,-11680.2,2.27374e-13)">
+                            <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(1.82904e-16,3.3211,-0.614653,-2.06466e-15,5552.26,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(2.96656e-16,7.97725,-1.08549,1.09443e-16,6874.25,-6333.82)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:2.75px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,0.416321,2.54923e-17,674.557,5124.8)">
+                                <text x="1088.94px" y="906.729px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(0.495792,0,0,0.301105,2908.37,2406.74)">
+                        <g transform="matrix(3.28148,0,0,1,-11680.2,2.27374e-13)">
+                            <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(1.82904e-16,3.3211,-0.614653,-2.06466e-15,5552.26,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(2.96656e-16,7.97725,-1.08549,1.09443e-16,6874.25,-6333.82)">
+                            <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:2.75px;"/>
+                            </g>
+                            <g transform="matrix(1.13777e-16,-1.85812,0.416321,2.54923e-17,674.557,5124.8)">
+                                <text x="1088.94px" y="906.729px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,-1.157e-18,-2.77157e-18,1,3359.01,3000.8)">
+                        <text x="1109.28px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULARIZA<tspan x="1535.17px 1573.25px " y="696.582px 696.582px ">TI</tspan>ON PHASE</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Module-Growth-Phase" serif:id="Module Growth Phase">
+            <g transform="matrix(4.40133,0,0,1.19247,2684.74,-314.221)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,242,244);stroke:rgb(210,130,211);stroke-width:1.03px;stroke-dasharray:5.17,5.17,0,0;"/>
+            </g>
+            <g>
+                <g id="UI-Info-Block1" serif:id="UI Info Block" transform="matrix(1.19018,0,0,0.727672,2776.67,-2099.56)">
+                    <g transform="matrix(1.22064,3.86388e-17,-5.05782e-17,-0.861359,363.741,3184.6)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(249,238,252);"/>
+                    </g>
+                    <g transform="matrix(0.840211,0,0,1.37425,2370.8,28.2968)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">Modules in a growth phases are going through both grouping phases related to Bounded Conte<tspan x="985.779px 996.531px " y="2208.86px 2208.86px ">xt</tspan> Ev<tspan x="1031.65px 1043.51px " y="2208.86px 2208.86px ">ol</tspan>ution cy<tspan x="1122.7px 1132.66px " y="2208.86px 2208.86px ">cl</tspan>e -</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">Bounded Conte<tspan x="256.883px 267.635px " y="2240.86px 2240.86px ">xt</tspan> Phase and Bounded Conte<tspan x="524.062px 534.814px " y="2240.86px 2240.86px ">xt</tspan> Growth Phase. Ev<tspan x="711.113px 722.291px " y="2240.86px 2240.86px ">er</tspan>y module might be in a separ<tspan x="992.478px 1003.29px " y="2240.86px 2240.86px ">at</tspan>e lifecy<tspan x="1076.45px 1086.41px " y="2240.86px 2240.86px ">cl</tspan>e phase</text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(211,125,240);">depending on growth speed. Modules are growing independently and it&apos;s up to team when to switch to ne<tspan x="1080.14px 1090.89px " y="2272.86px 2272.86px ">xt</tspan> phase.</text>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <g transform="matrix(0.495792,0,0,0.301105,4298.17,318.744)">
+                            <g transform="matrix(7.401,0,0,1.01071,-2055.5,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(6.00198e-16,3.3211,-2.01697,-2.06466e-15,6539.43,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                            <g>
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6872.23,-3860.25)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1207.75px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6874.25,-2552.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1055.94px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">GR<tspan x="1142.6px 1193.77px " y="853.3px 853.3px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.93396e-17,1.08839,-0.199256,1.36332e-16,4073.88,242.762)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1690.98,550.086L1690.98,445.662L1785.42,602.298L1690.98,758.933L1690.98,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(0.495792,0,0,0.301105,4298.17,1362.74)">
+                            <g transform="matrix(7.401,0,0,1.01071,-2055.5,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(6.00198e-16,3.3211,-2.01697,-2.06466e-15,6539.43,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                            <g>
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6872.23,-3860.25)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1207.75px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6874.25,-2552.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1055.94px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">GR<tspan x="1142.6px 1193.77px " y="853.3px 853.3px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.93396e-17,1.08839,-0.199256,1.36332e-16,4073.88,242.762)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1690.98,550.086L1690.98,445.662L1785.42,602.298L1690.98,758.933L1690.98,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(1.62693,0,0,0.301105,-1492.35,2406.74)">
+                            <g transform="matrix(2.25538,0,0,1.01071,2933.04,44.0714)">
+                                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,245);stroke:rgb(210,130,211);stroke-width:1.28px;stroke-dasharray:6.4,6.4,0,0;"/>
+                            </g>
+                            <g transform="matrix(1.82904e-16,3.3211,-0.614653,-2.06466e-15,5552.26,-1869.54)">
+                                <text x="949.233px" y="837.987px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE</text>
+                            </g>
+                            <g transform="matrix(0.30474,0,0,1,3559.43,0)">
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6872.23,-3860.25)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1207.75px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(72,102,157);fill-opacity:0.5;">PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1.84629e-16,4.96477,-1.08549,1.09443e-16,6874.25,-2552.7)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:4.35px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,0.668933,4.09603e-17,519.362,5124.8)">
+                                        <text x="994.536px" y="757.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT</text>
+                                        <text x="1055.94px" y="853.3px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">GR<tspan x="1142.6px 1193.77px " y="853.3px 853.3px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.93396e-17,1.08839,-0.199256,1.36332e-16,4073,242.762)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1690.98,550.086L1690.98,445.662L1785.42,602.298L1690.98,758.933L1690.98,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,-1.157e-18,-2.77157e-18,1,4748.81,3000.8)">
+                        <text x="1111.85px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE GR<tspan x="1485.71px 1536.88px " y="696.582px 696.582px ">OW</tspan>TH PHASE</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Microservices-Phase" serif:id="Microservices Phase">
+            <g id="Infrastructure" transform="matrix(0.72387,0,0,1.81036,6953.37,0)">
+                <rect x="0" y="0" width="1920" height="2160" style="fill:rgb(254,239,242);"/>
+            </g>
+            <g>
+                <g id="Infra-Info-Block3" serif:id="Infra Info Block" transform="matrix(1.68155,0,0,1,2585.52,-2919.1)">
+                    <g transform="matrix(0.837713,2.75994e-17,-2.25625e-17,-0.626787,1252.46,3136.89)">
+                        <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(251,218,224);"/>
+                    </g>
+                    <g transform="matrix(0.594691,0,0,1,2631.32,840.134)">
+                        <text x="111.518px" y="2208.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(241,113,132);">When y<tspan x="182.921px 194.782px " y="2208.86px 2208.86px ">ou</tspan> notice that adding additional modules to codebase becomes problematic and hard to maintain, it&apos;s the</text>
+                        <text x="111.518px" y="2240.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(241,113,132);">best time to detach into microservices and start lifecy<tspan x="605.854px 615.817px " y="2240.86px 2240.86px ">cl</tspan>e from the beginning. Y<tspan x="832.734px 844.595px " y="2240.86px 2240.86px ">ou</tspan> can detach into as man<tspan x="1070.45px " y="2240.86px ">y</tspan></text>
+                        <text x="111.518px" y="2272.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:21.333px;fill:rgb(241,113,132);">microservices as needed usually the<tspan x="442.889px 453.811px " y="2272.86px 2272.86px ">y </tspan>are related to pre<tspan x="619.081px 630.003px " y="2272.86px 2272.86px ">vi</tspan>ously crystalized modules.</text>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <g>
+                            <g id="Infrastructure1" serif:id="Infrastructure" transform="matrix(0.585142,0,0,0.462019,7086.55,410.018)">
+                                <rect x="0" y="0" width="1920" height="2160" style="fill:rgb(253,234,237);stroke:rgb(241,113,132);stroke-width:6.32px;stroke-linecap:round;stroke-dasharray:31.61,31.61,0,0;"/>
+                            </g>
+                            <g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,26.4883)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1045.03px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,-154.025)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1171.89px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,206.989)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="950.152px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT GR<tspan x="1406.55px 1438.53px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,388.189)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1059.91px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULARIZA<tspan x="1326.09px 1349.89px " y="704.471px 704.471px ">TI</tspan>ON PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,569.389)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,242,244);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1061.52px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE GR<tspan x="1295.18px 1327.16px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,291.426)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,471.814)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,652.888)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,834.906)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                            <g transform="matrix(3.03705e-16,1,-1,-3.50049e-16,8912.59,-246.371)">
+                                <text x="801.321px" y="880.771px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,167);fill-opacity:0.5;">MICR<tspan x="1045.69px 1122.44px " y="880.771px 880.771px ">OS</tspan>ERVICE</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(1,0,0,1,0,1046.19)">
+                            <g id="Infrastructure2" serif:id="Infrastructure" transform="matrix(0.585142,0,0,0.462019,7086.55,410.018)">
+                                <rect x="0" y="0" width="1920" height="2160" style="fill:rgb(253,234,237);stroke:rgb(241,113,132);stroke-width:6.32px;stroke-linecap:round;stroke-dasharray:31.61,31.61,0,0;"/>
+                            </g>
+                            <g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,26.4883)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1045.03px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,-154.025)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1171.89px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,206.989)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="950.152px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT GR<tspan x="1406.55px 1438.53px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,388.189)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1059.91px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULARIZA<tspan x="1326.09px 1349.89px " y="704.471px 704.471px ">TI</tspan>ON PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,569.389)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,242,244);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1061.52px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE GR<tspan x="1295.18px 1327.16px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,291.426)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,471.814)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,652.888)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,834.906)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                            <g transform="matrix(3.03705e-16,1,-1,-3.50049e-16,8912.59,-246.371)">
+                                <text x="801.321px" y="880.771px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,167);fill-opacity:0.5;">MICR<tspan x="1045.69px 1122.44px " y="880.771px 880.771px ">OS</tspan>ERVICE</text>
+                            </g>
+                        </g>
+                        <g transform="matrix(1,0,0,1,0,2088)">
+                            <g id="Infrastructure3" serif:id="Infrastructure" transform="matrix(0.585142,0,0,0.462019,7086.55,410.018)">
+                                <rect x="0" y="0" width="1920" height="2160" style="fill:rgb(253,234,237);stroke:rgb(241,113,132);stroke-width:6.32px;stroke-linecap:round;stroke-dasharray:31.61,31.61,0,0;"/>
+                            </g>
+                            <g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,26.4883)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(242,248,254);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1045.03px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(72,102,157);fill-opacity:0.5;">BOUNDED CONTEXT PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8992.02,-154.025)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,252,253);stroke:rgb(156,193,243);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1171.89px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(18,128,231);fill-opacity:0.5;">INITIAL PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,206.989)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(243,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="950.152px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">BOUNDED CONTEXT GR<tspan x="1406.55px 1438.53px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,388.189)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1059.91px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULARIZA<tspan x="1326.09px 1349.89px " y="704.471px 704.471px ">TI</tspan>ON PHASE</text>
+                                    </g>
+                                </g>
+                                <g transform="matrix(4.12064e-17,0.672952,-0.538178,3.29539e-17,8993.02,569.389)">
+                                    <g transform="matrix(0.708245,0,0,0.430445,467.078,1871.2)">
+                                        <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(254,242,244);stroke:rgb(210,130,211);stroke-width:8.9px;"/>
+                                    </g>
+                                    <g transform="matrix(1.13777e-16,-1.85812,1.48599,9.09907e-17,17.3943,5124.8)">
+                                        <text x="1061.52px" y="704.471px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:40px;fill:rgb(213,166,208);fill-opacity:0.5;">MODULE GR<tspan x="1295.18px 1327.16px " y="704.471px 704.471px ">OW</tspan>TH PHASE</text>
+                                    </g>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,291.426)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,471.814)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,652.888)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                                <g transform="matrix(1.80182e-17,0.222481,-0.0987897,2.98106e-17,7603.62,834.906)">
+                                    <path d="M1384.04,654.509L1384.04,550.086L1646.31,550.086L1646.31,445.662L1785.42,602.298L1646.31,758.933L1646.31,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                                </g>
+                            </g>
+                            <g transform="matrix(3.03705e-16,1,-1,-3.50049e-16,8912.59,-246.371)">
+                                <text x="801.321px" y="880.771px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,167);fill-opacity:0.5;">MICR<tspan x="1045.69px 1122.44px " y="880.771px 880.771px ">OS</tspan>ERVICE</text>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,-1.157e-18,-2.77157e-18,1,6158.36,3000.8)">
+                        <text x="1147.89px" y="696.582px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(241,113,132);fill-opacity:0.5;">MICR<tspan x="1310.8px 1361.97px " y="696.582px 696.582px ">OS</tspan>ERVICES PHASE</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-478.532,559.866)">
+            <text x="612.923px" y="3249.23px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:48px;fill:rgb(203,212,234);">© MA<tspan x="735.371px 763.931px " y="3249.23px 3249.23px ">TU</tspan>SZEW</text>
+        </g>
+        <g id="Progress-Arrows" serif:id="Progress Arrows">
+            <g transform="matrix(0.919283,-8.02686e-17,7.63848e-17,0.178951,-67.0078,3691.33)">
+                <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(0.919283,-8.02686e-17,7.63848e-17,0.178951,1322.79,3691.33)">
+                <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(0.919283,-8.02686e-17,7.63848e-17,0.178951,2714.79,3691.33)">
+                <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(0.919283,-8.02686e-17,7.63848e-17,0.178951,4106.76,3691.33)">
+                <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(0.919283,-8.02686e-17,7.63848e-17,0.178951,5496.56,3691.33)">
+                <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+        </g>
+    </g>
+</svg>
