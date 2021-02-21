@@ -25,7 +25,6 @@ import { IResolver } from 'ui/common/config/application/apollo/common/IResolver'
 import { EquipmentQuery } from 'ui/Administration/Equipment/graphql/EquipmentQuery';
 import { EquipmentMutation } from 'ui/Administration/Equipment/graphql/EquipmentMutation';
 import { EquipmentSubQuery } from 'ui/Administration/Equipment/graphql/EquipmentSubQuery';
-import { EquipmentStateRateEntityToEquipmentStateRateDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentStateRateEntityToEquipmentStateRateDomainMapper';
 
 export class EquipmentModule extends BaseModule {
   constructor() {
@@ -39,7 +38,6 @@ export class EquipmentModule extends BaseModule {
     this.provideEquipmentUnitOfWork(bind);
 
     this.provideEquipmentMapper(bind);
-    this.provideEquipmentStateRateMapper(bind);
     this.provideEquipmentService(bind);
 
     this.provideEquipmentQuery(bind);
@@ -62,12 +60,6 @@ export class EquipmentModule extends BaseModule {
   private provideEquipmentMapper(bind: interfaces.Bind): void {
     bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER).to(
       EquipmentEntityToEquipmentDomainMapper
-    );
-  }
-
-  private provideEquipmentStateRateMapper(bind: interfaces.Bind): void {
-    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_STATE_RATE_MAPPER).to(
-      EquipmentStateRateEntityToEquipmentStateRateDomainMapper
     );
   }
 

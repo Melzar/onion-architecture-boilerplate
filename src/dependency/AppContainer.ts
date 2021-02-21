@@ -15,6 +15,7 @@ import { AuthenticationModule } from 'dependency/shared/Authentication/Authentic
 import { UserModule } from 'dependency/shared/User/UserModule';
 import { UserModule as PortalUserModule } from 'dependency/Portal/User/UserModule';
 import { UserModule as AdministrationUserModule } from 'dependency/Administration/User/UserModule';
+import { WarehouseModule as AdministrationWarehouseModule } from 'dependency/Administration/Warehouse/WarehouseModule';
 import { RoleModule } from 'dependency/Administration/Role/RoleModule';
 import { RateModule } from 'dependency/Administration/Rate/RateModule';
 import { StateModule } from 'dependency/Administration/State/StateModule';
@@ -23,6 +24,7 @@ import { EquipmentModule } from 'dependency/shared/Equipment/EquipmentModule';
 import { AdministrationModule } from 'dependency/Administration/common/AdministrationModule';
 import { PortalModule } from 'dependency/Portal/common/PortalModule';
 import { SharedModule } from 'dependency/shared/common/SharedModule';
+import { WarehouseModule } from 'dependency/shared/Warehouse/WarehouseModule';
 
 export class AppContainer extends BaseContainer {
   constructor() {
@@ -51,6 +53,7 @@ export class AppContainer extends BaseContainer {
     this.provideAuthenticationModule();
     this.provideEquipmentModule();
     this.provideUserModule();
+    this.provideWarehouseModule();
 
     this.provideSharedModule();
   }
@@ -60,6 +63,7 @@ export class AppContainer extends BaseContainer {
     this.provideRateModule();
     this.provideStateModule();
     this.provideAdministrationUserModule();
+    this.provideAdministrationWarehouseModule();
 
     this.provideAdministrationModule();
   }
@@ -91,6 +95,10 @@ export class AppContainer extends BaseContainer {
     this.load(new UserModule());
   }
 
+  private provideWarehouseModule(): void {
+    this.load(new WarehouseModule());
+  }
+
   private provideSharedModule(): void {
     this.load(new SharedModule());
   }
@@ -101,6 +109,10 @@ export class AppContainer extends BaseContainer {
 
   private provideAdministrationUserModule(): void {
     this.load(new AdministrationUserModule());
+  }
+
+  private provideAdministrationWarehouseModule(): void {
+    this.load(new AdministrationWarehouseModule());
   }
 
   private provideAdministrationModule(): void {

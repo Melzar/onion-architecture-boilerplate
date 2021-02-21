@@ -8195,18 +8195,18 @@ typeorm-seeding@^1.6.1:
     reflect-metadata "0.1.13"
     yargs "15.3.1"
 
-typeorm-transactional-cls-hooked@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/typeorm-transactional-cls-hooked/-/typeorm-transactional-cls-hooked-0.1.12.tgz#30f6985655505475922da0bcd88a04ee72073760"
-  integrity sha512-kCKYVzmE+re8AbMCUR2hgXYFjhsTUo2L0r2ypo1mU8KY7WG+7S5o2LDhONX3OYJ12V81SOWHHmxGRwU82nYtWg==
+typeorm-transactional-cls-hooked@^0.1.20:
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/typeorm-transactional-cls-hooked/-/typeorm-transactional-cls-hooked-0.1.20.tgz#6db496b71e026d39c442612c066ddfbd029aaff6"
+  integrity sha512-y7z7axyQkfAXKM39PPjVaQHQWnWQZeu/0fShSyyfv8hPT7VtkrdkVlgvTbsd+4ltuzk/XzY96oDrmjJ4xIUm5Q==
   dependencies:
     "@types/cls-hooked" "^4.2.1"
     cls-hooked "^4.2.2"
 
-typeorm@^0.2.22:
-  version "0.2.30"
-  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.30.tgz#a0df2256402cbcdde8049a244437560495ce9b38"
-  integrity sha512-qpr8AO3Phi6ZF7qMHOrRdNisVt8jE1KfmW0ooLFcXscA87aJ12aBPyB9cJfxGNjNwd7B3WIK9ZlBveWiqd74QA==
+typeorm@^0.2.31:
+  version "0.2.31"
+  resolved "https://registry.yarnpkg.com/typeorm/-/typeorm-0.2.31.tgz#82b8a1b233224f81c738f53b0380386ccf360917"
+  integrity sha512-dVvCEVHH48DG0QPXAKfo0l6ecQrl3A8ucGP4Yw4myz4YEDMProebTQo8as83uyES+nrwCbu3qdkL4ncC2+qcMA==
   dependencies:
     "@sqltools/formatter" "1.2.2"
     app-root-path "^3.0.0"

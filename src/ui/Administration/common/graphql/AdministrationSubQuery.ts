@@ -13,11 +13,14 @@ export class AdministrationSubQuery implements IResolver<IResolverObject> {
     @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_USER_SUBQUERIES)
     public readonly userSubQueries: IResolver,
     @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_SUBQUERIES)
-    public readonly equipmentSubQueries: IResolver
+    public readonly equipmentSubQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_WAREHOUSE_SUBQUERIES)
+    public readonly warehouseSubQueries: IResolver
   ) {
     this.resolvers = {
       ...this.userSubQueries.resolvers,
       ...this.equipmentSubQueries.resolvers,
+      ...this.warehouseSubQueries.resolvers,
     };
   }
 }

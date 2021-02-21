@@ -3,7 +3,7 @@ import { Factory, Seeder, times } from 'typeorm-seeding';
 import { State } from 'infrastructure/database/entities/State';
 
 export class StateSeed implements Seeder {
-  async run(factory: Factory): Promise<any> {
+  async run(factory: Factory): Promise<void> {
     await this.prepareStateSeeds(factory);
   }
 

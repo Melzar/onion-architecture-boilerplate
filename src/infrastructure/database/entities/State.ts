@@ -8,7 +8,7 @@ import {
 } from 'typeorm';
 
 import { Rate } from 'infrastructure/database/entities/Rate';
-import { EquipmentStateRate } from 'infrastructure/database/entities/EquipmentStateRate';
+import { Warehouse } from 'infrastructure/database/entities/Warehouse';
 
 @Entity()
 export class State {
@@ -26,8 +26,8 @@ export class State {
   rates!: Rate[];
 
   @OneToMany(
-    () => EquipmentStateRate,
-    equipmentStateRate => equipmentStateRate.equipment
+    () => Warehouse,
+    warehouse => warehouse.state
   )
-  equipments!: EquipmentStateRate[];
+  warehouses!: Warehouse[];
 }

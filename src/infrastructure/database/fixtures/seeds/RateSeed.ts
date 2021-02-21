@@ -3,7 +3,7 @@ import { Factory, Seeder, times } from 'typeorm-seeding';
 import { Rate } from 'infrastructure/database/entities/Rate';
 
 export class RateSeed implements Seeder {
-  async run(factory: Factory): Promise<any> {
+  async run(factory: Factory): Promise<void> {
     await this.prepareRateSeeds(factory);
   }
 

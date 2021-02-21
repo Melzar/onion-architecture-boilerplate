@@ -1,0 +1,20 @@
+extend type Query {
+    warehouses: [Warehouse!]! @isAuthenticated(role: [ADMIN])
+    warehouse(id: ID!): Warehouse! @isAuthenticated(role: [ADMIN])
+}
+
+type Warehouse {
+    id: ID!
+    name: String!
+    state: State! # TODO To be handled by subqueries
+    warehouseItems: [WarehouseItem!]! # TODO To be handled by subqueries
+}
+
+# TODO To be moved to it's own domain probably
+type WarehouseItem {
+    id: ID!
+    name: String!
+    cost: Float!
+    equipment: Equipment! # TODO To be handled by subqueries
+    warehouse: Warehouse! # TODO To be handled by subqueries
+}

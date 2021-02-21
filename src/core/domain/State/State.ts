@@ -1,11 +1,11 @@
 import { Rate } from 'core/domain/Rate/Rate';
-import { Equipment } from 'core/domain/Equipment/Equipment';
+import { Warehouse } from 'core/domain/Warehouse/Warehouse';
 
 export class State {
   constructor(
     public readonly id: number,
     public readonly name: string,
     public readonly rates: Rate[],
-    public readonly equipments: Equipment[]
+    public readonly warehouses: Warehouse[]
   ) {}
 }

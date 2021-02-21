@@ -44,6 +44,16 @@ export const UI_SCHEMA_IDENTIFIERS = {
   ADMINISTRATION_USER_MUTATIONS: Symbol.for('AdministrationUserMutations'),
   ADMINISTRATION_USER_SUBQUERIES: Symbol.for('AdministrationUserSubQueries'),
 
+  ADMINISTRATION_WAREHOUSE_QUERIES: Symbol.for(
+    'AdministrationWarehouseQueries'
+  ),
+  ADMINISTRATION_WAREHOUSE_MUTATIONS: Symbol.for(
+    'AdministrationWarehouseMutations'
+  ),
+  ADMINISTRATION_WAREHOUSE_SUBQUERIES: Symbol.for(
+    'AdministrationWarehouseSubQueries'
+  ),
+
   PORTAL_EQUIPMENT_QUERIES: Symbol.for('PortalEquipmentQueries'),
 
   EQUIPMENT_QUERIES: Symbol.for('EquipmentQueries'),

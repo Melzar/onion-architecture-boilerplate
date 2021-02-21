@@ -7,7 +7,8 @@ import { USER_ROLE } from 'infrastructure/database/enum/UserRole';
 import { Equipment } from 'infrastructure/database/entities/Equipment';
 import { Rate } from 'infrastructure/database/entities/Rate';
 import { State } from 'infrastructure/database/entities/State';
-import { EquipmentStateRate } from 'infrastructure/database/entities/EquipmentStateRate';
+import { Warehouse } from 'infrastructure/database/entities/Warehouse';
+import { WarehouseItem } from 'infrastructure/database/entities/WarehouseItem';
 
 export class UserSeed implements Seeder {
   async run(factory: Factory): Promise<any> {
@@ -42,14 +43,18 @@ export class UserSeed implements Seeder {
       rates: [rate],
     });
 
+    const warehouse = await factory(Warehouse)().create({
+      state,
+    });
+
     const equipment = await factory(Equipment)().create({
       user,
     });
 
-    await factory(EquipmentStateRate)().create({
+    await factory(WarehouseItem)().create({
+      warehouse,
       equipment,
-      state,
-      rate,
+      cost: 10.5,
     });
 
     await times(5, async () => {

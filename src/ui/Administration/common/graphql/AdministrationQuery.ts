@@ -17,13 +17,16 @@ export class AdministrationQuery implements IResolver<IResolverObject> {
     @inject(UI_SCHEMA_IDENTIFIERS.STATE_QUERIES)
     public readonly stateQueries: IResolver,
     @inject(UI_SCHEMA_IDENTIFIERS.RATE_QUERIES)
-    public readonly rateQueries: IResolver
+    public readonly rateQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_WAREHOUSE_QUERIES)
+    public readonly warehouseQueries: IResolver
   ) {
     this.resolvers = {
       ...this.userQueries.resolvers,
       ...this.equipmentQueries.resolvers,
       ...this.rateQueries.resolvers,
       ...this.stateQueries.resolvers,
+      ...this.warehouseQueries.resolvers,
     };
   }
 }
