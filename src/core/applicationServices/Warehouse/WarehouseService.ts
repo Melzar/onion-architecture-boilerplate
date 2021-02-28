@@ -6,6 +6,10 @@ import { IWarehouseRepository } from 'core/domainServices/Warehouse/IWarehouseRe
 import { FetchWarehouseRequest } from 'core/applicationServices/Warehouse/requests/FetchWarehouseRequest';
 import { Warehouse } from 'core/domain/Warehouse/Warehouse';
 import { GetWarehouseRepositoryRequest } from 'core/domainServices/Warehouse/request/GetWarehouseRepositoryRequest';
+import { CreateWarehouseRequest } from 'core/applicationServices/Warehouse/requests/CreateWarehouseRequest';
+import { UpdateWarehouseRequest } from 'core/applicationServices/Warehouse/requests/UpdateWarehouseRequest';
+import { CreateWarehouseRepositoryRequest } from 'core/domainServices/Warehouse/request/CreateWarehouseRepositoryRequest';
+import { UpdateWarehouseRepositoryRequest } from 'core/domainServices/Warehouse/request/UpdateWarehouseRepositoryRequest';
 
 @injectable()
 export class WarehouseService implements IWarehouseService {
@@ -22,5 +26,24 @@ export class WarehouseService implements IWarehouseService {
 
   fetchWarehouses(): Promise<Warehouse[]> {
     return this.warehouseRepository.getWarehouses();
+  }
+
+  createWarehouse({
+    name,
+    stateID,
+  }: CreateWarehouseRequest): Promise<Warehouse> {
+    return this.warehouseRepository.createWarehouse(
+      new CreateWarehouseRepositoryRequest(name, stateID)
+    );
+  }
+
+  updateWarehouse({
+    warehouseID,
+    stateID,
+    name,
+  }: UpdateWarehouseRequest): Promise<Warehouse> {
+    return this.warehouseRepository.updateWarehouse(
+      new UpdateWarehouseRepositoryRequest(warehouseID, stateID, name)
+    );
   }
 }

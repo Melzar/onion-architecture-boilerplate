@@ -25,7 +25,7 @@ export class EquipmentMutation implements IResolver<IResolverObject> {
 
   private createEquipment = (
     _root: unknown,
-    { name }: CreateEquipmentInput, // TODO Potential bug
+    { input: { name } }: { input: CreateEquipmentInput },
     { viewer }: Context
   ) =>
     this.equipmentService.createEquipment(

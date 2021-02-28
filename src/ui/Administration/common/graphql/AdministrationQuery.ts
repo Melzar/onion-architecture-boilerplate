@@ -19,7 +19,9 @@ export class AdministrationQuery implements IResolver<IResolverObject> {
     @inject(UI_SCHEMA_IDENTIFIERS.RATE_QUERIES)
     public readonly rateQueries: IResolver,
     @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_WAREHOUSE_QUERIES)
-    public readonly warehouseQueries: IResolver
+    public readonly warehouseQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.ADMINISTRATION_WAREHOUSE_ITEM_QUERIES)
+    public readonly warehouseItemsQueries: IResolver
   ) {
     this.resolvers = {
       ...this.userQueries.resolvers,
@@ -27,6 +29,7 @@ export class AdministrationQuery implements IResolver<IResolverObject> {
       ...this.rateQueries.resolvers,
       ...this.stateQueries.resolvers,
       ...this.warehouseQueries.resolvers,
+      ...this.warehouseItemsQueries.resolvers,
     };
   }
 }

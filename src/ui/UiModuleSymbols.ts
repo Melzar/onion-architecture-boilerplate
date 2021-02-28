@@ -54,6 +54,16 @@ export const UI_SCHEMA_IDENTIFIERS = {
     'AdministrationWarehouseSubQueries'
   ),
 
+  ADMINISTRATION_WAREHOUSE_ITEM_QUERIES: Symbol.for(
+    'AdministrationWarehouseItemQueries'
+  ),
+  ADMINISTRATION_WAREHOUSE_ITEM_MUTATIONS: Symbol.for(
+    'AdministrationWarehouseItemMutations'
+  ),
+  ADMINISTRATION_WAREHOUSE_ITEM_SUBQUERIES: Symbol.for(
+    'AdministrationWarehouseItemSubQueries'
+  ),
+
   PORTAL_EQUIPMENT_QUERIES: Symbol.for('PortalEquipmentQueries'),
 
   EQUIPMENT_QUERIES: Symbol.for('EquipmentQueries'),
@@ -71,6 +81,9 @@ export const UI_SCHEMA_IDENTIFIERS = {
   PORTAL_QUERIES: Symbol.for('PortalQueries'),
   PORTAL_MUTATIONS: Symbol.for('PortalMutations'),
   PORTAL_SUBQUERIES: Symbol.for('PortalSubQueries'),
+
+  PORTAL_WAREHOUSE_QUERIES: Symbol.for('PortalWarehouseQueries'),
+  PORTAL_WAREHOUSE_ITEM_MUTATIONS: Symbol.for('PortalWarehouseItemMutations'),
 
   SHARED_QUERIES: Symbol.for('CommonQueries'),
   SHARED_MUTATIONS: Symbol.for('CommonMutations'),

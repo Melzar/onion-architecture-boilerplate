@@ -14,8 +14,11 @@ import { CommonModule } from 'dependency/common/CommonModule';
 import { AuthenticationModule } from 'dependency/shared/Authentication/AuthenticationModule';
 import { UserModule } from 'dependency/shared/User/UserModule';
 import { UserModule as PortalUserModule } from 'dependency/Portal/User/UserModule';
+import { WarehouseModule as PortalWarehouseModule } from 'dependency/Portal/Warehouse/WarehouseModule';
+import { WarehouseItemModule as PortalWarehouseItemModule } from 'dependency/Portal/WarehouseItem/WarehouseItemModule';
 import { UserModule as AdministrationUserModule } from 'dependency/Administration/User/UserModule';
 import { WarehouseModule as AdministrationWarehouseModule } from 'dependency/Administration/Warehouse/WarehouseModule';
+import { WarehouseItemModule as AdministrationWarehouseItemModule } from 'dependency/Administration/WarehouseItem/WarehouseItemModule';
 import { RoleModule } from 'dependency/Administration/Role/RoleModule';
 import { RateModule } from 'dependency/Administration/Rate/RateModule';
 import { StateModule } from 'dependency/Administration/State/StateModule';
@@ -64,6 +67,7 @@ export class AppContainer extends BaseContainer {
     this.provideStateModule();
     this.provideAdministrationUserModule();
     this.provideAdministrationWarehouseModule();
+    this.provideAdministrationWarehouseItemModule();
 
     this.provideAdministrationModule();
   }
@@ -71,6 +75,8 @@ export class AppContainer extends BaseContainer {
   private initializePortalNamespace(): void {
     this.provideUserEquipmentModule();
     this.providePortalUserModule();
+    this.providePortalWarehouseModule();
+    this.providePortalWarehouseItemModule();
 
     this.providePortalModule();
   }
@@ -115,6 +121,10 @@ export class AppContainer extends BaseContainer {
     this.load(new AdministrationWarehouseModule());
   }
 
+  private provideAdministrationWarehouseItemModule(): void {
+    this.load(new AdministrationWarehouseItemModule());
+  }
+
   private provideAdministrationModule(): void {
     this.load(new AdministrationModule());
   }
@@ -133,6 +143,14 @@ export class AppContainer extends BaseContainer {
 
   private providePortalUserModule(): void {
     this.load(new PortalUserModule());
+  }
+
+  private providePortalWarehouseModule(): void {
+    this.load(new PortalWarehouseModule());
+  }
+
+  private providePortalWarehouseItemModule(): void {
+    this.load(new PortalWarehouseItemModule());
   }
 
   private providePortalModule(): void {

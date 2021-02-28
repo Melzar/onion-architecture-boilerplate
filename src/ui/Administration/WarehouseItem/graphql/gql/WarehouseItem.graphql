@@ -1,0 +1,32 @@
+extend type Query {
+    warehouseItem(id: ID): WarehouseItem! @isAuthenticated(role: [ADMIN])
+    warehouseItems: [WarehouseItem!]! @isAuthenticated(role: [ADMIN])
+}
+
+extend type Mutation {
+    createWarehouseItem(input: CrateWarehouseItemInput): WarehouseItem! @isAuthenticated(role: [ADMIN])
+    updateWarehouseItem(input: UpdateWarehouseItemInput): WarehouseItem! @isAuthenticated(role: [ADMIN])
+}
+
+input CrateWarehouseItemInput {
+    name: String!
+    cost: Float!
+    warehouseID: ID!
+    equipmentID: ID!
+}
+
+input UpdateWarehouseItemInput {
+    id: ID!
+    name: String
+    cost: Float
+    warehouseID: ID
+    equipmentID: ID
+}
+
+type WarehouseItem {
+    id: ID!
+    name: String!
+    cost: Float!
+    equipment: Equipment!
+    warehouse: Warehouse!
+}

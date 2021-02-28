@@ -3,18 +3,25 @@ extend type Query {
     warehouse(id: ID!): Warehouse! @isAuthenticated(role: [ADMIN])
 }
 
+extend type Mutation {
+    createWarehouse(input: CreateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN])
+    updateWarehouse(input: UpdateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN])
+}
+
+input UpdateWarehouseInput {
+    warehouseID: ID!
+    stateID: ID
+    name: String
+}
+
+input CreateWarehouseInput {
+    name: String!
+    stateID: ID
+}
+
 type Warehouse {
     id: ID!
     name: String!
-    state: State! # TODO To be handled by subqueries
-    warehouseItems: [WarehouseItem!]! # TODO To be handled by subqueries
-}
-
-# TODO To be moved to it's own domain probably
-type WarehouseItem {
-    id: ID!
-    name: String!
-    cost: Float!
-    equipment: Equipment! # TODO To be handled by subqueries
-    warehouse: Warehouse! # TODO To be handled by subqueries
+    state: State!
+    warehouseItems: [WarehouseItem!]!
 }

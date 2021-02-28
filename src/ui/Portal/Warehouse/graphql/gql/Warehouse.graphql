@@ -1,0 +1,4 @@
+extend type Query {
+    availableWarehouses: [Warehouse!]! @isAuthenticated(role: [MEMBER])
+}
+

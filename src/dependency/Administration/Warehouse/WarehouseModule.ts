@@ -11,13 +11,17 @@ import {
   DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
   DOMAIN_REPOSITORY_IDENTIFIERS,
 } from 'core/CoreModuleSymbols';
-import { IWarehouseItemRepository } from 'core/domainServices/Warehouse/IWarehouseItemRepository';
 import { IWarehouseService } from 'core/applicationServices/Warehouse/IWarehouseService';
 import { WarehouseService } from 'core/applicationServices/Warehouse/WarehouseService';
-import { IWarehouseItemService } from 'core/applicationServices/Warehouse/IWarehouseItemService';
-import { WarehouseItemService } from 'core/applicationServices/Warehouse/WarehouseItemService';
+import { IWarehouseWarehouseItemRepository } from 'core/domainServices/Warehouse/IWarehouseWarehouseItemRepository';
+import { WarehouseWarehouseItemService } from 'core/applicationServices/Warehouse/WarehouseWarehouseItemService';
+import { IWarehouseWarehouseItemService } from 'core/applicationServices/Warehouse/IWarehouseWarehouseItemService';
+import { IWarehouseStateRepository } from 'core/domainServices/Warehouse/IWarehouseStateRepository';
+import { WarehouseStateService } from 'core/applicationServices/Warehouse/WarehouseStateService';
+import { IWarehouseStateService } from 'core/applicationServices/Warehouse/IWarehouseStateService';
 import { WarehouseRepository } from 'infrastructure/database/repository/Warehouse/WarehouseRepository';
-import { WarehouseItemRepository } from 'infrastructure/database/repository/Warehouse/WarehouseItemRepository';
+import { WarehouseWarehouseItemRepository } from 'infrastructure/database/repository/Warehouse/WarehouseWarehouseItemRepository';
+import { WarehouseStateRepository } from 'infrastructure/database/repository/Warehouse/WarehouseStateRepository';
 
 export class WarehouseModule extends BaseModule {
   constructor() {
@@ -28,10 +32,12 @@ export class WarehouseModule extends BaseModule {
 
   public init(bind: interfaces.Bind): void {
     this.provideWarehouseRepository(bind);
-    this.provideWarehouseItemRepository(bind);
+    this.provideWarehouseWarehouseItemRepository(bind);
+    this.provideWarehouseStateRepository(bind);
 
     this.provideWarehouseService(bind);
-    this.provideWarehouseItemService(bind);
+    this.provideWarehouseWarehouseItemService(bind);
+    this.provideWarehouseStateService(bind);
 
     this.provideWarehouseQuery(bind);
     this.provideWarehouseMutation(bind);
@@ -44,10 +50,16 @@ export class WarehouseModule extends BaseModule {
     ).to(WarehouseRepository);
   }
 
-  private provideWarehouseItemRepository(bind: interfaces.Bind): void {
-    bind<IWarehouseItemRepository>(
-      DOMAIN_REPOSITORY_IDENTIFIERS.WAREHOUSE_ITEM_REPOSITORY
-    ).to(WarehouseItemRepository);
+  private provideWarehouseWarehouseItemRepository(bind: interfaces.Bind): void {
+    bind<IWarehouseWarehouseItemRepository>(
+      DOMAIN_REPOSITORY_IDENTIFIERS.WAREHOUSE_WAREHOUSE_ITEM_REPOSITORY
+    ).to(WarehouseWarehouseItemRepository);
+  }
+
+  private provideWarehouseStateRepository(bind: interfaces.Bind): void {
+    bind<IWarehouseStateRepository>(
+      DOMAIN_REPOSITORY_IDENTIFIERS.WAREHOUSE_STATE_REPOSITORY
+    ).to(WarehouseStateRepository);
   }
 
   private provideWarehouseService(bind: interfaces.Bind): void {
@@ -56,10 +68,16 @@ export class WarehouseModule extends BaseModule {
     ).to(WarehouseService);
   }
 
-  private provideWarehouseItemService(bind: interfaces.Bind): void {
-    bind<IWarehouseItemService>(
-      DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.WAREHOUSE_ITEM_SERVICE
-    ).to(WarehouseItemService);
+  private provideWarehouseWarehouseItemService(bind: interfaces.Bind): void {
+    bind<IWarehouseWarehouseItemService>(
+      DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.WAREHOUSE_WAREHOUSE_ITEM_SERVICE
+    ).to(WarehouseWarehouseItemService);
+  }
+
+  private provideWarehouseStateService(bind: interfaces.Bind): void {
+    bind<IWarehouseStateService>(
+      DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.WAREHOUSE_STATE_SERVICE
+    ).to(WarehouseStateService);
   }
 
   private provideWarehouseQuery(bind: interfaces.Bind): void {

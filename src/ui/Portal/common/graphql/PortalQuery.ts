@@ -13,11 +13,14 @@ export class PortalQuery implements IResolver<IResolverObject> {
     @inject(UI_SCHEMA_IDENTIFIERS.USER_QUERIES)
     public readonly userQueries: IResolver,
     @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_QUERIES)
-    public readonly equipmentQueries: IResolver
+    public readonly equipmentQueries: IResolver,
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_WAREHOUSE_QUERIES)
+    public readonly warehouseQueries: IResolver
   ) {
     this.resolvers = {
       ...this.userQueries.resolvers,
       ...this.equipmentQueries.resolvers,
+      ...this.warehouseQueries.resolvers,
     };
   }
 }

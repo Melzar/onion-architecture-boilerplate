@@ -1,0 +1,9 @@
+extend type Mutation {
+    addWarehouseItem(input: AddWarehouseItem): WarehouseItem! @isAuthenticated(role: [MEMBER])
+}
+
+input AddWarehouseItem {
+    equipmentID: ID!
+    warehouseID: ID!
+    name: String
+}

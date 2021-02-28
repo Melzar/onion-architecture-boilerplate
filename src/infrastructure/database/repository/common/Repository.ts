@@ -7,6 +7,7 @@ import { Repository as ORMRepository } from 'typeorm/repository/Repository';
 
 import { IRepository } from 'infrastructure/database/repository/common/IRepository';
 import { Query } from 'infrastructure/database/repository/common/Query';
+import { UpdateQueryData } from 'infrastructure/database/repository/common/UpdateQueryData';
 
 @injectable()
 export abstract class Repository<E> extends AbstractRepository<E>
@@ -35,7 +36,10 @@ export abstract class Repository<E> extends AbstractRepository<E>
     return this.getDBRepository().query(query, parameters);
   }
 
-  public async update(condition: string | number, data: E): Promise<boolean> {
+  public async update(
+    condition: string | number,
+    data: UpdateQueryData<E>
+  ): Promise<boolean> {
     return !!(await this.getDBRepository().update(condition, data));
   }
 

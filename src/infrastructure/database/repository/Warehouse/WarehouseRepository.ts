@@ -14,6 +14,9 @@ import { Warehouse } from 'core/domain/Warehouse/Warehouse';
 import { BaseError } from 'core/common/errors/BaseError';
 import { InfrastructureErrors } from 'infrastructure/common/errors/InfrastructureErrors';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
+import { CreateWarehouseRepositoryRequest } from 'core/domainServices/Warehouse/request/CreateWarehouseRepositoryRequest';
+import { UpdateWarehouseRepositoryRequest } from 'core/domainServices/Warehouse/request/UpdateWarehouseRepositoryRequest';
+import { State } from 'infrastructure/database/entities/State';
 
 @injectable()
 @EntityRepository(WarehouseEntity)
@@ -55,6 +58,63 @@ export class WarehouseRepository extends Repository<WarehouseEntity>
         source: DATABASE_MAPPING_IDENTIFIERS.WAREHOUSE_ENTITY,
       },
       result
+    );
+  }
+
+  async createWarehouse({
+    name,
+    stateID,
+  }: CreateWarehouseRepositoryRequest): Promise<Warehouse> {
+    const warehouse = new WarehouseEntity();
+    warehouse.name = name;
+
+    if (stateID) {
+      const state = new State();
+      state.id = stateID;
+      warehouse.state = state;
+    }
+
+    const savedWarehouse = await this.save(warehouse);
+
+    return this.dbMapper.mapper.map<WarehouseEntity, Warehouse>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.WAREHOUSE_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.WAREHOUSE_ENTITY,
+      },
+      savedWarehouse
+    );
+  }
+
+  async updateWarehouse({
+    warehouseID,
+    stateID,
+    name,
+  }: UpdateWarehouseRepositoryRequest): Promise<Warehouse> {
+    const warehouse = await this.find(warehouseID);
+
+    if (!warehouse) {
+      throw new BaseError(
+        InfrastructureErrors[InfrastructureErrors.WAREHOUSE_NOT_FOUND]
+      );
+    }
+
+    if (name) {
+      warehouse.name = name;
+    }
+    if (stateID) {
+      const state = new State();
+      state.id = stateID;
+      warehouse.state = state;
+    }
+
+    const savedWarehouse = await this.save(warehouse);
+
+    return this.dbMapper.mapper.map<WarehouseEntity, Warehouse>(
+      {
+        destination: DOMAIN_MAPPING_IDENTIFIERS.WAREHOUSE_DOMAIN,
+        source: DATABASE_MAPPING_IDENTIFIERS.WAREHOUSE_ENTITY,
+      },
+      savedWarehouse
     );
   }
 }
