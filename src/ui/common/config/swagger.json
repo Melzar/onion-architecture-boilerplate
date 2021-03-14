@@ -191,6 +191,15 @@
       "properties": {
         "name": {
           "type": "string"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "depth": {
+          "type": "integer"
         }
       }
     },

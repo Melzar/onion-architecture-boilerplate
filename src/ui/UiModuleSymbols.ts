@@ -38,7 +38,7 @@ export const UI_APPLICATION_IDENTIFIERS = {
 export const UI_SCHEMA_IDENTIFIERS = {
   AUTHENTICATION_MUTATIONS: Symbol.for('AuthenticationMutations'),
 
-  USER_QUERIES: Symbol.for('UserQueries'),
+  PORTAL_USER_QUERIES: Symbol.for('PortalUserQueries'),
 
   ADMINISTRATION_USER_QUERIES: Symbol.for('AdministrationUserQueries'),
   ADMINISTRATION_USER_MUTATIONS: Symbol.for('AdministrationUserMutations'),

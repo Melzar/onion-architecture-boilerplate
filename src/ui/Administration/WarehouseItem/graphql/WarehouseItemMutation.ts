@@ -31,7 +31,7 @@ export class WarehouseItemMutation implements IResolver<IResolverObject> {
     }: { input: CreateWarehouseItemInput }
   ) =>
     this.warehouseItemService.createWarehouseItem(
-      new CreateWarehouseItemRequest(name, cost, warehouseID, equipmentID)
+      new CreateWarehouseItemRequest(name, warehouseID, equipmentID, cost)
     );
 
   private updateWarehouseItem = (

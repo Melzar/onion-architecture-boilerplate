@@ -16,6 +16,5 @@ type User {
     email: String!
     role: String!
     lastName: String!
-    password: String!
     age: Int!
 }

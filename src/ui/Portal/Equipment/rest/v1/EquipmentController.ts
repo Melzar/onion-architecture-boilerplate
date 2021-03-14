@@ -33,14 +33,20 @@ export class EquipmentController extends BaseHttpController {
   @httpPost('/', isAuthenticated({ role: USER_ROLE.MEMBER }))
   public async create(
     @requestBody()
-    { name }: CreateEquipmentRequestBody,
+    { name, width, height, depth }: CreateEquipmentRequestBody,
     @request()
     req: Request
   ): Promise<results.JsonResult> {
     const currentUser = getCurrentUser(req);
 
     const createdEquipment = await this.equipmentService.createEquipment(
-      new CreateEquipmentRequest(name, currentUser.details!.id)
+      new CreateEquipmentRequest(
+        name,
+        width,
+        height,
+        depth,
+        currentUser.details!.id
+      )
     );
     return this.json(createdEquipment, OK);
   }

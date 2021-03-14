@@ -10,14 +10,12 @@ import { IApplication } from 'ui/common/config/application/common/IApplication';
 import { BaseApplication } from 'ui/common/config/application/common/BaseApplication';
 import { ILogger } from 'ui/common/config/logger/ILogger';
 import {
-  SWAGGER_HOST,
   SWAGGER_BASE_PATH,
-  APOLLO_BASE_PATH,
+  SWAGGER_HOST,
 } from 'ui/common/config/consts/variables';
 import { UI_APPLICATION_IDENTIFIERS } from 'ui/UiModuleSymbols';
 
 import swaggerDocument from 'ui/common/config/swagger.json';
-import { unless } from 'ui/common/config/application/express/utils/unless';
 
 @injectable()
 export class ExpressApplication extends BaseApplication<express.Application>
@@ -85,8 +83,6 @@ export class ExpressApplication extends BaseApplication<express.Application>
   }
 
   public initializeExtensions(): void {
-    this.app.use(unless(APOLLO_BASE_PATH, this.router));
-
     if (SWAGGER_HOST) {
       swaggerDocument.host = SWAGGER_HOST;
       this.app.use(

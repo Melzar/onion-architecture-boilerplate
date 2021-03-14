@@ -1,3 +1,13 @@
 extend type Query {
-    myEquipment: Equipment! @isAuthenticated(role: [MEMBER])
+    myEquipment: [Equipment!]! @isAuthenticated(role: [MEMBER])
+    calculateEquipmentCost(input: CalculateEquipmentCostInput): EquipmentCost! @isAuthenticated(role: [MEMBER])
+}
+
+input CalculateEquipmentCostInput {
+    equipmentID: ID!
+    warehouseID: ID!
+}
+
+type EquipmentCost {
+    cost: Float!
 }

@@ -16,6 +16,12 @@ export const DOMAIN_APPLICATION_SERVICE_IDENTIFIERS = {
   PORTAL_WAREHOUSE_ITEM_SERVICE: Symbol.for('PortalWarehouseItemService'),
 };
 
+export const DOMAIN_INTERACTORS_IDENTIFIERS = {
+  CALCULATE_EQUIPMENT_COST_INTERACTOR: Symbol.for(
+    'CalculateEquipmentCostInteractor'
+  ),
+};
+
 export const DOMAIN_REPOSITORY_IDENTIFIERS = {
   EQUIPMENT_REPOSITORY: Symbol.for('EquipmentRepository'),
   ROLE_REPOSITORY: Symbol.for('RoleRepository'),
@@ -34,6 +40,8 @@ export const DOMAIN_REPOSITORY_IDENTIFIERS = {
   WAREHOUSE_ITEM_EQUIPMENT_REPOSITORY: Symbol.for(
     'WarehouseItemEquipmentRepository'
   ),
+
+  USER_EQUIPMENT_REPOSITORY: Symbol.for('UserEquipmentRepository'), // TODO RENAME IT TO PORTAL AND MOVE TO PORTAL STRUCTURE
 
   PORTAL_WAREHOUSE_REPOSITORY: Symbol.for('PortalWarehouseRepository'),
   PORTAL_WAREHOUSE_ITEM_REPOSITORY: Symbol.for('PortalItemWarehouseRepository'),

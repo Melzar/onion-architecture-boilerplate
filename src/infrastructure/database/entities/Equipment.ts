@@ -17,6 +17,15 @@ export class Equipment {
   @Column()
   name!: string;
 
+  @Column()
+  width!: number;
+
+  @Column()
+  height!: number;
+
+  @Column()
+  depth!: number;
+
   @ManyToOne(
     () => User,
     user => user.equipment

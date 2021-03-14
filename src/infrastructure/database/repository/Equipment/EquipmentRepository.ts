@@ -4,7 +4,6 @@ import { EntityRepository } from 'typeorm';
 import { BaseError } from 'core/common/errors/BaseError';
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
 import { FindEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentRepositoryRequest';
-import { FindEquipmentForUserRepositoryRequest } from 'core/domainServices/Equipment/request/FindEquipmentForUserRepositoryRequest';
 import { AddEquipmentRepositoryRequest } from 'core/domainServices/Equipment/request/AddEquipmentRepositoryRequest';
 import { Equipment } from 'core/domain/Equipment/Equipment';
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
@@ -50,31 +49,18 @@ export class EquipmentRepository extends Repository<EquipmentEntity>
     );
   }
 
-  async findEquipmentForUser({
-    userId,
-  }: FindEquipmentForUserRepositoryRequest): Promise<Equipment[]> {
-    const userEquipment = await this.custom()
-      .createQueryBuilder()
-      .where('"Equipment"."userId" = :userId', {
-        userId,
-      })
-      .getMany();
-
-    return this.dbMapper.mapper.map<EquipmentEntity[], Equipment[]>(
-      {
-        destination: DOMAIN_MAPPING_IDENTIFIERS.EQUIPMENT_DOMAIN,
-        source: DATABASE_MAPPING_IDENTIFIERS.EQUIPMENT_ENTITY,
-      },
-      userEquipment
-    );
-  }
-
   async addEquipment({
     name,
+    width,
+    height,
+    depth,
     userId,
   }: AddEquipmentRepositoryRequest): Promise<Equipment> {
     const equipment = new EquipmentEntity();
     equipment.name = name;
+    equipment.width = width;
+    equipment.height = height;
+    equipment.depth = depth;
 
     const userToAssign = new User();
     userToAssign.id = +userId;

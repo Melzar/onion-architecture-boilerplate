@@ -25,10 +25,19 @@ export class EquipmentService implements IEquipmentService {
 
   async createEquipment({
     name,
+    width,
+    height,
+    depth,
     userId,
   }: CreateEquipmentRequest): Promise<Equipment> {
     return this.equipmentUnitOfWork.addEquipment(
-      new AddEquipmentUnitOfWorkRepositoryRequest(name, userId)
+      new AddEquipmentUnitOfWorkRepositoryRequest(
+        name,
+        width,
+        height,
+        depth,
+        userId
+      )
     );
   }
 

@@ -31,6 +31,7 @@ export class WarehouseStateRepository extends Repository<StateEntity>
   }: GetWarehouseStateRepositoryRequest): Promise<State> {
     const state = await this.custom()
       .createQueryBuilder('State')
+      .innerJoinAndSelect('State.rates', 'Rate')
       .innerJoin('State.warehouses', 'Warehouse')
       .where('Warehouse.id = :warehouseId', { warehouseId })
       .getOne();

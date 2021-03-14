@@ -10,6 +10,116 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1900T-IpU1bZ
 
 > Diagrams have copyrights, if you want to use it on larger scale, feel free to contact me.
 
+### BUSINESS CONTEXT
+
+Project is a simple simulator of warehouse and managing storage space. 
+There are two separate perspectives `Administrative` and `Client` facing app.
+
+##### Scenarios
+
+#### Portal - Client facing app
+
+    --------- CLIENT PERSPECTIVE ---------
+
+    Given that I'm not a Client
+    And I would like to create account
+    When I provide required data
+    Then my account is created
+
+    Given I'm not authenticated Client 
+    And I would like to authenticate
+    When I provide proper authentication details
+    Then I'm able to get into system
+
+    Given I'm authenticated Client 
+    And I would like to delete account
+    When I perform delete action
+    Then I'm no longer able to authenticate
+
+    Given I'm authenticated Client
+    When I get into my profile
+    Then I can see my account data
+
+    Given I'm authenticated Client
+    And I would like to create equipment
+    When I provide all required data
+    Then Equipment is created
+
+    Given I'm authenticated Client
+    And I have equipment
+    When I select Warehouse
+    Then I receive price preview
+
+    Given I'm authenticated Client
+    And I have multiple equipment items
+    Then I can preview it
+
+    Given I'm authenticated Client
+    Then I can preview available Warehouses
+
+    Given I'm authenticated Client
+    And I have equipment
+    When I select Warehouse
+    And perform store item action
+    Then I receive Warehouse Item with cost included
+
+    --------- Admin PERSPECTIVE ---------
+
+    Given I'm authenticated Admin
+    Then I can preview all equipment
+    And Users related to equipment
+    
+    Given I'm authenticated Admin
+    And I would like to create equipment
+    When I provide required data
+    Then Equipment is created
+
+    Given I'm authenticated Admin
+    Then I can preview all warehouses
+    And related Warehouse Items
+
+    Given I'm authenticated Admin
+    Then I can preview specific warehouse
+    And related Warehouse Items
+
+    Given I'm authenticated Admin
+    And I would like to create new Warehouse
+    When I provide all required data with State
+    Then Warehouse is created
+
+    Given I'm authenticated Admin
+    And there is existing Warehouse
+    When I provide new data with State
+    Then Warehouse data is updated
+
+    Given I'm authenticated Admin
+    And there is existing WarehouseItem
+    Then I can preview it
+
+    Given I'm authenticated Admin
+    And there are many existing WarehouseItems
+    Then I can preview all of them
+
+    Given I'm authenticated Admin
+    And I would like to create new WarehouseItem
+    When I provide all required data with Warehouse
+    Then WarehouseItem is created
+
+    Given I'm authenticated Admin
+    And there is existing WarehouseItem
+    When I provide new data with Warehouse
+    Then WarehouseItem is updated
+
+    Given I'm authenticated Admin
+    Then I can preview all Users
+
+    Given I'm authenticated Admin
+    Then I can preview all States
+    And related Rates
+
+    Given I'm authenticated Admin
+    Then I can preview all Rates
+
 ##### Technologies used
 
 1. `Typescript` ( `v3.7.5` )
@@ -189,6 +299,21 @@ Unit Of Work is simply speaking - a wrapper. It wraps repositories and performs 
 It solves issue related to circular repository dependency in ioc, or nested repository dependency on each other. With unit 
 of work specific repository methods don't have any reference to external repositories which makes them more atomic.
 
+#### Interactor / UseCase / Scenario
+
+`Interactor` is a single, independent action to execute in any place of the system. It contains logic related to specific problem ( usually also to specific domain )
+and can be shared across multiple domains. It has clear input definition and output. The idea of `interactor` is to avoid need of nesting 
+`services` in each other. If you need to nest `services` then you also combine domains, and you will face cross domain issues. As `interactor` is
+independent operation to reuse, it **CANNOT** have `service` as dependency ( `repository` is allowed ). It can be injected into `service` though.
+
+`UseCase` you can see it as a wrapper, if you have business use case which depends on multiple `interactor `results, and you need to apply some logic on those results,
+then `UseCase` is a way to go. `UseCase` may have multiple `interactors` as dependencies + `repositories`.
+
+`Scenario` is a wrapper around `UseCases`. Same way of thinking as in `UseCase` - if you have a complex, reusable across multiple domains / modules operation, which depends
+on multiple `UseCases`, `Interactors`, `repositories` results, and you need to apply specific logic on those results, then `scenario` is a way to go.
+
+All of those patterns should be presented as single action to execute - there shouldn't be multiple methods / functions applied to their interfaces, just `execute`.
+
 #### Mapper
 
 The Simple concept, where one module data structure is translated to another module
@@ -246,9 +371,8 @@ not only responses but also saved data in database and authentication context.
 * Introduce the `Docker` into project  
 * Improve IOC implementation ( some injections do not have dependencies, so we can define it as pure functions )
 * Prepare testing infrastructure for `GraphQL` endpoints
-* Provide more real life examples of `GraphQL` + `Rest` - define Story for that case
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
-* Provide example of interactor / use case / scenario pattern
+* Resolve `TODO's` comments  
 * Provide additional diagrams
     * Database diagram
     * Detailed diagram per layer

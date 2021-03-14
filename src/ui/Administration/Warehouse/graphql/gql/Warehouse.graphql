@@ -4,8 +4,8 @@ extend type Query {
 }
 
 extend type Mutation {
-    createWarehouse(input: CreateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN])
-    updateWarehouse(input: UpdateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN])
+    createWarehouse(input: CreateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN]) # TODO Add option to pass more props related to warehouse
+    updateWarehouse(input: UpdateWarehouseInput): Warehouse! @isAuthenticated(role: [ADMIN]) # TODO Add option to pass more props related to warehouse
 }
 
 input UpdateWarehouseInput {
@@ -22,6 +22,16 @@ input CreateWarehouseInput {
 type Warehouse {
     id: ID!
     name: String!
+    widthCost: Float!
+    heightCost: Float!
+    depthCost: Float!
+    capacityWidth: Int!,
+    capacityHeight: Int!,
+    capacityDepth: Int!,
+    capacityWidthLoad: Int!,
+    capacityHeightLoad: Int!,
+    capacityDepthLoad: Int!,
+    available: Boolean!,
     state: State!
     warehouseItems: [WarehouseItem!]!
 }

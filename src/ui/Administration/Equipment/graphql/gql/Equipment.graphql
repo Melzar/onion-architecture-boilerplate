@@ -3,15 +3,21 @@ extend type Query {
 }
 
 extend type Mutation {
-    createEquipment(input: CreateEquipmentInput): Equipment! @isAuthenticated(role: [ADMIN])
+    createEquipment(input: CreateEquipmentInput): Equipment! @isAuthenticated(role: [ADMIN]) # TODO add assigning equipment to user
 }
 
 input CreateEquipmentInput {
     name: String!
+    width: Int!
+    height: Int!
+    depth: Int!
 }
 
 type Equipment {
     id: ID!
     name: String!
+    width: Int!
+    height: Int!
+    depth: Int!
 }
 

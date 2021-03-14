@@ -10,9 +10,9 @@ export class PortalQuery implements IResolver<IResolverObject> {
   readonly resolvers: IResolverObject;
 
   constructor(
-    @inject(UI_SCHEMA_IDENTIFIERS.USER_QUERIES)
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_USER_QUERIES)
     public readonly userQueries: IResolver,
-    @inject(UI_SCHEMA_IDENTIFIERS.EQUIPMENT_QUERIES)
+    @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_EQUIPMENT_QUERIES)
     public readonly equipmentQueries: IResolver,
     @inject(UI_SCHEMA_IDENTIFIERS.PORTAL_WAREHOUSE_QUERIES)
     public readonly warehouseQueries: IResolver

@@ -29,6 +29,7 @@ export class WarehouseItemRepository extends Repository<WarehouseItemEntity>
   async addWarehouseItem({
     equipmentID,
     warehouseID,
+    cost,
     name,
   }: AddWarehouseItemRepositoryRequest): Promise<WarehouseItem> {
     const equipment = new Equipment();
@@ -43,6 +44,9 @@ export class WarehouseItemRepository extends Repository<WarehouseItemEntity>
 
     warehouseItem.warehouse = warehouse;
     warehouseItem.equipment = equipment;
+    warehouseItem.cost = cost;
+
+    // TODO this will have to be moved to unit of work as we need to modify warehouse capacity when item is added
 
     const addedWarehouseItem = await this.save(warehouseItem);
 

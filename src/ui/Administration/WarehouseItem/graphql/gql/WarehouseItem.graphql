@@ -10,7 +10,7 @@ extend type Mutation {
 
 input CrateWarehouseItemInput {
     name: String!
-    cost: Float!
+    cost: Float
     warehouseID: ID!
     equipmentID: ID!
 }

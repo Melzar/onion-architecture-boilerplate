@@ -25,10 +25,10 @@ export class EquipmentMutation implements IResolver<IResolverObject> {
 
   private createEquipment = (
     _root: unknown,
-    { input: { name } }: { input: CreateEquipmentInput },
+    { input: { name, depth, height, width } }: { input: CreateEquipmentInput },
     { viewer }: Context
   ) =>
     this.equipmentService.createEquipment(
-      new CreateEquipmentRequest(name, viewer!.id)
+      new CreateEquipmentRequest(name, width, height, depth, viewer!.id)
     );
 }

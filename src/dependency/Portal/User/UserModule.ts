@@ -17,6 +17,6 @@ export class UserModule extends BaseModule {
   }
 
   private provideUserQuery(bind: interfaces.Bind): void {
-    bind<IResolver>(UI_SCHEMA_IDENTIFIERS.USER_QUERIES).to(UserQuery);
+    bind<IResolver>(UI_SCHEMA_IDENTIFIERS.PORTAL_USER_QUERIES).to(UserQuery);
   }
 }

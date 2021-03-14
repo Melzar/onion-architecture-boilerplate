@@ -13,15 +13,13 @@ import {
 } from 'core/CoreModuleSymbols';
 
 import { UserRepository } from 'infrastructure/database/repository/User/UserRepository';
+import { UserUnitOfWork } from 'infrastructure/database/repository/User/UserUnitOfWork';
 import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 import { UserEntityToUserDomainMapper } from 'infrastructure/database/mappings/User/UserEntityToUserDomainMapper';
 
 import { UI_IDENTIFIERS } from 'ui/UiModuleSymbols';
 import { UserDomainToUserUIMapper } from 'ui/common/mappings/User/UserDomainToUserUIMapper';
 import { IUserUnitOfWork } from 'core/domainServices/User/IUserUnitOfWork';
-import { UserUnitOfWork } from 'infrastructure/database/repository/User/UserUnitOfWork';
-import { UserEquipmentService } from 'core/applicationServices/User/UserEquipmentService';
-import { IUserEquipmentService } from 'core/applicationServices/User/IUserEquipmentService';
 
 export class UserModule extends BaseModule {
   constructor() {
@@ -37,7 +35,6 @@ export class UserModule extends BaseModule {
     this.provideUserUIMapper(bind);
     this.provideUserEntityMapper(bind);
     this.provideUserService(bind);
-    this.provideUserEquipmentService(bind);
   }
 
   private provideUserRepository(bind: interfaces.Bind): void {
@@ -66,11 +63,5 @@ export class UserModule extends BaseModule {
     bind<IUserService>(DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.USER_SERVICE).to(
       UserService
     );
-  }
-
-  private provideUserEquipmentService(bind: interfaces.Bind): void {
-    bind<IUserEquipmentService>(
-      DOMAIN_APPLICATION_SERVICE_IDENTIFIERS.USER_EQUIPMENT_SERVICE
-    ).to(UserEquipmentService);
   }
 }

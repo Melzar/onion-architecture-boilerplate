@@ -28,13 +28,16 @@ export class EquipmentUnitOfWork extends UnitOfWork
   async addEquipment({
     userId,
     name,
+    width,
+    height,
+    depth,
   }: AddEquipmentUnitOfWorkRepositoryRequest): Promise<Equipment> {
     const { id } = await this.userRepository.findUser(
       new FindUserRepositoryRequest(userId)
     );
 
     return this.equipmentRepository.addEquipment(
-      new AddEquipmentRepositoryRequest(name, id)
+      new AddEquipmentRepositoryRequest(name, width, height, depth, id)
     );
   }
 }

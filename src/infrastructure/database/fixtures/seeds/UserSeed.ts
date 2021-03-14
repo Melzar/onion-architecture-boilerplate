@@ -45,10 +45,19 @@ export class UserSeed implements Seeder {
 
     const warehouse = await factory(Warehouse)().create({
       state,
+      capacityWidth: 10000000,
+      capacityDepth: 10000000,
+      capacityHeight: 100000,
+      widthCost: 9.5,
+      depthCost: 10.5,
+      heightCost: 11,
     });
 
     const equipment = await factory(Equipment)().create({
       user,
+      width: 100,
+      height: 100,
+      depth: 100,
     });
 
     await factory(WarehouseItem)().create({
