@@ -15,11 +15,9 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1900T-IpU1bZ
 Project is a simple simulator of warehouse and managing storage space. 
 There are two separate perspectives `Administrative` and `Client` facing app.
 
-##### Scenarios
+#### User Stories
 
-#### Portal - Client facing app
-
-    --------- CLIENT PERSPECTIVE ---------
+##### Portal - Client facing app
 
     Given that I'm not a Client
     And I would like to create account
@@ -63,7 +61,7 @@ There are two separate perspectives `Administrative` and `Client` facing app.
     And perform store item action
     Then I receive Warehouse Item with cost included
 
-    --------- Admin PERSPECTIVE ---------
+##### Administration - Admin facing app
 
     Given I'm authenticated Admin
     Then I can preview all equipment
@@ -120,7 +118,9 @@ There are two separate perspectives `Administrative` and `Client` facing app.
     Given I'm authenticated Admin
     Then I can preview all Rates
 
-##### Technologies used
+### TECHNICAL ASPECT
+
+#### Technologies used
 
 1. `Typescript` ( `v3.7.5` )
 2. `Inversify.js`
@@ -130,7 +130,7 @@ There are two separate perspectives `Administrative` and `Client` facing app.
 6. `GraphQL`   
 7. `Mocha / Chai` for testing
 
-##### Structure
+#### Structure
 
 1. core ( `Application Core` )
     
@@ -148,7 +148,7 @@ There are two separate perspectives `Administrative` and `Client` facing app.
 
         Contains definition of presentation layer like controller, express setup etc  
 
-##### Data flow
+#### Data flow
 
 It's important to keep data flow as simple as possible. Generally it's simple to follow - for entry data always specify request object,
 for output translate data to specific layer. For easier understanding I've prepared a diagram.
@@ -157,7 +157,7 @@ for output translate data to specific layer. For easier understanding I've prepa
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1cpdb56cnzkxT_LA_NSW9aRFDDcS_3GFl)
 
-##### Architecture layers access restrictions
+#### Architecture layers access restrictions
 
 Every layer has its own rules when it comes to access to another layer. 
 
@@ -180,7 +180,7 @@ Visual representation of above restrictions can be seen in a diagram.
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1xonZCgIalsW1UCBqusK6Rqz5__I0-T8p)
 
-##### Architecture Growth Lifecycle
+#### Architecture Growth Lifecycle
 
 It's natural that every project evolve with time. From my perspective process of growth can be divided into specific phases.
 
@@ -207,7 +207,7 @@ Visual representation of above process can be seen in a diagram.
 Diagram available [here](https://drive.google.com/uc?export=view&id=1GkY_vOUCXxVce-6Ajz1Zlj1pVMwhJ9d1)
 
 
-##### What is supported?
+#### What is supported?
 
 1. Multiple environment setup
 2. DB Agnostic setup, supports multiple datasource
@@ -218,7 +218,7 @@ Diagram available [here](https://drive.google.com/uc?export=view&id=1GkY_vOUCXxV
 7. Test Parallelization
 8. Multiple protocols within one codebase ( GraphQL / REST )
 
-##### Reference
+#### Reference
 
 Inspired by following articles:
 
@@ -269,7 +269,7 @@ When there is a swagger host provided in `.env` file then you can navigate to `h
 
 Update `swagger.json` file located at `ui > config` every time you apply changes to api.
 
-### GraphQL Playground
+### GRAPHQL PLAYGROUND
 
 Navigate to `http://localhost:3000/graphql` to make queries through `GraphQL` playground
           
@@ -312,7 +312,7 @@ then `UseCase` is a way to go. `UseCase` may have multiple `interactors` as depe
 `Scenario` is a wrapper around `UseCases`. Same way of thinking as in `UseCase` - if you have a complex, reusable across multiple domains / modules operation, which depends
 on multiple `UseCases`, `Interactors`, `repositories` results, and you need to apply specific logic on those results, then `scenario` is a way to go.
 
-All of those patterns should be presented as single action to execute - there shouldn't be multiple methods / functions applied to their interfaces, just `execute`.
+All of those concepts should be presented as single action to execute - there shouldn't be multiple methods / functions applied to their interfaces, just `execute`.
 
 #### Mapper
 
