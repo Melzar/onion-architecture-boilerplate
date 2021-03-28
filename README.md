@@ -206,6 +206,12 @@ Visual representation of above process can be seen in a diagram.
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1GkY_vOUCXxVce-6Ajz1Zlj1pVMwhJ9d1)
 
+#### Database Structure
+
+To have better context on general example of architecture, it's also good to understand database structure and how whole project structure
+is aligned to it.
+
+![Project database structure](onion.diagram.database.png)
 
 #### What is supported?
 
@@ -374,7 +380,6 @@ not only responses but also saved data in database and authentication context.
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
 * Resolve `TODO's` comments  
 * Provide additional diagrams
-    * Database diagram
     * Detailed diagram per layer
 
 ### KNOWN ISSUES
