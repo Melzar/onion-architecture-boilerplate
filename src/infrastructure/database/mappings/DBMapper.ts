@@ -1,35 +1,19 @@
 import { Mapper } from '@wufe/mapper';
-import { inject, injectable } from 'inversify';
+import { injectable } from 'inversify';
 
-import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-
-import { UserEntityToUserDomainMapper } from 'infrastructure/database/mappings/User/UserEntityToUserDomainMapper';
-import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
-import { RoleEntityToRoleDomainMapper } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomainMapper';
-import { RateEntityToRateDomainMapper } from 'infrastructure/database/mappings/Rate/RateEntityToRateDomainMapper';
-import { StateEntityToStateDomainMapper } from 'infrastructure/database/mappings/State/StateEntityToStateDomainMapper';
-import { WarehouseEntityToWarehouseDomainMapper } from 'infrastructure/database/mappings/Warehouse/WarehouseEntityToWarehouseDomainMapper';
+import { UserEntityToUserDomain } from 'infrastructure/database/mappings/User/UserEntityToUserDomain';
+import { EquipmentEntityToEquipmentDomain } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomain';
+import { RoleEntityToRoleDomain } from 'infrastructure/database/mappings/Role/RoleEntityToRoleDomain';
+import { RateEntityToRateDomain } from 'infrastructure/database/mappings/Rate/RateEntityToRateDomain';
+import { StateEntityToStateDomain } from 'infrastructure/database/mappings/State/StateEntityToStateDomain';
+import { WarehouseEntityToWarehouseDomain } from 'infrastructure/database/mappings/Warehouse/WarehouseEntityToWarehouseDomain';
+import { WarehouseItemEntityToWarehouseItemDomain } from 'infrastructure/database/mappings/Warehouse/WarehouseItemEntityToWarehouseItemDomain';
 
 @injectable()
 export class DBMapper {
   public readonly mapper: Mapper;
 
-  constructor(
-    @inject(INFRASTRUCTURE_IDENTIFIERS.USER_MAPPER)
-    private readonly userEntityToUserDomainMapper: UserEntityToUserDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER)
-    private readonly equipmentEntityToEquipmentDomainMapper: EquipmentEntityToEquipmentDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.ROLE_MAPPER)
-    private readonly roleEntityToRoleDomainMapper: RoleEntityToRoleDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.RATE_MAPPER)
-    private readonly rateEntityToRateDomainMapper: RateEntityToRateDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.STATE_MAPPER)
-    private readonly stateEntityToStateDomainMapper: StateEntityToStateDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.WAREHOUSE_MAPPER)
-    private readonly warehouseEntityToWarehouseDomainMapper: WarehouseEntityToWarehouseDomainMapper,
-    @inject(INFRASTRUCTURE_IDENTIFIERS.WAREHOUSE_ITEM_MAPPER)
-    private readonly warehouseItemEntityToWarehouseItemDomainMapper: WarehouseEntityToWarehouseDomainMapper
-  ) {
+  constructor() {
     this.mapper = new Mapper().withConfiguration(configuration =>
       configuration
         .shouldIgnoreSourcePropertiesIfNotInDestination(true)
@@ -40,14 +24,12 @@ export class DBMapper {
   }
 
   private initialize(): void {
-    this.userEntityToUserDomainMapper.configureMappings(this.mapper);
-    this.equipmentEntityToEquipmentDomainMapper.configureMappings(this.mapper);
-    this.roleEntityToRoleDomainMapper.configureMappings(this.mapper);
-    this.rateEntityToRateDomainMapper.configureMappings(this.mapper);
-    this.stateEntityToStateDomainMapper.configureMappings(this.mapper);
-    this.warehouseEntityToWarehouseDomainMapper.configureMappings(this.mapper);
-    this.warehouseItemEntityToWarehouseItemDomainMapper.configureMappings(
-      this.mapper
-    );
+    UserEntityToUserDomain().configureMapping(this.mapper);
+    EquipmentEntityToEquipmentDomain().configureMapping(this.mapper);
+    RoleEntityToRoleDomain().configureMapping(this.mapper);
+    RateEntityToRateDomain().configureMapping(this.mapper);
+    StateEntityToStateDomain().configureMapping(this.mapper);
+    WarehouseEntityToWarehouseDomain().configureMapping(this.mapper);
+    WarehouseItemEntityToWarehouseItemDomain().configureMapping(this.mapper);
   }
 }

@@ -374,9 +374,8 @@ not only responses but also saved data in database and authentication context.
 ### STILL TODO
 
 * Prepare FP version of architecture - separate repo
-* Introduce the `Docker` into project  
-* Improve IOC implementation ( some injections do not have dependencies, so we can define it as pure functions )
-* Prepare testing infrastructure for `GraphQL` endpoints
+* Introduce the `Docker` into project
+* Prepare testing infrastructure for `GraphQL` endpoints, add more tests, update testing and fix issues
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
 * Resolve `TODO's` comments  
 * Provide additional diagrams

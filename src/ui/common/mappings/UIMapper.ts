@@ -1,17 +1,13 @@
-import { inject, injectable } from 'inversify';
+import { injectable } from 'inversify';
 import { Mapper } from '@wufe/mapper';
 
-import { IMapper } from 'core/common/mapper/IMapper';
-import { UI_IDENTIFIERS } from 'ui/UiModuleSymbols';
+import { UserDomainToUserUI } from 'ui/common/mappings/User/UserDomainToUserUI';
 
 @injectable()
 export class UIMapper {
   public readonly mapper: Mapper;
 
-  constructor(
-    @inject(UI_IDENTIFIERS.USER_MAPPER)
-    private readonly userDomainToUserUIMapper: IMapper
-  ) {
+  constructor() {
     this.mapper = new Mapper().withConfiguration(configuration =>
       configuration
         .shouldIgnoreSourcePropertiesIfNotInDestination(true)
@@ -22,6 +18,6 @@ export class UIMapper {
   }
 
   private initialize(): void {
-    this.userDomainToUserUIMapper.configureMappings(this.mapper);
+    UserDomainToUserUI().configureMapping(this.mapper);
   }
 }

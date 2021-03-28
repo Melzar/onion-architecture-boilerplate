@@ -1,10 +1,7 @@
 import { interfaces } from 'inversify';
 
 import { BaseModule } from 'dependency/BaseModule';
-import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { RateEntityToRateDomainMapper } from 'infrastructure/database/mappings/Rate/RateEntityToRateDomainMapper';
 import { RateRepository } from 'infrastructure/database/repository/Rate/RateRepository';
-import { IMapper } from 'core/common/mapper/IMapper';
 import {
   DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
   DOMAIN_REPOSITORY_IDENTIFIERS,
@@ -24,19 +21,11 @@ export class RateModule extends BaseModule {
   }
 
   init(bind: interfaces.Bind): void {
-    this.provideRateMapper(bind);
-
     this.provideRateRepository(bind);
 
     this.provideRateService(bind);
 
     this.provideRateQuery(bind);
-  }
-
-  private provideRateMapper(bind: interfaces.Bind): void {
-    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.RATE_MAPPER).to(
-      RateEntityToRateDomainMapper
-    );
   }
 
   private provideRateRepository(bind: interfaces.Bind): void {

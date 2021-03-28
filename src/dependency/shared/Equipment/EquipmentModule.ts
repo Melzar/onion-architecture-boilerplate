@@ -7,8 +7,6 @@ import { EquipmentService } from 'core/applicationServices/Equipment/EquipmentSe
 import { IEquipmentRepository } from 'core/domainServices/Equipment/IEquipmentRepository';
 import { IEquipmentUnitOfWork } from 'core/domainServices/Equipment/IEquipmentUnitOfWork';
 
-import { IMapper } from 'core/common/mapper/IMapper';
-
 import {
   DOMAIN_APPLICATION_SERVICE_IDENTIFIERS,
   DOMAIN_REPOSITORY_IDENTIFIERS,
@@ -16,8 +14,6 @@ import {
 } from 'core/CoreModuleSymbols';
 
 import { EquipmentRepository } from 'infrastructure/database/repository/Equipment/EquipmentRepository';
-import { INFRASTRUCTURE_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
-import { EquipmentEntityToEquipmentDomainMapper } from 'infrastructure/database/mappings/Equipment/EquipmentEntityToEquipmentDomainMapper';
 import { EquipmentUnitOfWork } from 'infrastructure/database/repository/Equipment/EquipmentUnitOfWork';
 
 import { UI_SCHEMA_IDENTIFIERS } from 'ui/UiModuleSymbols';
@@ -37,7 +33,6 @@ export class EquipmentModule extends BaseModule {
     this.provideEquipmentRepository(bind);
     this.provideEquipmentUnitOfWork(bind);
 
-    this.provideEquipmentMapper(bind);
     this.provideEquipmentService(bind);
 
     this.provideEquipmentQuery(bind);
@@ -55,12 +50,6 @@ export class EquipmentModule extends BaseModule {
     bind<IEquipmentUnitOfWork>(
       DOMAIN_UNIT_OF_WORK_IDENTIFIERS.EQUIPMENT_UNIT_OF_WORK
     ).to(EquipmentUnitOfWork);
-  }
-
-  private provideEquipmentMapper(bind: interfaces.Bind): void {
-    bind<IMapper>(INFRASTRUCTURE_IDENTIFIERS.EQUIPMENT_MAPPER).to(
-      EquipmentEntityToEquipmentDomainMapper
-    );
   }
 
   private provideEquipmentService(bind: interfaces.Bind): void {

@@ -1,8 +1,6 @@
-import { injectable } from 'inversify';
-
 import { Mapper } from '@wufe/mapper';
 
-import { IMapper } from 'core/common/mapper/IMapper';
+import { IMapping } from 'core/common/mapper/IMapping';
 
 import { DOMAIN_MAPPING_IDENTIFIERS } from 'core/CoreModuleSymbols';
 
@@ -11,9 +9,8 @@ import { User as UserEntity } from 'infrastructure/database/entities/User';
 
 import { DATABASE_MAPPING_IDENTIFIERS } from 'infrastructure/InfrastructureModuleSymbols';
 
-@injectable()
-export class UserEntityToUserDomainMapper implements IMapper {
-  public configureMappings(mapper: Mapper): void {
+export const UserEntityToUserDomain = (): IMapping => ({
+  configureMapping(mapper: Mapper): void {
     mapper
       .createMap<UserEntity, User>(
         {
@@ -23,5 +20,5 @@ export class UserEntityToUserDomainMapper implements IMapper {
         User
       )
       .forMember('role', opt => opt.mapFrom(src => src.role.name));
-  }
-}
+  },
+});

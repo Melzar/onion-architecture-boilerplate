@@ -1,6 +1,5 @@
 export const UI_IDENTIFIERS = {
   UI_MAPPER: Symbol.for('UIMapper'),
-  USER_MAPPER: Symbol.for('UserUIMapper'),
 };
 
 export const UI_APPLICATION_IDENTIFIERS = {
