@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 25114 16294" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(4.16667,0,0,4.16667,0,0)">
+        <g id="Infrastructure-Layer" serif:id="Infrastructure Layer">
+            <g id="Core" transform="matrix(2.94796,0,0,1.70682,2.38837,106.634)">
+                <rect x="0" y="0" width="1920" height="2160" style="fill:rgb(254,242,244);"/>
+            </g>
+            <g transform="matrix(1,2.99676e-17,-1.35018e-17,1,-1347.64,-749.823)">
+                <text x="2690.77px" y="1274.33px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:384px;fill:rgb(248,112,137);fill-opacity:0.05;">INFRASTR<tspan x="4517.65px 4797.2px " y="1274.33px 1274.33px ">UC</tspan>TURE</text>
+            </g>
+        </g>
+        <g transform="matrix(8.20049e-16,13.3924,-2.87555,1.76077e-16,6488.4,-11802.6)">
+            <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,234,251);stroke:rgb(210,130,211);stroke-width:0.49px;stroke-dasharray:2.46,2.46,0,0;"/>
+            </g>
+            <g transform="matrix(9.39809e-18,-0.417311,0.089603,-2.21302e-16,845.117,3035.83)">
+                <text x="3815.95px" y="1092.98px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(213,166,208);fill-opacity:0.5;">FUNCTIONALITY GR<tspan x="4729.68px 4806.43px " y="1092.98px 1092.98px ">OU</tspan>P</text>
+            </g>
+        </g>
+        <g transform="matrix(6.84328e-16,11.1759,-2.62979,1.61028e-16,3532.75,-9453.17)">
+            <g transform="matrix(0.708245,0,-1.32641e-33,0.430445,467.078,-620.428)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(251,242,254);stroke:rgb(210,130,211);stroke-width:0.59px;"/>
+            </g>
+            <g transform="matrix(8.60786e-18,-0.45631,0.107374,-1.96598e-16,864.362,1329.03)">
+                <text x="2158.16px" y="743.178px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:80px;fill:rgb(187,32,238);fill-opacity:0.3;">FUNCTIONALITY</text>
+            </g>
+        </g>
+        <g transform="matrix(1.36132e-16,2.2232,-0.67686,4.14457e-17,2628.73,-123.099)">
+            <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(252,246,255);stroke:rgb(210,130,211);stroke-width:2.94px;"/>
+            </g>
+            <g transform="matrix(1.08558e-16,-1.77289,0.539762,3.30509e-17,598.72,3564.75)">
+                <text x="1131.05px" y="845.303px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(187,32,238);fill-opacity:0.3;">REPOSIT<tspan x="1390.8px 1441.96px " y="845.303px 845.303px ">OR</tspan>Y</text>
+            </g>
+        </g>
+        <g transform="matrix(1.06453e-16,1.73851,-0.629484,3.85448e-17,4471.87,382.023)">
+            <g>
+                <g transform="matrix(0.708245,0,0,0.430445,467.078,390.438)">
+                    <rect x="654.082" y="263.503" width="315.768" height="3279.21" style="fill:rgb(253,227,232);stroke:rgb(236,60,86);stroke-width:3.74px;"/>
+                </g>
+                <g transform="matrix(1.16729e-16,-1.90632,0.690247,4.22655e-17,506.268,3688.89)">
+                    <text x="1085.48px" y="760.138px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(239,129,164);">D<tspan x="1131.68px 1172.42px 1205.8px 1251.24px " y="760.138px 760.138px 760.138px 760.138px ">ATA </tspan>SOUR<tspan x="1436.07px 1478.98px " y="760.138px 760.138px ">CE</tspan></text>
+                    <text x="1190.95px" y="840.138px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(239,129,164);">CLIENT</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1.08872e-16,-3.41971,0.297296,-2.78016e-16,3929.07,8584.88)">
+            <path d="M1384.04,654.509L1384.04,550.086L1758.18,550.086L1758.18,445.662L1785.42,602.298L1758.18,758.933L1758.18,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+        </g>
+        <g id="Infrastructure-Flow" serif:id="Infrastructure Flow">
+            <g transform="matrix(1,0,0,1,-4924.91,432.743)">
+                <g transform="matrix(-1.28536,-1.79065e-16,8.77727e-17,-1,10075.8,2258.92)">
+                    <path d="M3000,495.796L4000,495.796" style="fill:none;stroke:rgb(210,130,211);stroke-width:11.58px;"/>
+                </g>
+                <g transform="matrix(-2.24102,-2.74446e-16,2.74446e-16,-2.24102,10900.5,4187.07)">
+                    <g transform="matrix(0.54002,0,0,0.54002,792.483,804.497)">
+                        <circle cx="2369.26" cy="514.885" r="30.987" style="fill:rgb(210,130,211);"/>
+                    </g>
+                    <g transform="matrix(0.466128,0,0,0.466128,967.551,842.543)">
+                        <circle cx="2369.26" cy="514.885" r="30.987" style="fill:rgb(251,252,253);"/>
+                    </g>
+                    <g transform="matrix(0.334498,0,0,0.334498,1279.42,910.317)">
+                        <circle cx="2369.26" cy="514.885" r="30.987" style="fill:rgb(210,130,211);"/>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(0.443183,-4.996e-17,9.15934e-17,0.16668,-53.7351,1989.52)">
+                <path d="M1384.04,654.509L1384.04,550.086L1667.6,550.086L1667.6,445.662L1785.42,602.298L1667.6,758.933L1667.6,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(-0.443183,-4.3142e-18,-7.1181e-17,-0.16668,1350.91,2401.7)">
+                <path d="M1384.04,654.509L1384.04,550.086L1667.6,550.086L1667.6,445.662L1785.42,602.298L1667.6,758.933L1667.6,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-545.149,832.819)">
+                <text x="1066.17px" y="1413.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(210,130,211);">DOMAIN MODEL</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-545.149,755.035)">
+                <text x="1059.47px" y="1413.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(210,130,211);">REQUEST OBJECT</text>
+            </g>
+        </g>
+        <g id="Data-Source-Flow" serif:id="Data Source Flow" transform="matrix(-0.571054,0,0,1,5132.3,306.742)">
+            <g>
+                <g transform="matrix(-1.75115,9.19322e-33,0,1,2807.01,563.577)">
+                    <text x="1041.02px" y="1389.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(241,113,132);">D<tspan x="1064.45px 1084.1px 1100.86px 1122.62px " y="1389.06px 1389.06px 1389.06px 1389.06px ">ATA </tspan>SOUR<tspan x="1214.53px 1236.45px " y="1389.06px 1389.06px ">CE</tspan></text>
+                    <text x="1035.63px" y="1437.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(241,113,132);">RETURNS D<tspan x="1208.43px 1228.08px " y="1437.06px 1437.06px ">AT</tspan>A</text>
+                </g>
+                <g transform="matrix(-1.75115,9.19322e-33,0,1,2807.01,408.008)">
+                    <text x="1021.73px" y="1389.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(241,113,132);">SA<tspan x="1058.27px 1080.03px " y="1389.06px 1389.06px ">VI</tspan>NG T<tspan x="1161.02px 1186.56px 1192.74px 1216.16px 1235.81px " y="1389.06px 1389.06px 1389.06px 1389.06px 1389.06px ">O DAT</tspan>A</text>
+                    <text x="1088px" y="1437.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(241,113,132);">SOUR<tspan x="1173.73px 1195.65px " y="1437.06px 1437.06px ">CE</tspan></text>
+                </g>
+                <g transform="matrix(-1.75115,8.24399e-33,0,1,6138.51,343.515)">
+                    <text x="983.142px" y="1413.06px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:32px;fill:rgb(241,113,132);">P<tspan x="1000.49px 1022.25px " y="1413.06px 1413.06px ">AR</tspan>AMETERS / P<tspan x="1229.32px 1248.45px 1268.58px 1283.75px 1308.61px 1330.37px " y="1413.06px 1413.06px 1413.06px 1413.06px 1413.06px 1413.06px ">AYLOAD</tspan></text>
+                </g>
+                <g transform="matrix(-1.6098,1.23853e-16,-6.41792e-17,0.178951,3340.62,1602.88)">
+                    <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                </g>
+                <g transform="matrix(1.6098,-1.12735e-17,1.02556e-16,-0.178951,-1761.57,2170.95)">
+                    <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                </g>
+                <g transform="matrix(1.6098,-1.12735e-17,1.02556e-16,-0.178951,1540.67,2240.3)">
+                    <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                </g>
+                <g transform="matrix(-1.6098,-1.01306e-16,-1.40932e-16,0.178951,6642.85,1568.69)">
+                    <path d="M1384.04,654.509L1384.04,550.086L1724.43,550.086L1724.43,445.662L1785.42,602.298L1724.43,758.933L1724.43,654.509L1384.04,654.509Z" style="fill:rgb(135,245,188);"/>
+                </g>
+                <g transform="matrix(2.80209,0,0,1,-1961.87,677.444)">
+                    <path d="M1287.65,1209.62L676.159,1209.62" style="fill:none;stroke:rgb(236,60,86);stroke-width:9.99px;"/>
+                </g>
+                <g transform="matrix(0.600652,0,0,1,4142.23,761.378)">
+                    <path d="M1287.65,1209.62L676.159,1209.62" style="fill:none;stroke:rgb(236,60,86);stroke-width:17.84px;"/>
+                </g>
+                <g transform="matrix(0.600652,0,0,1,2861.73,761.378)">
+                    <path d="M1287.65,1209.62L676.159,1209.62" style="fill:none;stroke:rgb(236,60,86);stroke-width:17.84px;"/>
+                </g>
+                <g transform="matrix(-2.3595,0,0,1.3474,5399.62,1115.97)">
+                    <g transform="matrix(1.06099,0,0,1.06099,-79.8258,-29.8675)">
+                        <circle cx="1548.31" cy="567.537" r="19.674" style="fill:rgb(252,227,231);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-207.969,172.97)">
+                        <path d="M1770.89,371.482C1786.25,371.482 1798.72,383.953 1798.72,399.313C1798.72,414.674 1786.25,427.145 1770.89,427.145C1755.53,427.145 1743.05,414.674 1743.05,399.313C1743.05,383.953 1755.53,371.482 1770.89,371.482ZM1770.89,378.44C1782.41,378.44 1791.76,387.793 1791.76,399.313C1791.76,410.834 1782.41,420.187 1770.89,420.187C1759.37,420.187 1750.01,410.834 1750.01,399.313C1750.01,387.793 1759.37,378.44 1770.89,378.44Z" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.536359,0,0,0.536359,613.086,358.108)">
+                        <circle cx="1770.89" cy="399.313" r="27.831" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(-2.3595,0,0,1.3474,8669.02,1199.9)">
+                    <g transform="matrix(1.06099,0,0,1.06099,-79.8258,-29.8675)">
+                        <circle cx="1548.31" cy="567.537" r="19.674" style="fill:rgb(252,227,231);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-207.969,172.97)">
+                        <path d="M1770.89,371.482C1786.25,371.482 1798.72,383.953 1798.72,399.313C1798.72,414.674 1786.25,427.145 1770.89,427.145C1755.53,427.145 1743.05,414.674 1743.05,399.313C1743.05,383.953 1755.53,371.482 1770.89,371.482ZM1770.89,378.44C1782.41,378.44 1791.76,387.793 1791.76,399.313C1791.76,410.834 1782.41,420.187 1770.89,420.187C1759.37,420.187 1750.01,410.834 1750.01,399.313C1750.01,387.793 1759.37,378.44 1770.89,378.44Z" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.536359,0,0,0.536359,613.086,358.108)">
+                        <circle cx="1770.89" cy="399.313" r="27.831" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(-2.3595,0,0,1.3474,6955.56,1199.9)">
+                    <g transform="matrix(1.06099,0,0,1.06099,-79.8258,-29.8675)">
+                        <circle cx="1548.31" cy="567.537" r="19.674" style="fill:rgb(252,227,231);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-207.969,172.97)">
+                        <path d="M1770.89,371.482C1786.25,371.482 1798.72,383.953 1798.72,399.313C1798.72,414.674 1786.25,427.145 1770.89,427.145C1755.53,427.145 1743.05,414.674 1743.05,399.313C1743.05,383.953 1755.53,371.482 1770.89,371.482ZM1770.89,378.44C1782.41,378.44 1791.76,387.793 1791.76,399.313C1791.76,410.834 1782.41,420.187 1770.89,420.187C1759.37,420.187 1750.01,410.834 1750.01,399.313C1750.01,387.793 1759.37,378.44 1770.89,378.44Z" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.536359,0,0,0.536359,613.086,358.108)">
+                        <circle cx="1770.89" cy="399.313" r="27.831" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(2.6947,0,0,1,1445.82,591.75)">
+                    <path d="M1287.65,1209.62L676.159,1209.62" style="fill:none;stroke:rgb(236,60,86);stroke-width:10.27px;"/>
+                </g>
+                <g transform="matrix(-2.3595,0,0,1.3474,6955.56,1030.28)">
+                    <g transform="matrix(1.06099,0,0,1.06099,-79.8258,-29.8675)">
+                        <circle cx="1548.31" cy="567.537" r="19.674" style="fill:rgb(252,227,231);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-207.969,172.97)">
+                        <path d="M1770.89,371.482C1786.25,371.482 1798.72,383.953 1798.72,399.313C1798.72,414.674 1786.25,427.145 1770.89,427.145C1755.53,427.145 1743.05,414.674 1743.05,399.313C1743.05,383.953 1755.53,371.482 1770.89,371.482ZM1770.89,378.44C1782.41,378.44 1791.76,387.793 1791.76,399.313C1791.76,410.834 1782.41,420.187 1770.89,420.187C1759.37,420.187 1750.01,410.834 1750.01,399.313C1750.01,387.793 1759.37,378.44 1770.89,378.44Z" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.536359,0,0,0.536359,613.086,358.108)">
+                        <circle cx="1770.89" cy="399.313" r="27.831" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(-2.3595,0,0,1.3474,8669.02,1030.28)">
+                    <g transform="matrix(1.06099,0,0,1.06099,-79.8258,-29.8675)">
+                        <circle cx="1548.31" cy="567.537" r="19.674" style="fill:rgb(252,227,231);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-207.969,172.97)">
+                        <path d="M1770.89,371.482C1786.25,371.482 1798.72,383.953 1798.72,399.313C1798.72,414.674 1786.25,427.145 1770.89,427.145C1755.53,427.145 1743.05,414.674 1743.05,399.313C1743.05,383.953 1755.53,371.482 1770.89,371.482ZM1770.89,378.44C1782.41,378.44 1791.76,387.793 1791.76,399.313C1791.76,410.834 1782.41,420.187 1770.89,420.187C1759.37,420.187 1750.01,410.834 1750.01,399.313C1750.01,387.793 1759.37,378.44 1770.89,378.44Z" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.536359,0,0,0.536359,613.086,358.108)">
+                        <circle cx="1770.89" cy="399.313" r="27.831" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-74.935,0.26837)">
+                <g transform="matrix(1.07227e-16,-1,1.75115,6.12323e-17,-1670.5,3006.84)">
+                    <g transform="matrix(0.505913,0,0,0.505913,381.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.505913,0,0,0.505913,421.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.505913,0,0,0.505913,461.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(1.07227e-16,-1,1.75115,6.12323e-17,-1670.5,2488.88)">
+                    <g transform="matrix(0.505913,0,0,0.505913,381.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.505913,0,0,0.505913,421.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                    <g transform="matrix(0.505913,0,0,0.505913,461.449,411.288)">
+                        <circle cx="791.794" cy="852.188" r="19.766" style="fill:rgb(236,60,86);"/>
+                    </g>
+                </g>
+                <g transform="matrix(-1.75115,0,0,1,1242.58,429.255)">
+                    <g>
+                        <g transform="matrix(0.845698,0,0,0.164339,321.366,1174.84)">
+                            <path d="M682.123,1226.78C682.123,1209.65 679.421,1195.75 676.093,1195.75L505.737,1195.75C502.409,1195.75 499.707,1209.65 499.707,1226.78L499.707,1468.97C499.707,1486.1 502.409,1500 505.737,1500L676.093,1500C679.421,1500 682.123,1486.1 682.123,1468.97L682.123,1226.78Z" style="fill:rgb(236,60,86);"/>
+                        </g>
+                        <g transform="matrix(0.845698,0,0,0.164339,321.366,1234.84)">
+                            <path d="M682.123,1226.78C682.123,1209.65 679.421,1195.75 676.093,1195.75L505.737,1195.75C502.409,1195.75 499.707,1209.65 499.707,1226.78L499.707,1468.97C499.707,1486.1 502.409,1500 505.737,1500L676.093,1500C679.421,1500 682.123,1486.1 682.123,1468.97L682.123,1226.78Z" style="fill:rgb(236,60,86);"/>
+                        </g>
+                        <g transform="matrix(0.845698,0,0,0.164339,321.366,1294.84)">
+                            <path d="M682.123,1226.78C682.123,1209.65 679.421,1195.75 676.093,1195.75L505.737,1195.75C502.409,1195.75 499.707,1209.65 499.707,1226.78L499.707,1468.97C499.707,1486.1 502.409,1500 505.737,1500L676.093,1500C679.421,1500 682.123,1486.1 682.123,1468.97L682.123,1226.78Z" style="fill:rgb(236,60,86);"/>
+                        </g>
+                    </g>
+                    <g transform="matrix(1,0,0,1,189.996,-804.931)">
+                        <text x="586.338px" y="2423.92px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:64px;fill:rgb(236,60,86);">DB</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(6.12323e-17,1,-0.772529,4.73038e-17,3445.67,-1301.12)">
+            <g transform="matrix(1,0,0,1.54181,114.664,-100.91)">
+                <rect x="3380.26" y="392.249" width="167.565" height="437.825" style="fill:rgb(253,227,232);stroke:rgb(236,60,86);stroke-width:3.03px;"/>
+            </g>
+            <g transform="matrix(4.02415e-17,-1.55334,1.2,1.73674e-16,3329.87,4620.65)">
+                <text x="2239.94px" y="193.08px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(239,129,164);">D<tspan x="2264px 2285.22px 2302.6px 2326.27px " y="193.08px 193.08px 193.08px 193.08px ">ATA </tspan>SOUR<tspan x="2422.54px 2444.89px " y="193.08px 193.08px ">CE</tspan> MAPPER -</text>
+                <text x="2289.85px" y="246.413px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:33.333px;fill:rgb(239,129,164);">D<tspan x="2313.92px 2335.14px 2352.52px 2376.19px 2382.62px 2401.15px 2427.8px " y="246.413px 246.413px 246.413px 246.413px 246.413px 246.413px 246.413px ">ATA TO </tspan>DOMAIN</text>
+            </g>
+        </g>
+        <g id="Info-Block" serif:id="Info Block">
+            <g id="Infra-Info-Block" serif:id="Infra Info Block" transform="matrix(0.785825,0,0,1.17246,2623.68,-1917.51)">
+                <g transform="matrix(0.837713,2.75994e-17,-2.25625e-17,-0.626787,1252.46,3136.89)">
+                    <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(251,218,224);"/>
+                </g>
+                <g transform="matrix(1.27255,0,0,0.852905,2555.73,1173.9)">
+                    <text x="111.518px" y="2186.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">F<tspan x="124.262px 137.606px " y="2186.94px 2186.94px ">or</tspan> speciﬁc data source, y<tspan x="378.614px 391.958px " y="2186.94px 2186.94px ">ou</tspan> use data from</text>
+                    <text x="111.518px" y="2217.9px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">Request Object and  tr<tspan x="345.278px 357.446px " y="2217.9px 2217.9px ">an</tspan>slate to speciﬁc data</text>
+                    <text x="111.518px" y="2248.86px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">input format ( data for queries, entities, ﬁles,</text>
+                    <text x="111.518px" y="2279.83px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">e<tspan x="123.374px 135.47px " y="2279.83px 2279.83px ">xt</tspan>ernal services etc.)</text>
+                </g>
+            </g>
+            <g id="Infra-Info-Block1" serif:id="Infra Info Block" transform="matrix(0.819877,0,0,0.963004,2179.05,-2302.7)">
+                <g transform="matrix(0.837713,2.75994e-17,-2.25625e-17,-0.626787,1252.46,3136.89)">
+                    <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(251,218,224);"/>
+                </g>
+                <g transform="matrix(1.2197,0,0,1.03842,2561.62,771.474)">
+                    <text x="111.518px" y="2186.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">Infr<tspan x="149.534px 161.702px " y="2186.94px 2186.94px ">as</tspan>tructure la<tspan x="282.398px 294.374px 306.95px " y="2186.94px 2186.94px 2186.94px ">yer</tspan> contains deﬁnition, models,</text>
+                    <text x="111.518px" y="2222.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">clients implementation for variety of data source.</text>
+                    <text x="111.518px" y="2258.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">This la<tspan x="178.142px 190.118px 202.694px " y="2258.94px 2258.94px 2258.94px ">yer</tspan> has an access to Domain La<tspan x="498.782px 510.758px 523.334px " y="2258.94px 2258.94px 2258.94px ">yer</tspan> only</text>
+                </g>
+            </g>
+            <g id="Infra-Info-Block2" serif:id="Infra Info Block" transform="matrix(0.926371,0,0,0.93376,551.926,-1049.67)">
+                <g transform="matrix(0.837713,2.75994e-17,-2.25625e-17,-0.626787,1252.46,3136.89)">
+                    <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(251,218,224);"/>
+                </g>
+                <g transform="matrix(1.07948,0,0,1.07094,2577.26,700.925)">
+                    <text x="111.518px" y="2186.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">Data source returns data in speciﬁc format - entity<tspan x="634.07px " y="2186.94px ">,</tspan></text>
+                    <text x="111.518px" y="2222.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">cloud service pa<tspan x="278.15px 290.438px " y="2222.94px 2222.94px ">yl</tspan>oad etc. Repository is responsible for</text>
+                    <text x="111.518px" y="2258.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">tr<tspan x="129.686px 141.854px " y="2258.94px 2258.94px ">an</tspan>sforming Data Source output into Domain Model</text>
+                </g>
+            </g>
+            <g id="Infra-Info-Block3" serif:id="Infra Info Block" transform="matrix(0.816179,0,0,0.951747,2007.5,518.654)">
+                <g transform="matrix(0.837713,2.75994e-17,-2.25625e-17,-0.626787,1252.46,3136.89)">
+                    <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(251,218,224);"/>
+                </g>
+                <g transform="matrix(1.22522,0,0,1.0507,2561,744.831)">
+                    <text x="111.518px" y="2186.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">Data source client is injected to repository via</text>
+                    <text x="111.518px" y="2222.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">Dependency Injection, it should be also</text>
+                    <text x="111.518px" y="2258.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(241,113,132);">abstr<tspan x="165.686px 177.854px " y="2258.94px 2258.94px ">ac</tspan>ted and gener<tspan x="332.174px 344.342px " y="2258.94px 2258.94px ">al</tspan>ized as much as possible</text>
+                </g>
+            </g>
+            <g id="App-Services-Info-Block" serif:id="App Services Info Block" transform="matrix(0.497347,0,0,0.637375,-472.957,-252.806)">
+                <g transform="matrix(1.21272,-8.99232e-18,7.81342e-18,-1.28185,377.201,3270.13)">
+                    <rect x="1700.18" y="-0" width="797.552" height="203.404" style="fill:rgb(249,238,252);"/>
+                </g>
+                <g transform="matrix(2.01067,0,0,1.56894,2243.49,-362.28)">
+                    <text x="111.518px" y="2186.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(211,125,240);">Repository implementation is related to</text>
+                    <text x="111.518px" y="2222.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(211,125,240);">speciﬁc data source. After e<tspan x="398.342px 409.718px 422.294px " y="2222.94px 2222.94px 2222.94px ">xec</tspan>uting</text>
+                    <text x="111.518px" y="2258.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(211,125,240);">oper<tspan x="159.902px 172.07px " y="2258.94px 2258.94px ">at</tspan>ion on data source, it returns</text>
+                    <text x="111.518px" y="2294.94px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:24px;fill:rgb(211,125,240);">mapped Domain Model</text>
+                </g>
+            </g>
+        </g>
+        <g id="DI" transform="matrix(1,0,0,1,2.38837,5.18545)">
+            <g transform="matrix(0.94094,0,0,1,1.28442e-12,-2.59703e-12)">
+                <g transform="matrix(1.14226,0,0,1.09726,-421.633,-374.117)">
+                    <rect x="369.121" y="3793.37" width="5266.18" height="106.634" style="fill:rgb(225,232,244);"/>
+                </g>
+                <g transform="matrix(1.06277,0,0,1,-315.374,3793.37)">
+                    <text x="2836.83px" y="73.742px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:48px;fill:rgb(72,102,157);">DEPENDENCY INJECTION</text>
+                </g>
+            </g>
+            <g transform="matrix(4.54677e-17,0.742543,-1.09726,6.71876e-17,9822.39,-279.274)">
+                <rect x="369.121" y="3793.37" width="5266.18" height="106.634" style="fill:rgb(225,232,244);"/>
+            </g>
+            <g transform="matrix(1.06911,0,0,1.04863,-389.9,-5.18545)">
+                <g transform="matrix(1.00532,0,0,1,-6.38963,-3793.37)">
+                    <rect x="369.121" y="3793.37" width="5266.18" height="106.634" style="fill:rgb(225,232,244);"/>
+                </g>
+                <g transform="matrix(0.935354,0,0,0.953627,218.764,-3.36075e-12)">
+                    <text x="2878.44px" y="73.742px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:48px;fill:rgb(72,102,157);">DEPENDENCY INJECTION</text>
+                </g>
+            </g>
+        </g>
+        <g id="External-Internal-Source" serif:id="External/Internal Source" transform="matrix(1,0,0,1.00266,27.1736,-6.82121e-13)">
+            <g transform="matrix(1,0,0,1,5635.31,0)">
+                <rect x="0" y="0" width="364.694" height="3900" style="fill:rgb(242,118,136);"/>
+            </g>
+            <g transform="matrix(6.10699e-17,0.997348,-1,6.12323e-17,6667.3,-105.76)">
+                <text x="1352.07px" y="885.316px" style="font-family:'Lato-Bold', 'Lato', sans-serif;font-weight:700;font-size:96px;fill:rgb(252,227,231);">EXTERNAL  ST<tspan x="1979.48px 2056.23px 2119.11px 2184.83px 2254.23px " y="885.316px 885.316px 885.316px 885.316px 885.316px ">ORAGE</tspan> / SERVICE</text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -180,6 +180,23 @@ Visual representation of above restrictions can be seen in a diagram.
 
 Diagram available [here](https://drive.google.com/uc?export=view&id=1xonZCgIalsW1UCBqusK6Rqz5__I0-T8p)
 
+#### Architecture layers in details
+
+To understand in details how whole architecture works together with applied design patterns etc take a look
+at detailed diagrams per layer.
+
+![Onion UI Layer](onion.diagram.ui.svg)
+
+Diagram available [here](https://drive.google.com/uc?export=view&id=1e2hC_xUvdu9pPEKg1W1_4U2JLM-MtoP0)
+
+![Onion Domain Layer](onion.diagram.domain.svg)
+
+Diagram available [here](https://drive.google.com/uc?export=view&id=1l4IkkixZhySl8gjp978M3dOWt3p_7Ihi)
+
+![Onion Infrastructure Layer](onion.diagram.infrastructure.svg)
+
+Diagram available [here](https://drive.google.com/uc?export=view&id=17ZEXrPhbfOAjautzJ2waOFTVvfSS0rzs)
+
 #### Architecture Growth Lifecycle
 
 It's natural that every project evolve with time. From my perspective process of growth can be divided into specific phases.
@@ -377,9 +394,7 @@ not only responses but also saved data in database and authentication context.
 * Introduce the `Docker` into project
 * Prepare testing infrastructure for `GraphQL` endpoints, add more tests, update testing and fix issues
 * Provide example of project modularization ( `lerna` + `yarn workspaces` )
-* Resolve `TODO's` comments  
-* Provide additional diagrams
-    * Detailed diagram per layer
+* Resolve `TODO's` comments
 
 ### KNOWN ISSUES
 * To authenticate provide token this way as swagger 2.0 do not support bearer strategy 
