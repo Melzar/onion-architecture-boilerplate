@@ -48,7 +48,7 @@
     "cors": "^2.8.5",
     "debug": "~4.1.1",
     "dotenv": "^8.2.0",
-    "express": "~4.17.1",
+    "express": "~4.17.3",
     "faker": "^4.1.0",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.2",
